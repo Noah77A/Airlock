@@ -73,12 +73,13 @@ text = "Game Over"
 
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=1544012543]
 unique_name_in_owner = true
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="MainMenu" unique_id=810463387]
-offset_left = 6.0
-offset_top = -1.0
-offset_right = 1974.0
-offset_bottom = 1095.0
+offset_left = -17.0
+offset_top = -12.0
+offset_right = 1951.0
+offset_bottom = 1084.0
 
 [node name="Title" type="Label" parent="MainMenu" unique_id=251934345]
 offset_left = 674.0
@@ -112,6 +113,11 @@ offset_right = 1006.0
 offset_bottom = 895.0
 text = "Version"
 
+[node name="StartTimer" type="Timer" parent="MainMenu" unique_id=473612105]
+wait_time = 3.5
+autostart = true
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
+[connection signal="timeout" from="MainMenu/StartTimer" to="." method="_on_start_timer_timeout"]

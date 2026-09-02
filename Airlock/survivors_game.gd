@@ -34,3 +34,7 @@ func _on_player_health_depleted():
 func _on_start_pressed() -> void:
 	%MainMenu.queue_free()
 	%Timer.autostart
+
+
+func _on_start_timer_timeout() -> void:
+	%MainMenu.visible = true
