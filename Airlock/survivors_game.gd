@@ -29,3 +29,8 @@ func _on_timer_timeout():
 func _on_player_health_depleted():
 	%"Game Over".visible = true
 	get_tree().paused = true
+
+
+func _on_start_pressed() -> void:
+	%MainMenu.queue_free()
+	%Timer.autostart
