@@ -31,9 +31,10 @@ func _on_player_health_depleted():
 	get_tree().paused = true
 
 
-func _on_start_pressed() -> void:
+func _on_start_pressed():
+	%Timer.start()
 	%MainMenu.queue_free()
-	%Timer.autostart
+	
 
 
 func _on_start_timer_timeout() -> void:
