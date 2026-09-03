@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_y3pti"]
 [ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://pine_tree.tscn" id="2_l26od"]
 [ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://credits.tscn" id="4_qqaft"]
+[ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://version.tscn" id="5_7jj1j"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
@@ -15,6 +16,7 @@ point_count = 5
 y_sort_enabled = true
 script = ExtResource("1_l26od")
 credits_scene = ExtResource("4_qqaft")
+version_scene = ExtResource("5_7jj1j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542972953]
 layer = -10
@@ -77,6 +79,9 @@ text = "Game Over"
 unique_name_in_owner = true
 visible = false
 
+[node name="Version" parent="." unique_id=1997187708 instance=ExtResource("5_7jj1j")]
+visible = false
+
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=1544012543]
 unique_name_in_owner = true
 visible = false
@@ -128,4 +133,5 @@ autostart = true
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainMenu/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MainMenu/Credits" to="Credits" method="_on_credits_pressed"]
+[connection signal="pressed" from="MainMenu/Version" to="." method="_on_version_pressed"]
 [connection signal="timeout" from="MainMenu/StartTimer" to="." method="_on_start_timer_timeout"]

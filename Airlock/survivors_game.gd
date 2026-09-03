@@ -49,3 +49,9 @@ func _on_credits_pressed() -> void:
 
 	
 	
+
+@export var version_scene: PackedScene
+func _on_version_pressed() -> void:
+	if version_scene:
+		var versionScreen = version_scene.instantiate()
+		add_child(versionScreen)
