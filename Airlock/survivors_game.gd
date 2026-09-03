@@ -39,3 +39,13 @@ func _on_start_pressed():
 
 func _on_start_timer_timeout() -> void:
 	%MainMenu.visible = true
+
+
+@export var credits_scene: PackedScene
+func _on_credits_pressed() -> void:
+	if credits_scene:
+		var creditsScreen = credits_scene.instantiate()
+		add_child(creditsScreen)
+
+	
+	

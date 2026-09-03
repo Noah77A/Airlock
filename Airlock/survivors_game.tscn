@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c1bfau31nfqio" path="res://survivors_game.gd" id="1_l26od"]
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_y3pti"]
 [ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://pine_tree.tscn" id="2_l26od"]
+[ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://credits.tscn" id="4_qqaft"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
@@ -13,6 +14,7 @@ point_count = 5
 [node name="Game" type="Node2D" unique_id=90994203]
 y_sort_enabled = true
 script = ExtResource("1_l26od")
+credits_scene = ExtResource("4_qqaft")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542972953]
 layer = -10
@@ -71,6 +73,10 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 174
 text = "Game Over"
 
+[node name="Credits" parent="." unique_id=1616567190 instance=ExtResource("4_qqaft")]
+unique_name_in_owner = true
+visible = false
+
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=1544012543]
 unique_name_in_owner = true
 visible = false
@@ -120,4 +126,6 @@ autostart = true
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MainMenu/Credits" to="Credits" method="_on_credits_pressed"]
 [connection signal="timeout" from="MainMenu/StartTimer" to="." method="_on_start_timer_timeout"]
