@@ -7,7 +7,7 @@
 radius = 572.1337
 
 [node name="Gun" type="Area2D" unique_id=412163857]
-collision_layer = 0
+collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_dk5gl")
 

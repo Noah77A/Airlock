@@ -1,20 +1,20 @@
 extends Area2D
 
+@onready var marker_2d: Marker2D = %ShootingPoint
 func _physics_process(delta):
-	var eneminies_in_range = get_overlapping_bodies()
-	if (eneminies_in_range.size() > 0):
-		var target_enemey = eneminies_in_range.front()
-		look_at(target_enemey.global_position)
+	look_at(get_global_mouse_position())
 
 
 
 func shoot():
 	const BULLET = preload("res://bullet.tscn")
 	var new_bullet = BULLET.instantiate()
-	new_bullet.global_position = %ShootingPoint.global_position
+	new_bullet.position = marker_2d.global_position
+	new_bullet.target_position = (get_global_mouse_position() - marker_2d.global_position).normalized()
 	new_bullet.global_rotation = %ShootingPoint.global_rotation
 	%ShootingPoint.add_child(new_bullet)
 	
-
-func _on_timer_timeout():
-	shoot() 
+func _input(event) -> void:
+	if event.is_action_pressed("shoot"):
+		shoot()
+	
