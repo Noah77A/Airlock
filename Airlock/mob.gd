@@ -17,6 +17,8 @@ func take_damage():
 	%Slime.play_hurt()
 	
 	if (health == 0):
+		GameManager.credits += 1
+		print(GameManager.credits)
 		queue_free()
 		
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")

@@ -87,6 +87,7 @@ buses/default_bus_layout="uid://c0r1synmqj70v"
 
 WpiLogo="*uid://d2osiqxthtblf"
 Music="*uid://bev1ey085r6t6"
+GameManager="*uid://b6vswtwlffbke"
 
 [display]
 
