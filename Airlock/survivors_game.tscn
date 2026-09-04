@@ -29,7 +29,7 @@ offset_bottom = 1075.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=227039421 instance=ExtResource("1_y3pti")]
-position = Vector2(1007, 410)
+position = Vector2(957, 545)
 
 [node name="Path2D" type="Path2D" parent="Player" unique_id=610517452]
 position = Vector2(-1007, -410)

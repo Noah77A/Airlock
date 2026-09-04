@@ -34,7 +34,6 @@ func _on_player_health_depleted():
 func _on_start_pressed():
 	%Timer.start()
 	%MainMenu.queue_free()
-	
 
 
 func _on_start_timer_timeout() -> void:

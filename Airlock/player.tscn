@@ -5,6 +5,19 @@
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cyyh0hb1gomly" path="res://assets/Credit.png" id="4_hqtel"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sweqy"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hs0m"]
+bg_color = Color(0.20462477, 0.49895602, 0.79832965, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 29.15
 
@@ -28,6 +41,20 @@ corner_radius_bottom_left = 8
 [node name="Player" type="CharacterBody2D" unique_id=227039421]
 script = ExtResource("1_onrkg")
 
+[node name="OxygenBar" type="ProgressBar" parent="." unique_id=83714366]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -941.0
+offset_top = -314.0
+offset_right = -332.0
+offset_bottom = -291.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_sweqy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2hs0m")
+value = 100.0
+
 [node name="HappyBoo" parent="." unique_id=1091727253 instance=ExtResource("1_4flbx")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=984836777]
@@ -49,10 +76,10 @@ debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1200308221]
 unique_name_in_owner = true
-offset_left = -118.0
-offset_top = -128.0
-offset_right = 120.0
-offset_bottom = -100.83125
+offset_left = -107.0
+offset_top = -134.0
+offset_right = 131.0
+offset_bottom = -106.83125
 theme_override_styles/background = SubResource("StyleBoxFlat_i3pqv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hqtel")
 value = 100.0
@@ -72,3 +99,9 @@ text = "0"
 position = Vector2(-917, -391)
 scale = Vector2(0.054375015, 0.055625007)
 texture = ExtResource("4_hqtel")
+
+[node name="OxygenMeter" type="Timer" parent="." unique_id=1287375485]
+unique_name_in_owner = true
+wait_time = 0.056
+
+[connection signal="timeout" from="OxygenMeter" to="." method="_on_oxygen_meter_timeout"]
