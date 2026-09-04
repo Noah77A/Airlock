@@ -4,9 +4,12 @@ const SCROLL_SPEED = 100
 @onready var VersionText = %VersionText
 
 func _ready() -> void:
-	VersionText.position.y = VersionText.size.y
+	#VersionText.position.y = VersionText.size.y
+	pass
 
 func _process(delta) -> void:
-	VersionText.position.y -= SCROLL_SPEED * delta
-	if VersionText.position.y < 0:
-		queue_free()
+	pass
+
+
+func _on_button_pressed() -> void:
+	queue_free() # Replace with function body.

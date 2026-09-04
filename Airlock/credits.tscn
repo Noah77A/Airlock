@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bb8ifnmph62q7" path="res://credits.gd" id="1_nm7lk"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nm7lk"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1t8d"]
+bg_color = Color(0.6911139, 2.4787337e-06, 4.813075e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4wvt"]
+bg_color = Color(0.5006195, 0.5006196, 0.5006194, 1)
+
 [node name="Credits" type="CanvasLayer" unique_id=1997187708]
 script = ExtResource("1_nm7lk")
 
@@ -30,3 +39,19 @@ Seamus Knott
 Noah Hartglass
 Andrew Huff"
 horizontal_alignment = 1
+
+[node name="Menu" type="Button" parent="Background" unique_id=1303622092]
+light_mask = 5
+layout_mode = 0
+offset_left = 17.0
+offset_top = 982.0
+offset_right = 133.0
+offset_bottom = 1056.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_nm7lk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c1t8d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g4wvt")
+action_mode = 0
+text = "Menu"
+
+[connection signal="pressed" from="Background/Menu" to="." method="_on_menu_pressed"]

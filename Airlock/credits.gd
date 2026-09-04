@@ -10,3 +10,7 @@ func _process(delta) -> void:
 	CreditsText.position.y -= SCROLL_SPEED * delta
 	if CreditsText.position.y < 0:
 		queue_free()
+
+
+func _on_menu_pressed() -> void:
+	queue_free() # Replace with function body.
