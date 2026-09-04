@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health = 3
+var health = 3 + GameManager.difficulty
 
 @onready var player = get_node("/root/Game/Player")
 
@@ -18,7 +18,7 @@ func take_damage():
 	
 	if (health == 0):
 		GameManager.credits += 1
-		print(GameManager.credits)
+		
 		queue_free()
 		
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")

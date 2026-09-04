@@ -19,3 +19,5 @@ func _physics_process(delta):
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+			
+	%Money.text = str(GameManager.credits)

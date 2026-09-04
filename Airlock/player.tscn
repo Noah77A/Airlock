@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://yh2ao5or56lq" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cyyh0hb1gomly" path="res://assets/Credit.png" id="4_hqtel"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 29.15
@@ -56,3 +57,18 @@ theme_override_styles/background = SubResource("StyleBoxFlat_i3pqv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hqtel")
 value = 100.0
 show_percentage = false
+
+[node name="Money" type="Label" parent="." unique_id=937372080]
+unique_name_in_owner = true
+offset_left = -868.0
+offset_top = -437.0
+offset_right = -662.0
+offset_bottom = -347.0
+theme_override_colors/font_color = Color(0.2740714, 0.7829926, 0.9085662, 1)
+theme_override_font_sizes/font_size = 65
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1395919689]
+position = Vector2(-917, -391)
+scale = Vector2(0.054375015, 0.055625007)
+texture = ExtResource("4_hqtel")
