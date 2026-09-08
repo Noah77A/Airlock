@@ -41,6 +41,7 @@ func _on_start_pressed():
 
 
 func _on_start_timer_timeout() -> void:
+	%WhiteBackground.visible = false
 	%MainMenu.visible = true
 
 

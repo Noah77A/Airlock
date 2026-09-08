@@ -32,6 +32,15 @@ script = ExtResource("1_l26od")
 credits_scene = ExtResource("4_qqaft")
 version_scene = ExtResource("5_7jj1j")
 
+[node name="WhiteBackground" type="ColorRect" parent="." unique_id=100178721]
+unique_name_in_owner = true
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542972953]
 layer = -10
 
@@ -157,7 +166,7 @@ offset_bottom = 895.0
 text = "Version"
 
 [node name="StartTimer" type="Timer" parent="MainMenu" unique_id=473612105]
-wait_time = 3.5
+wait_time = 2.135
 autostart = true
 
 [node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
