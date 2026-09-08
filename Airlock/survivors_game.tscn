@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://c1bfau31nfqio" path="res://survivors_game.gd" id="1_l26od"]
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_y3pti"]
 [ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://pine_tree.tscn" id="2_l26od"]
-[ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://credits.tscn" id="4_qqaft"]
-[ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://version.tscn" id="5_7jj1j"]
+[ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://ui/credits.tscn" id="4_qqaft"]
+[ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://ui/version.tscn" id="5_7jj1j"]
+[ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data_storage/player_room_handler.tscn" id="6_edxvn"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
@@ -127,6 +128,8 @@ text = "Version"
 [node name="StartTimer" type="Timer" parent="MainMenu" unique_id=473612105]
 wait_time = 3.5
 autostart = true
+
+[node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
