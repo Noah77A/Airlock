@@ -34,6 +34,7 @@ version_scene = ExtResource("5_7jj1j")
 
 [node name="WhiteBackground" type="ColorRect" parent="." unique_id=100178721]
 unique_name_in_owner = true
+visible = false
 top_level = true
 anchors_preset = 15
 anchor_right = 1.0
@@ -170,6 +171,33 @@ wait_time = 2.135
 autostart = true
 
 [node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
+
+[node name="Upgrade" type="CanvasLayer" parent="." unique_id=496219269]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Upgrade" unique_id=1201736244]
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 1889.0
+offset_bottom = 1083.0
+color = Color(0.34407577, 0.34407574, 0.34407574, 0.52156866)
+
+[node name="Choice1" type="Button" parent="Upgrade" unique_id=36990647]
+unique_name_in_owner = true
+offset_left = 397.0
+offset_top = 358.0
+offset_right = 637.0
+offset_bottom = 676.0
+text = "Test Box"
+
+[node name="Choice2" type="Button" parent="Upgrade" unique_id=1982936725]
+unique_name_in_owner = true
+offset_left = 1110.0
+offset_top = 359.0
+offset_right = 1382.0
+offset_bottom = 680.0
+text = "Test Box"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Player/OxygenMeter" to="." method="_on_oxygen_meter_timeout"]

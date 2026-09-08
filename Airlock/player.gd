@@ -4,10 +4,7 @@ var health = 100.0
 
 
 func _physics_process(delta):
-	%OxygenMeter.wait_time = GameManager.oxygen + 60
-	%OxygenBar.max_value = %OxygenMeter.wait_time
-	%OxygenMeter.start()
-	%OxygenBar.value = %OxygenMeter.time_left
+	
 	
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
 	velocity = direction * 600
@@ -26,6 +23,3 @@ func _physics_process(delta):
 			health_depleted.emit()
 			
 	%Money.text = str(GameManager.credits)
-	
-func _on_oxygen_meter_timeout() -> void:
-	health_depleted.emit()
