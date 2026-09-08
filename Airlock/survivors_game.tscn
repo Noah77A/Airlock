@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://pine_tree.tscn" id="2_l26od"]
 [ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://ui/credits.tscn" id="4_qqaft"]
 [ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://ui/version.tscn" id="5_7jj1j"]
+[ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data/player_room_handler.tscn" id="6_edxvn"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
@@ -159,7 +160,7 @@ text = "Version"
 wait_time = 3.5
 autostart = true
 
-[node name="PlayerRoomHandler" parent="." unique_id=1494511931]
+[node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Player/OxygenMeter" to="." method="_on_oxygen_meter_timeout"]

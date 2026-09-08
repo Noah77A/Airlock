@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6iue8ok2oj4p"]
+
+[ext_resource type="Script" uid="uid://duradjf736cf5" path="res://game_generation/data/player_room_handler.gd" id="1_j4fjg"]
+
+[node name="PlayerRoomHandler" type="Node2D" unique_id=1494511931]
+script = ExtResource("1_j4fjg")

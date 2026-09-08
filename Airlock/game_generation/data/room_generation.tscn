@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bjwql3wv0xv4b"]
+
+[ext_resource type="Script" uid="uid://cjuncqqyo0m2k" path="res://game_generation/data/room_data.gd" id="1_ivfxt"]
+[ext_resource type="Script" uid="uid://bp836rmhjq1t" path="res://game_generation/data/floor_data.gd" id="2_cs0ud"]
+
+[node name="room_generation" type="Node2D" unique_id=1419104542]
+
+[node name="room_data" type="Node2D" parent="." unique_id=135088474]
+script = ExtResource("1_ivfxt")
+
+[node name="floor_data" type="Node2D" parent="." unique_id=448759413]
+script = ExtResource("2_cs0ud")
