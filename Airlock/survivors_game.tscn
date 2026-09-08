@@ -5,13 +5,25 @@
 [ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://pine_tree.tscn" id="2_l26od"]
 [ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://ui/credits.tscn" id="4_qqaft"]
 [ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://ui/version.tscn" id="5_7jj1j"]
-[ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data_storage/player_room_handler.tscn" id="6_edxvn"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -75, -90, 0, 0, 0, 0, 2031, -90, 0, 0, 0, 0, 2033, 1120, 0, 0, 0, 0, -81, 1114, 0, 0, 0, 0, -72, -87)
 }
 point_count = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jj1j"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edxvn"]
+bg_color = Color(0.20462477, 0.49895602, 0.79832965, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Game" type="Node2D" unique_id=90994203]
 y_sort_enabled = true
@@ -39,6 +51,24 @@ curve = SubResource("Curve2D_qqaft")
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=1393536581]
 unique_name_in_owner = true
 position = Vector2(-75, -90)
+
+[node name="OxygenBar" type="ProgressBar" parent="Player" unique_id=343746548]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -941.0
+offset_top = -314.0
+offset_right = -332.0
+offset_bottom = -291.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_7jj1j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_edxvn")
+value = 100.0
+
+[node name="OxygenMeter" type="Timer" parent="Player" unique_id=871822174]
+unique_name_in_owner = true
+wait_time = 0.056
 
 [node name="PineTree" parent="." unique_id=326243450 instance=ExtResource("2_l26od")]
 unique_name_in_owner = true
@@ -129,9 +159,10 @@ text = "Version"
 wait_time = 3.5
 autostart = true
 
-[node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
+[node name="PlayerRoomHandler" parent="." unique_id=1494511931]
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Player/OxygenMeter" to="." method="_on_oxygen_meter_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainMenu/Credits" to="." method="_on_credits_pressed"]
