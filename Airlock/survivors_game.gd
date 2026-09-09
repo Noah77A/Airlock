@@ -64,16 +64,3 @@ func _on_version_pressed() -> void:
 func _on_oxygen_meter_timeout() -> void:
 	%"Game Over".visible = true
 	get_tree().paused = true
-
-func _physics_process(delta):
-	if(GameManager.credits > 15): 
-		GameManager.credits -= 15
-		upgrade()
-
-func upgrade():
-	
-	var rando = randi_range(0,3)
-	if (rando == 1):
-		%choice1
-		
-	%Upgrade.queue_free()

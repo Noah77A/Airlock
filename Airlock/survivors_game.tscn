@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://ui/credits.tscn" id="4_qqaft"]
 [ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://ui/version.tscn" id="5_7jj1j"]
 [ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data/player_room_handler.tscn" id="6_edxvn"]
+[ext_resource type="Script" uid="uid://bmppfghwps46y" path="res://upgrade.gd" id="7_pk6fm"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
@@ -175,6 +176,7 @@ autostart = true
 [node name="Upgrade" type="CanvasLayer" parent="." unique_id=496219269]
 unique_name_in_owner = true
 visible = false
+script = ExtResource("7_pk6fm")
 
 [node name="ColorRect" type="ColorRect" parent="Upgrade" unique_id=1201736244]
 offset_left = -7.0
