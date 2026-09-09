@@ -33,14 +33,14 @@ script = ExtResource("1_l26od")
 layer = -10
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1244689540]
-offset_left = 1.0
-offset_top = -3.0
-offset_right = 1921.0
-offset_bottom = 1075.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=227039421 instance=ExtResource("1_y3pti")]
-position = Vector2(957, 545)
 
 [node name="Path2D" type="Path2D" parent="Player" unique_id=610517452]
 position = Vector2(-1007, -410)
@@ -55,10 +55,10 @@ unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -941.0
-offset_top = -314.0
-offset_right = -332.0
-offset_bottom = -291.0
+offset_left = -716.0
+offset_top = -248.0
+offset_right = -107.0
+offset_bottom = -225.0
 grow_horizontal = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_7jj1j")
 theme_override_styles/fill = SubResource("StyleBoxFlat_edxvn")
@@ -120,18 +120,20 @@ color = Color(0.34407577, 0.34407574, 0.34407574, 0.52156866)
 
 [node name="Choice1" type="Button" parent="Upgrade" unique_id=36990647]
 unique_name_in_owner = true
-offset_left = 397.0
-offset_top = 358.0
-offset_right = 637.0
-offset_bottom = 676.0
+process_mode = 2
+offset_left = 143.0
+offset_top = 205.0
+offset_right = 875.0
+offset_bottom = 829.0
 text = "Test Box"
 
 [node name="Choice2" type="Button" parent="Upgrade" unique_id=1982936725]
 unique_name_in_owner = true
+process_mode = 2
 offset_left = 1110.0
-offset_top = 359.0
-offset_right = 1382.0
-offset_bottom = 680.0
+offset_top = 173.0
+offset_right = 1736.0
+offset_bottom = 831.0
 text = "Test Box"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]

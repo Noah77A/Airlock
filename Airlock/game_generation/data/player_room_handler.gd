@@ -17,11 +17,11 @@ var curFloorData : floorData = floorData.new()
 func load_room(data: roomData):
 	loadedData = data
 	
-	
-	var scene = load(data.scenePath)
+	var scene = load(data.roomPath + data.scenePath)
 	if loadedRoomInstance !=null: remove_child(loadedRoomInstance)
 	loadedRoomInstance = scene.instantiate()
 	add_child(loadedRoomInstance)
+	loadedRoomInstance.z_index = -1
 	
 	loadedExits.clear()
 	for exit in loadedData.roomExits:
@@ -41,23 +41,43 @@ func load_room(data: roomData):
 
 
 func load_floor():
-	var test: roomData = roomData.new()
-	test.scenePath = test.roomPath + "test_room1.tscn"
-	test.name = "test"
-	test.roomExits = [[Vector2i(-4,-3), Vector2i(0,0), 'W']]
-	test.nodesOccupying = [Vector2i(0,0)]
-	test.tags = [] 
-	var test2: roomData = roomData.new()
-	test2.scenePath = test.roomPath + "test_room2.tscn"
-	test2.name = "test2"
-	test2.roomExits = [[Vector2i(-4,-3), Vector2i(0,0), 'W']]
-	test2.nodesOccupying = [Vector2i(0,0)]
-	test2.tags = [] 
+	curFloorData = load("res://game_generation/resources/test_floor.tres").duplicate()
+	for x in range(-3, 3):
+		for y in range(-3, 3):
+			var r = randi_range(0, curFloorData.roomFiles.size() - 1)
+			curFloorData.add_room(load(curFloorData.roomFiles[r]).duplicate(), Vector2i(x,y))
 	
-	curFloorData.add_room(test, Vector2i(0,0))
-	curFloorData.add_room(test2, Vector2i(-1,0))
 	load_room(curFloorData.get_room(Vector2i(0,0)))
-	load_room(curFloorData.get_room(Vector2i(-1,0)))
+
+func playerDoorCheck()->void:
+	if (loadedRoomInstance == null): return
+	var map: TileMapLayer = loadedRoomInstance.find_child("TileMapLayer")
+	if !map: return
+	var localTilePos: Vector2i = map.local_to_map(player.position)
+	if!loadedExits.has(localTilePos):return
 	
+	var exit: Vector3i = loadedExits.get(localTilePos)
+	if !exit: return
+	var dir: int = exit[2]
+	var localPos: Vector2i = Vector2i(exit[0], exit[1])
+	var globalPos: Vector2i = loadedData.globalOrigin
+	
+	if dir == 0:
+		if !curFloorData.contains(globalPos + localPos + Vector2i(0,1)) : return
+		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,1)))
+	if dir == 1:
+		if !curFloorData.contains(globalPos + localPos + Vector2i(1,0)) : return
+		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(1,0)))
+	if dir == 2:
+		if !curFloorData.contains(globalPos + localPos + Vector2i(0,-1)) : return
+		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,-1)))
+	if dir == 3:
+		if !curFloorData.contains(globalPos + localPos + Vector2i(-1,0)) : return
+		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(-1,0)))
+		
+
+func _process(delta: float) -> void:
+	playerDoorCheck()
+
 func _ready() -> void:
 	load_floor()

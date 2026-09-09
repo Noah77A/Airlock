@@ -27,9 +27,10 @@ func spawn_red_tree():
 	add_child(new_tree)
 	
 func _on_timer_timeout():
-	spawn_mob()
-	spawn_tree()
-	spawn_red_tree()
+	return
+	#spawn_mob()
+	#spawn_tree()
+	#spawn_red_tree()
 
 
 func _on_player_health_depleted():
