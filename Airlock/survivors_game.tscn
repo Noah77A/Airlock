@@ -35,11 +35,14 @@ version_scene = ExtResource("5_7jj1j")
 
 [node name="WhiteBackground" type="ColorRect" parent="." unique_id=100178721]
 unique_name_in_owner = true
-visible = false
 top_level = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -500.0
+offset_right = -800.0
+offset_bottom = -500.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -47,14 +50,14 @@ grow_vertical = 2
 layer = -10
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1244689540]
-offset_left = 1.0
-offset_top = -3.0
-offset_right = 1921.0
-offset_bottom = 1075.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=227039421 instance=ExtResource("1_y3pti")]
-position = Vector2(957, 545)
 
 [node name="Path2D" type="Path2D" parent="Player" unique_id=610517452]
 position = Vector2(-1007, -410)
@@ -69,10 +72,10 @@ unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -941.0
-offset_top = -314.0
-offset_right = -332.0
-offset_bottom = -291.0
+offset_left = -716.0
+offset_top = -248.0
+offset_right = -107.0
+offset_bottom = -225.0
 grow_horizontal = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_7jj1j")
 theme_override_styles/fill = SubResource("StyleBoxFlat_edxvn")
