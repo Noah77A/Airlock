@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d2nc185554igs" path="res://ui/version.gd" id="1_37kes"]
 
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37kes"]
 bg_color = Color(1, 1, 1, 1)
 
@@ -37,7 +36,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Version 0.1: 9/2/26
-Description:"
+Description:
+add menu
+add wpi animation
+
+Version 0.2: 9/9/26
+Description:
+point and shoot gameplay
+credits and upgrades
+oxygen meter added
+room development
+obstical development
+menu buttons
+bug fixes"
 horizontal_alignment = 1
 
 [node name="Menu" type="Button" parent="Background" unique_id=73407062]

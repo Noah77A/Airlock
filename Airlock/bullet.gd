@@ -16,9 +16,10 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
+	pierce -= 1
 	if body.has_method("take_damage"):
 		body.take_damage()
-		pierce -= 1
+		
 	if(pierce <= 0):
 		queue_free()
 		
