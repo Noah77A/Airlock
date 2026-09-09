@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://cdyr727rbwq1l"]
 
-[ext_resource type="Script" path="res://version.gd" id="1_37kes"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37kes"]
 bg_color = Color(1, 1, 1, 1)
 
@@ -12,7 +10,6 @@ bg_color = Color(0.6911139, 2.4787337e-06, 4.813075e-07, 1)
 bg_color = Color(0.5006195, 0.5006196, 0.5006194, 1)
 
 [node name="Version" type="CanvasLayer" unique_id=1997187708]
-script = ExtResource("1_37kes")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1745407667]
 anchors_preset = 15
@@ -36,7 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Version 0.1: 9/2/26
-Description:"
+Description: "
 horizontal_alignment = 1
 
 [node name="Menu" type="Button" parent="Background" unique_id=73407062]

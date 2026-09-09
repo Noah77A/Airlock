@@ -56,7 +56,7 @@ _data = {
 }
 
 [node name="Sprite2D" type="Sprite2D" unique_id=694533663]
-visibility_layer = 512
+top_level = true
 z_index = 10
 scale = Vector2(0.8, 0.795)
 texture = ExtResource("1_xn5sw")

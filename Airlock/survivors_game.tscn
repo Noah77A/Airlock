@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1bfau31nfqio" path="res://survivors_game.gd" id="1_l26od"]
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_y3pti"]
-[ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://pine_tree.tscn" id="2_l26od"]
-[ext_resource type="PackedScene" uid="uid://ctw3fqepj17lq" path="res://ui/credits.tscn" id="4_qqaft"]
-[ext_resource type="PackedScene" uid="uid://dfr82kqkjqur5" path="res://ui/version.tscn" id="5_7jj1j"]
+[ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://trees/pine_tree.tscn" id="2_l26od"]
 [ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data/player_room_handler.tscn" id="6_edxvn"]
 [ext_resource type="Script" uid="uid://bmppfghwps46y" path="res://upgrade.gd" id="7_pk6fm"]
 
@@ -30,18 +28,6 @@ corner_radius_bottom_left = 16
 [node name="Game" type="Node2D" unique_id=90994203]
 y_sort_enabled = true
 script = ExtResource("1_l26od")
-credits_scene = ExtResource("4_qqaft")
-version_scene = ExtResource("5_7jj1j")
-
-[node name="WhiteBackground" type="ColorRect" parent="." unique_id=100178721]
-unique_name_in_owner = true
-visible = false
-top_level = true
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542972953]
 layer = -10
@@ -118,59 +104,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 174
 text = "Game Over"
 
-[node name="Credits" parent="." unique_id=1616567190 instance=ExtResource("4_qqaft")]
-unique_name_in_owner = true
-visible = false
-
-[node name="Version" parent="." unique_id=1997187708 instance=ExtResource("5_7jj1j")]
-visible = false
-
-[node name="MainMenu" type="CanvasLayer" parent="." unique_id=1544012543]
-unique_name_in_owner = true
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="MainMenu" unique_id=810463387]
-offset_left = -17.0
-offset_top = -12.0
-offset_right = 1951.0
-offset_bottom = 1084.0
-
-[node name="Title" type="Label" parent="MainMenu" unique_id=251934345]
-offset_left = 674.0
-offset_top = 141.0
-offset_right = 1102.0
-offset_bottom = 304.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 119
-text = "AirLock"
-horizontal_alignment = 1
-
-[node name="Start" type="Button" parent="MainMenu" unique_id=104608826]
-offset_left = 604.0
-offset_top = 504.0
-offset_right = 1095.0
-offset_bottom = 583.0
-theme_override_font_sizes/font_size = 33
-text = "Start"
-
-[node name="Credits" type="Button" parent="MainMenu" unique_id=155930999]
-offset_left = 654.0
-offset_top = 679.0
-offset_right = 1044.0
-offset_bottom = 751.0
-text = "Credits"
-
-[node name="Version" type="Button" parent="MainMenu" unique_id=1332506628]
-offset_left = 666.0
-offset_top = 818.0
-offset_right = 1006.0
-offset_bottom = 895.0
-text = "Version"
-
-[node name="StartTimer" type="Timer" parent="MainMenu" unique_id=473612105]
-wait_time = 2.135
-autostart = true
-
 [node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
 
 [node name="Upgrade" type="CanvasLayer" parent="." unique_id=496219269]
@@ -204,8 +137,3 @@ text = "Test Box"
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Player/OxygenMeter" to="." method="_on_oxygen_meter_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MainMenu/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="MainMenu/Credits" to="Credits" method="_on_credits_pressed"]
-[connection signal="pressed" from="MainMenu/Version" to="." method="_on_version_pressed"]
-[connection signal="timeout" from="MainMenu/StartTimer" to="." method="_on_start_timer_timeout"]
