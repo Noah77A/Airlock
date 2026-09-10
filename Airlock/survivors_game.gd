@@ -7,7 +7,6 @@ func _ready():
 	%OxygenBar.max_value = %OxygenMeter.wait_time
 	%OxygenMeter.start()
 	
-
 func spawn_mob():
 	var new_mob = preload("res://mob.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
@@ -26,12 +25,6 @@ func spawn_red_tree():
 	new_tree.global_position = %PathFollow2D.global_position
 	add_child(new_tree)
 	
-func _on_timer_timeout():
-	return
-	#spawn_mob()
-	#spawn_tree()
-	#spawn_red_tree()
-
 
 func _on_player_health_depleted():
 	%"Game Over".visible = true

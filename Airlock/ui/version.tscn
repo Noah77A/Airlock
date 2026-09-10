@@ -37,18 +37,19 @@ grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Version 0.1: 9/2/26
 Description:
-add menu
-add wpi animation
+- added menu with credits and version notes
+- add wpi animation
 
 Version 0.2: 9/9/26
 Description:
-point and shoot gameplay
-credits and upgrades
-oxygen meter added
-room development
-obstical development
-menu buttons
-bug fixes"
+- point and shoot gameplay
+-credits and upgrades
+- oxygen meter added
+- room development
+- obstacal development
+- menu buttons on credits  and version notes
+- New spritesheet for future intro sequence
+bug fixes "
 horizontal_alignment = 1
 
 [node name="Menu" type="Button" parent="Background" unique_id=73407062]

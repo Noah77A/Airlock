@@ -63,6 +63,7 @@ grow_horizontal = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_7jj1j")
 theme_override_styles/fill = SubResource("StyleBoxFlat_edxvn")
 value = 100.0
+metadata/_edit_use_anchors_ = true
 
 [node name="OxygenMeter" type="Timer" parent="Player" unique_id=871822174]
 unique_name_in_owner = true
@@ -139,3 +140,5 @@ text = "Test Box"
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Player/OxygenMeter" to="." method="_on_oxygen_meter_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Upgrade/Choice1" to="Upgrade" method="_on_choice_1_pressed"]
+[connection signal="pressed" from="Upgrade/Choice2" to="Upgrade" method="_on_choice_2_pressed"]

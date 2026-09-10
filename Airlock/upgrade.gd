@@ -7,7 +7,7 @@ func _physics_process(delta):
 
 func upgrade():
 	visible = true
-	
+	get_tree().paused = true
 	var rando = randi_range(1,3)
 	if (rando == 1):
 		%Choice1.text = "Damage"
@@ -26,11 +26,10 @@ func upgrade():
 			%Choice2.text = "Pierce"
 		if (rando == 3):
 			%Choice2.text = "Health"
-	get_tree().paused = true
+	
 
 
 func _on_choice_1_pressed():
-	get_tree().paused = false
 	var select = %Choice1.text
 	if(select == "Damage"):
 		GameManager.damage +=1
@@ -41,6 +40,7 @@ func _on_choice_1_pressed():
 	if(select == "Speed"):
 		GameManager.movement +=1
 	visible = false
+	get_tree().paused = false
 	
 
 

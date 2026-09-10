@@ -58,7 +58,8 @@ _data = {
 [node name="Sprite2D" type="Sprite2D" unique_id=694533663]
 top_level = true
 z_index = 10
-scale = Vector2(0.1, 0.1)
+position = Vector2(998, 540)
+scale = Vector2(0.80707395, 0.80707395)
 texture = ExtResource("1_xn5sw")
 script = ExtResource("2_xafvu")
 

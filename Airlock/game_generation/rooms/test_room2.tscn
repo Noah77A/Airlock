@@ -17,3 +17,15 @@ tile_set = ExtResource("1_0bd00")
 [node name="Mob" parent="." unique_id=121620099 instance=ExtResource("2_00fak")]
 position = Vector2(107, 50)
 scale = Vector2(0.25, 0.25)
+
+[node name="Mob2" parent="." unique_id=272454504 instance=ExtResource("2_00fak")]
+position = Vector2(49, 57)
+scale = Vector2(0.25, 0.25)
+
+[node name="Mob3" parent="." unique_id=1308970384 instance=ExtResource("2_00fak")]
+position = Vector2(148, 50)
+scale = Vector2(0.25, 0.25)
+
+[node name="Mob4" parent="." unique_id=1575022654 instance=ExtResource("2_00fak")]
+position = Vector2(60, 20)
+scale = Vector2(0.25, 0.25)
