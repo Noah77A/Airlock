@@ -33,11 +33,13 @@ func _physics_process(delta):
 		$HappyBoo.play_idle_animation()	
 	const DAMAGE_RATE = 5.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
+	
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		%Health.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+	health += GameManager.regen * delta
+	%Health.value = health
 	%Money.text = str(GameManager.credits)
 	%Exp.text = str(GameManager.exp)
 	

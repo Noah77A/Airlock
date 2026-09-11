@@ -8,3 +8,4 @@ var damage = 1
 var health = 100
 var movement = 0
 var exp = 0
+var regen = 0

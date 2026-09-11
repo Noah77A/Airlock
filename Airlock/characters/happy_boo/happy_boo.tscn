@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dgd62havw7eu8" path="res://characters/happy_boo/square_upper_leg.png" id="5_q2t1e"]
 [ext_resource type="Texture2D" uid="uid://c3r8eyeh2833v" path="res://characters/happy_boo/square_body.png" id="6_w3ck4"]
 [ext_resource type="Texture2D" uid="uid://c8nnwxs1l12em" path="res://characters/happy_boo/square_face.png" id="7_h5h8s"]
+[ext_resource type="Texture2D" uid="uid://ytr3uycblmjy" path="res://assets/animations/AstronautIdle.png" id="8_l3moq"]
 
 [sub_resource type="Animation" id="Animation_hed62"]
 length = 0.001
@@ -647,3 +648,9 @@ offset = Vector2(0, -23)
 position = Vector2(0, -17)
 texture = ExtResource("7_h5h8s")
 metadata/_edit_lock_ = true
+
+[node name="Astronaut" type="Sprite2D" parent="." unique_id=166944139]
+visible = false
+position = Vector2(0, -51)
+scale = Vector2(0.071249984, 0.07359375)
+texture = ExtResource("8_l3moq")
