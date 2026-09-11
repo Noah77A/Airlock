@@ -61,14 +61,274 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8skm"]
-size = Vector2(43.247345, 21.062279)
+size = Vector2(287.70743, 105.22086)
 
-[node name="IntroSequence" type="Node2D" unique_id=902010237]
+[node name="IntroSequence" type="Control" unique_id=2146729937]
+self_modulate = Color(0, 0, 0, 1)
 top_level = true
+layout_mode = 3
+anchors_preset = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1511367163]
+top_level = true
+layout_mode = 0
+offset_left = 383.00006
+offset_top = 680.0
+offset_right = 1544.0
+offset_bottom = 1066.0
+text = "Click in this box to progress. story will be told here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1409428546]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=1631309513]
+top_level = true
+layout_mode = 0
+offset_left = 170.0
+offset_top = 832.0
+offset_right = 182.99994
+offset_bottom = 843.0
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1236119572]
+top_level = true
+layout_mode = 0
+offset_left = 256.0
+offset_top = 867.0
+offset_right = 268.99994
+offset_bottom = 878.0
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=74450998]
+top_level = true
+layout_mode = 0
+offset_left = 188.0
+offset_top = 682.0
+offset_right = 200.99994
+offset_bottom = 693.0
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRect" unique_id=62568078]
+top_level = true
+layout_mode = 0
+offset_left = 306.0
+offset_top = 599.0
+offset_right = 318.99994
+offset_bottom = 610.0
+
+[node name="ColorRect6" type="ColorRect" parent="ColorRect" unique_id=232608943]
+top_level = true
+layout_mode = 0
+offset_left = 303.0
+offset_top = 411.0
+offset_right = 315.99994
+offset_bottom = 422.0
+
+[node name="ColorRect7" type="ColorRect" parent="ColorRect" unique_id=198685911]
+top_level = true
+layout_mode = 0
+offset_left = 163.0
+offset_top = 177.0
+offset_right = 175.99994
+offset_bottom = 188.0
+
+[node name="ColorRect8" type="ColorRect" parent="ColorRect" unique_id=1123469330]
+top_level = true
+layout_mode = 0
+offset_left = 298.0
+offset_top = 139.0
+offset_right = 310.99994
+offset_bottom = 150.0
+
+[node name="ColorRect9" type="ColorRect" parent="ColorRect" unique_id=80500928]
+top_level = true
+layout_mode = 0
+offset_left = 175.0
+offset_top = 554.0
+offset_right = 187.99994
+offset_bottom = 565.0
+
+[node name="ColorRect10" type="ColorRect" parent="ColorRect" unique_id=313243509]
+top_level = true
+layout_mode = 0
+offset_left = 220.0
+offset_top = 455.0
+offset_right = 232.99994
+offset_bottom = 466.0
+
+[node name="ColorRect11" type="ColorRect" parent="ColorRect" unique_id=1672263908]
+top_level = true
+layout_mode = 0
+offset_left = 172.0
+offset_top = 81.0
+offset_right = 184.99994
+offset_bottom = 92.0
+
+[node name="ColorRect12" type="ColorRect" parent="ColorRect" unique_id=944077100]
+top_level = true
+layout_mode = 0
+offset_left = 90.0
+offset_top = 144.0
+offset_right = 102.99994
+offset_bottom = 155.0
+
+[node name="ColorRect13" type="ColorRect" parent="ColorRect" unique_id=1335276120]
+top_level = true
+layout_mode = 0
+offset_left = 52.0
+offset_top = 350.0
+offset_right = 64.99994
+offset_bottom = 361.0
+
+[node name="ColorRect14" type="ColorRect" parent="ColorRect" unique_id=1715918818]
+top_level = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 232.0
+offset_right = 52.99994
+offset_bottom = 243.0
+
+[node name="ColorRect15" type="ColorRect" parent="ColorRect" unique_id=860828084]
+top_level = true
+layout_mode = 0
+offset_left = 195.0
+offset_top = 996.0
+offset_right = 207.99994
+offset_bottom = 1007.0
+
+[node name="ColorRect16" type="ColorRect" parent="ColorRect" unique_id=1004250876]
+top_level = true
+layout_mode = 0
+offset_left = 1709.0
+offset_top = 175.0
+offset_right = 1722.0
+offset_bottom = 186.0
+
+[node name="ColorRect17" type="ColorRect" parent="ColorRect" unique_id=918944502]
+top_level = true
+layout_mode = 0
+offset_left = 70.0
+offset_top = 752.0
+offset_right = 82.99994
+offset_bottom = 763.0
+
+[node name="ColorRect18" type="ColorRect" parent="ColorRect" unique_id=1906928407]
+top_level = true
+layout_mode = 0
+offset_left = 92.0
+offset_top = 62.0
+offset_right = 104.99994
+offset_bottom = 73.0
+
+[node name="ColorRect19" type="ColorRect" parent="ColorRect" unique_id=1009168247]
+top_level = true
+layout_mode = 0
+offset_left = 1862.0
+offset_top = 785.0
+offset_right = 1875.0
+offset_bottom = 796.0
+
+[node name="ColorRect20" type="ColorRect" parent="ColorRect" unique_id=1349244334]
+top_level = true
+layout_mode = 0
+offset_left = 1679.0
+offset_top = 709.0
+offset_right = 1692.0
+offset_bottom = 720.0
+
+[node name="ColorRect21" type="ColorRect" parent="ColorRect" unique_id=11654979]
+top_level = true
+layout_mode = 0
+offset_left = 1780.0
+offset_top = 609.0
+offset_right = 1793.0
+offset_bottom = 620.0
+
+[node name="ColorRect22" type="ColorRect" parent="ColorRect" unique_id=2130570100]
+top_level = true
+layout_mode = 0
+offset_left = 1639.0
+offset_top = 441.0
+offset_right = 1652.0
+offset_bottom = 452.0
+
+[node name="ColorRect23" type="ColorRect" parent="ColorRect" unique_id=779536152]
+top_level = true
+layout_mode = 0
+offset_left = 1830.0
+offset_top = 446.0
+offset_right = 1843.0
+offset_bottom = 457.0
+
+[node name="ColorRect24" type="ColorRect" parent="ColorRect" unique_id=1472101596]
+top_level = true
+layout_mode = 0
+offset_left = 1694.0
+offset_top = 277.0
+offset_right = 1707.0
+offset_bottom = 288.0
+
+[node name="ColorRect25" type="ColorRect" parent="ColorRect" unique_id=1723709879]
+top_level = true
+layout_mode = 0
+offset_left = 1674.0
+offset_top = 94.0
+offset_right = 1687.0
+offset_bottom = 105.0
+
+[node name="ColorRect26" type="ColorRect" parent="ColorRect" unique_id=353405373]
+top_level = true
+layout_mode = 0
+offset_left = 1805.0
+offset_top = 54.0
+offset_right = 1818.0
+offset_bottom = 65.0
+
+[node name="ColorRect27" type="ColorRect" parent="ColorRect" unique_id=1299884256]
+top_level = true
+layout_mode = 0
+offset_left = 82.0
+offset_top = 453.0
+offset_right = 94.99994
+offset_bottom = 464.0
+
+[node name="ColorRect28" type="ColorRect" parent="ColorRect" unique_id=860052360]
+top_level = true
+layout_mode = 0
+offset_left = 1817.0
+offset_top = 227.0
+offset_right = 1830.0
+offset_bottom = 238.0
+
+[node name="ColorRect29" type="ColorRect" parent="ColorRect" unique_id=2056771566]
+top_level = true
+layout_mode = 0
+offset_left = 165.0
+offset_top = 247.0
+offset_right = 177.99994
+offset_bottom = 258.0
+
+[node name="ColorRect30" type="ColorRect" parent="ColorRect" unique_id=475766681]
+top_level = true
+layout_mode = 0
+offset_left = 1719.0
+offset_top = 895.0
+offset_right = 1732.0
+offset_bottom = 906.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1210530716]
-position = Vector2(280.5, 224)
-scale = Vector2(6.59, 5.46)
+position = Vector2(960, 540)
+scale = Vector2(4.0591674, 3.596662)
 sprite_frames = SubResource("SpriteFrames_ru1xy")
 frame_progress = 0.09635179
 script = ExtResource("2_gc2vk")
@@ -77,7 +337,8 @@ script = ExtResource("2_gc2vk")
 unique_name_in_owner = true
 
 [node name="ClickArea" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1063194346]
-position = Vector2(122.45827, 133.05862)
+position = Vector2(0.22824097, 90.979324)
+scale = Vector2(1.0000004, 1)
 shape = SubResource("RectangleShape2D_l8skm")
 
 [connection signal="input_event" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_input_event"]
