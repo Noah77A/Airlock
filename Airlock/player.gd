@@ -39,8 +39,10 @@ func _physics_process(delta):
 			health_depleted.emit()
 	%Money.text = str(GameManager.credits)
 	%Exp.text = str(GameManager.exp)
-	#o2 -= 1*delta
-	#%OxygenBar
+	o2 -= 1*delta
+	%OxygenBar.value = o2
+	if o2 <= 0:
+		health_depleted.emit
 	
 
 
