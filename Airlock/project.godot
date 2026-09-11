@@ -79,9 +79,14 @@ run/main_scene="uid://swcb8q32cvqi"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.png"
 
+[audio]
+
+buses/default_bus_layout="uid://c0r1synmqj70v"
+
 [autoload]
 
 WpiLogo="*uid://d2osiqxthtblf"
+Music="*uid://bev1ey085r6t6"
 
 [display]
 

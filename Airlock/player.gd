@@ -19,3 +19,25 @@ func _physics_process(delta):
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+
+
+
+func _physics_process_ice(delta: float) -> void:
+	var ground_accel: float = 0.0
+	var ground_friction: float = 0.0
+	var ice_accel: float = 1.0
+	var ice_friction: float = -1.0
+	var _ice_count:int=0
+	var on_ice := _ice_count > 0
+	var accel := ice_accel 
+	var friction := ice_friction 
+
+	var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+
+	# friction always applies, not just when input is released
+	velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+
+	if dir != Vector2.ZERO:
+		velocity += dir * accel * delta
+
+	move_and_slide()
