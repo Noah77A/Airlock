@@ -7,3 +7,4 @@ var pierce = 1
 var damage = 1
 var health = 0
 var movement = 0
+var exp = 0

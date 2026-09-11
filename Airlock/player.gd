@@ -4,11 +4,27 @@ var health = 100.0
 
 
 func _physics_process(delta):
+	var ice = false
+	if(ice):
+		var ground_accel: float = 0.0
+		var ground_friction: float = 0.0
+		var ice_accel: float = 1.0
+		var ice_friction: float = -1.0
+		var _ice_count:int=0
+		var on_ice := _ice_count > 0
+		var accel := ice_accel 
+		var friction := ice_friction 
+		var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		# friction always applies, not just when input is released
+		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+		if dir != Vector2.ZERO:
+			velocity += dir * accel * delta
+		move_and_slide()
+	else:
+		var direction = Input.get_vector("move_left","move_right","move_up","move_down")
+		velocity = direction * 80
+		move_and_slide()
 	
-	
-	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
-	velocity = direction * 80
-	move_and_slide()
 	
 	if velocity.length() > 0.0:
 		$HappyBoo.play_walk_animation()	
@@ -21,5 +37,29 @@ func _physics_process(delta):
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
-			
-	%Money.text = str(GameManager.credits)
+	%Money.text = GameManager.credits
+	%Exp.text = GameManager.exp
+	
+	
+
+
+
+#func _physics_process_ice(delta: float) -> void:
+	#var ground_accel: float = 0.0
+	#var ground_friction: float = 0.0
+	#var ice_accel: float = 1.0
+	#var ice_friction: float = -1.0
+	#var _ice_count:int=0
+	#var on_ice := _ice_count > 0
+	#var accel := ice_accel 
+	#var friction := ice_friction 
+
+	#var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+
+	# friction always applies, not just when input is released
+	#velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+
+	#if dir != Vector2.ZERO:
+	#	velocity += dir * accel * delta
+
+	#move_and_slide()

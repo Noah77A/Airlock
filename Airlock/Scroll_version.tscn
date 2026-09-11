@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cby67jlocy7yb"]
+
+[node name="ScrollContainer" type="ScrollContainer" unique_id=1232032237]
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 220.0
+offset_bottom = 29.0
+
+[node name="Label" type="Label" parent="." unique_id=1847808820]
+layout_mode = 2
+text = "Version Notes
+I
+T
+S
+C
+R
+O
+L
+L
+S"

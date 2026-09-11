@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2qqeo4w5gjun"]
+
+[node name="Node2D" type="Node2D" unique_id=1278053716]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1661687350]
+polygon = PackedVector2Array(-48.666992, -13.333328, -48.666992, -56.666664, -21.33368, -84.666664, 12.666321, -54.666664, 11.999664, -29.333328, 32.66632, -29.333328, 32.66632, -11.333328)
+uv = PackedVector2Array(-48.666992, -13.333328, -48.666992, -56.666664, -21.33368, -84.666664, 12.666321, -54.666664, 11.999664, -29.333328, 32.66632, -29.333328, 32.66632, -11.333328)
+
+[node name="Polygon2D" type="Polygon2D" parent="Polygon2D" unique_id=675110552]
+polygon = PackedVector2Array(-142.00034, -18, -96.66701, -50, -87.33368, -38, -132.667, -7.3333282)
+uv = PackedVector2Array(-142.00034, -18, -96.66701, -50, -87.33368, -38, -132.667, -7.3333282)
+
+[node name="Polygon2D" type="Polygon2D" parent="Polygon2D/Polygon2D" unique_id=1476280111]
+polygon = PackedVector2Array(-150.667, -21.333328, -133.33368, -38.666664, -80.66699, 4.6666718, -99.33368, 22)
+uv = PackedVector2Array(-150.667, -21.333328, -133.33368, -38.666664, -95.33368, -6, -111.33368, 10)
