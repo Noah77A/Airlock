@@ -6,5 +6,5 @@
 script = ExtResource("1_e4po1")
 name = "test1"
 scenePath = "test_room2.tscn"
-roomExits = [[Vector2i(-4, -3), Vector2i(0, 0), "W"]]
+roomExits = [[Vector2i(-4, -3), Vector2i(0, 0), "W"], [Vector2(10, 4), Vector2(0, 0), "E"]]
 metadata/_custom_type_script = "uid://cjuncqqyo0m2k"
