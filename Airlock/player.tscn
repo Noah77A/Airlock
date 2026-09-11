@@ -49,7 +49,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_i3pqv")
 debug_color = Color(1, 0, 0, 0.41960785)
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1200308221]
+[node name="Health" type="ProgressBar" parent="." unique_id=1200308221]
 unique_name_in_owner = true
 offset_left = -107.0
 offset_top = -134.0
@@ -70,7 +70,20 @@ theme_override_colors/font_color = Color(0.2740714, 0.7829926, 0.9085662, 1)
 theme_override_font_sizes/font_size = 65
 text = "0"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1395919689]
+[node name="Credit" type="Sprite2D" parent="." unique_id=1395919689]
 position = Vector2(-727.99994, -364)
 scale = Vector2(0.054375015, 0.055625007)
 texture = ExtResource("4_hqtel")
+
+[node name="Exp" type="Label" parent="." unique_id=395272427]
+unique_name_in_owner = true
+offset_left = -740.0
+offset_top = -272.0
+offset_right = -432.0
+offset_bottom = -196.0
+text = "0"
+
+[node name="OxygenBar" type="ProgressBar" parent="." unique_id=1538337981]
+unique_name_in_owner = true
+offset_right = 4.0
+offset_bottom = 27.0
