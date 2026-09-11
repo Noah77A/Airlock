@@ -1,8 +1,9 @@
 extends CharacterBody2D
 signal health_depleted
 var health = 100.0
-var o2 = 999
-
+var o2 = 60
+func _ready():
+	%OxygenBar.max_value = o2
 func _physics_process(delta):
 	var ice = false
 	if(ice):
@@ -39,10 +40,11 @@ func _physics_process(delta):
 			health_depleted.emit()
 	%Money.text = str(GameManager.credits)
 	%Exp.text = str(GameManager.exp)
+	
 	o2 -= 1*delta
 	%OxygenBar.value = o2
 	if o2 <= 0:
-		health_depleted.emit
+		health_depleted.emit()
 	
 
 
