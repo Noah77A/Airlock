@@ -2,6 +2,9 @@ extends Node2D
 
 const collisionLayer = 1
 
+const doorCD: float = 2.0
+var lastTimeDoorUsed: float = 0
+
 @onready var player: CharacterBody2D = get_node("/root/Game/Player")
 
 var loadedData: roomData
@@ -65,18 +68,29 @@ func playerDoorCheck()->void:
 	if dir == 0:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(0,1)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,1)))
-	if dir == 1:
+		dir = 2
+	else: if dir == 1:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(1,0)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(1,0)))
-	if dir == 2:
+		dir = 3
+	else: if dir == 2:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(0,-1)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,-1)))
-	if dir == 3:
+		dir = 0
+	else: if dir == 3:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(-1,0)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(-1,0)))
-		
+		dir = 1
+	var nextExit = loadedExits.find_key(Vector3i(localPos.x, localPos.y ,dir))
+	if !nextExit: return
+	var globalTilePos = map.to_global(map.map_to_local(Vector2i(nextExit.x, nextExit.y)))
+	player.position = globalTilePos
+	lastTimeDoorUsed = 0
 
 func _process(delta: float) -> void:
+	lastTimeDoorUsed += delta
+	print(lastTimeDoorUsed)
+	if(lastTimeDoorUsed < doorCD): return
 	playerDoorCheck()
 
 func _ready() -> void:
