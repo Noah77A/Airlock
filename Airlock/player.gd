@@ -3,7 +3,7 @@ signal health_depleted
 var health = 100.0
 var o2 = 60
 func _ready():
-	%OxygenBar.max_value = o2
+	RoundStart()
 func _physics_process(delta):
 	var ice = false
 	if(ice):
@@ -45,9 +45,16 @@ func _physics_process(delta):
 	%OxygenBar.value = o2
 	if o2 <= 0:
 		health_depleted.emit()
-	
+	if(GameManager.exp >= 15):
+		GameManager.exp -= 15
+		GameManager.oxygen += 5
+		o2 +=15
+		%OxygenBar.max_value +=5
+		
 
-
+func RoundStart():
+	o2 = GameManager.oxygen
+	%OxygenBar.max_value = o2
 
 #func _physics_process_ice(delta: float) -> void:
 	#var ground_accel: float = 0.0
