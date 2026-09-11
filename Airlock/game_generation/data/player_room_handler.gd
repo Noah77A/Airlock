@@ -44,7 +44,7 @@ func load_room(data: roomData):
 
 
 func load_floor():
-	curFloorData = load("res://game_generation/resources/test_floor.tres").duplicate()
+	curFloorData = load("res://game_generation/resources/floors/test_floor.tres").duplicate()
 	for x in range(-3, 3):
 		for y in range(-3, 3):
 			var r = randi_range(0, curFloorData.roomFiles.size() - 1)
