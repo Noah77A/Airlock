@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal health_depleted
 var health = 100.0
-
+var o2 = 60
 
 func _physics_process(delta):
 	var ice = false
@@ -34,12 +34,13 @@ func _physics_process(delta):
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		%ProgressBar.value = health
+		%Health.value = health
 		if health <= 0.0:
 			health_depleted.emit()
-	%Money.text = GameManager.credits
-	%Exp.text = GameManager.exp
-	
+	%Money.text = str(GameManager.credits)
+	%Exp.text = str(GameManager.exp)
+	#o2 -= 1*delta
+	#%OxygenBar
 	
 
 
