@@ -89,7 +89,6 @@ func playerDoorCheck()->void:
 
 func _process(delta: float) -> void:
 	lastTimeDoorUsed += delta
-	print(lastTimeDoorUsed)
 	if(lastTimeDoorUsed < doorCD): return
 	playerDoorCheck()
 
