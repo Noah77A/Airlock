@@ -1,7 +1,8 @@
 extends Area2D
 
 var travelled_distance = 0
-
+var target_position
+var pierce = GameManager.pierce
 func _physics_process(delta):
 	const SPEED = 1000
 	const RANGE = 1200
@@ -15,7 +16,11 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	queue_free()
+	pierce -= 1
 	if body.has_method("take_damage"):
 		body.take_damage()
+		
+	if(pierce <= 0):
+		queue_free()
+		
 		

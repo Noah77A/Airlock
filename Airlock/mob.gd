@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health = 3
+var health = 3 + GameManager.difficulty
 
 @onready var player = get_node("/root/Game/Player")
 
@@ -9,14 +9,16 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 300.0
+	velocity = direction * 30.0
 	move_and_slide()
 	
 func take_damage():
-	health -= 1
+	health -= GameManager.damage
 	%Slime.play_hurt()
 	
-	if (health == 0):
+	if (health <= 0):
+		GameManager.credits += 8
+		
 		queue_free()
 		
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")

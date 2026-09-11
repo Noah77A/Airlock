@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="roomData" format=3 uid="uid://d1gv43hljd5j4"]
+
+[ext_resource type="Script" uid="uid://cjuncqqyo0m2k" path="res://game_generation/data/room_data.gd" id="1_e4po1"]
+
+[resource]
+script = ExtResource("1_e4po1")
+name = "test1"
+scenePath = "test_room2.tscn"
+roomExits = [[Vector2i(-4, -3), Vector2i(0, 0), "W"], [Vector2(10, 4), Vector2(0, 0), "E"]]
+metadata/_custom_type_script = "uid://cjuncqqyo0m2k"
