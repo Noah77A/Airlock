@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://yh2ao5or56lq" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cyyh0hb1gomly" path="res://assets/Credit.png" id="4_hqtel"]
+[ext_resource type="Texture2D" uid="uid://c2nsrynj6atq1" path="res://assets/O2Icon.png" id="5_sweqy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 29.15
@@ -77,13 +78,22 @@ texture = ExtResource("4_hqtel")
 
 [node name="Exp" type="Label" parent="." unique_id=395272427]
 unique_name_in_owner = true
-offset_left = -740.0
-offset_top = -272.0
-offset_right = -432.0
-offset_bottom = -196.0
+offset_left = -752.0
+offset_top = -168.0
+offset_right = -444.0
+offset_bottom = -90.0
+theme_override_font_sizes/font_size = 57
 text = "0"
 
 [node name="OxygenBar" type="ProgressBar" parent="." unique_id=1538337981]
 unique_name_in_owner = true
-offset_right = 4.0
-offset_bottom = 27.0
+offset_left = -692.0
+offset_top = -276.0
+offset_right = -92.0
+offset_bottom = -249.0
+value = 14.84
+
+[node name="O2" type="Sprite2D" parent="." unique_id=1273628642]
+position = Vector2(-720, -251.99997)
+scale = Vector2(0.053125, 0.051250007)
+texture = ExtResource("5_sweqy")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal health_depleted
 var health = 100.0
-var o2 = 60
+var o2 = 999
 
 func _physics_process(delta):
 	var ice = false

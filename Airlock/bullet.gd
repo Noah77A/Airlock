@@ -20,7 +20,8 @@ func _on_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage()
 		
-	if(pierce <= 0):
+		if(pierce <= 0):
+			queue_free()
+	else:
 		queue_free()
-		
 		
