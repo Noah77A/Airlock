@@ -18,7 +18,7 @@ func take_damage():
 	
 	if (health <= 0):
 		GameManager.credits += 1
-		GameManager.exp += 1
+		GameManager.experiance += 1
 		
 		queue_free()
 		

@@ -46,11 +46,11 @@ func _physics_process(delta):
 	%OxygenBar.value = o2
 	if o2 <= 0:
 		health_depleted.emit()
-	%ExpBar.value = GameManager.exp
-	if(GameManager.exp >= 15 +(GameManager.level * 2)):
-		GameManager.exp -= 15 + (GameManager.level * 2)
+	%ExpBar.value = GameManager.experiance
+	if(GameManager.experiance >= 15 +(GameManager.level * 2)):
+		GameManager.experiance -= 15 + (GameManager.level * 2)
 		GameManager.level += 1
-		%ExpBar.maxvalue = 15 +(GameManager.level * 2)
+		%ExpBar.max_value = 15 +(GameManager.level * 2)
 		GameManager.oxygen += 5
 		o2 +=15
 		%OxygenBar.max_value +=5
