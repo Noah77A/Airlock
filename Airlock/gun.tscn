@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://du5i8r7jdycua"]
 
 [ext_resource type="Script" uid="uid://bpyfw0mh6bsnv" path="res://gun.gd" id="1_dk5gl"]
-[ext_resource type="Texture2D" uid="uid://coon1w77o334i" path="res://pistol/pistol.png" id="1_vk1bi"]
+[ext_resource type="Texture2D" uid="uid://wsw3rmngj0o3" path="res://assets/Blaster.png" id="2_dk5gl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 572.1337
@@ -18,12 +18,13 @@ shape = SubResource("CircleShape2D_dk5gl")
 rotation = 0.011787142
 
 [node name="Pistol" type="Sprite2D" parent="WeaponPivot" unique_id=2106139078]
-position = Vector2(50, -16)
-texture = ExtResource("1_vk1bi")
+position = Vector2(71.01863, 1.1629925)
+scale = Vector2(0.052365854, 0.043733362)
+texture = ExtResource("2_dk5gl")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Pistol" unique_id=707001273]
 unique_name_in_owner = true
-position = Vector2(24.683813, -11.6483555)
+position = Vector2(777.394, -111.64916)
 
 [node name="Timer" type="Timer" parent="." unique_id=57949276]
 wait_time = 0.3

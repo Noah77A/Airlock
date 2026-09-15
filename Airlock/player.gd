@@ -41,14 +41,16 @@ func _physics_process(delta):
 	health += GameManager.regen * delta
 	%Health.value = health
 	%Money.text = str(GameManager.credits)
-	%Exp.text = str(GameManager.exp)
 	
 	o2 -= 1*delta
 	%OxygenBar.value = o2
 	if o2 <= 0:
 		health_depleted.emit()
-	if(GameManager.exp >= 15):
-		GameManager.exp -= 15
+	%ExpBar.value = GameManager.exp
+	if(GameManager.exp >= 15 +(GameManager.level * 2)):
+		GameManager.exp -= 15 + (GameManager.level * 2)
+		GameManager.level += 1
+		%ExpBar.maxvalue = 15 +(GameManager.level * 2)
 		GameManager.oxygen += 5
 		o2 +=15
 		%OxygenBar.max_value +=5
