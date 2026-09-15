@@ -2,8 +2,8 @@ extends CanvasLayer
 var option1
 var option2
 func _physics_process(delta):
-	if(GameManager.credits >= 5): 
-		GameManager.credits -= 5
+	if(GameManager.credits >= 15): 
+		GameManager.credits -= 15
 		upgrade()
 
 func upgrade():

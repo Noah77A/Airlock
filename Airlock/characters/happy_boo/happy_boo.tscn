@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c3r8eyeh2833v" path="res://characters/happy_boo/square_body.png" id="6_w3ck4"]
 [ext_resource type="Texture2D" uid="uid://c8nnwxs1l12em" path="res://characters/happy_boo/square_face.png" id="7_h5h8s"]
 [ext_resource type="Texture2D" uid="uid://ytr3uycblmjy" path="res://assets/animations/AstronautIdle.png" id="8_l3moq"]
+[ext_resource type="Texture2D" uid="uid://cip111gv150md" path="res://assets/animations/AstronautWalkSheet.png" id="9_4xaa2"]
+[ext_resource type="Script" uid="uid://b5k3rd4ko8nom" path="res://characters/happy_boo/astonaut_animation.gd" id="10_yc1et"]
 
 [sub_resource type="Animation" id="Animation_hed62"]
 length = 0.001
@@ -203,6 +205,9 @@ tracks/15/keys = {
 "update": 0,
 "values": [0.0]
 }
+
+[sub_resource type="Animation" id="Animation_qae2p"]
+resource_name = "Walking"
 
 [sub_resource type="Animation" id="Animation_sablf"]
 resource_name = "idle"
@@ -577,9 +582,46 @@ tracks/13/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wrcpu"]
 _data = {
 &"RESET": SubResource("Animation_hed62"),
+&"Walking": SubResource("Animation_qae2p"),
 &"idle": SubResource("Animation_sablf"),
 &"walk": SubResource("Animation_74kqe")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dadfp"]
+atlas = ExtResource("9_4xaa2")
+region = Rect2(1606, 0, 1606, 1606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmcxi"]
+atlas = ExtResource("9_4xaa2")
+region = Rect2(0, 0, 1606, 1606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3anx"]
+atlas = ExtResource("9_4xaa2")
+region = Rect2(1606, 0, 1606, 1606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4u6v"]
+atlas = ExtResource("9_4xaa2")
+region = Rect2(0, 1606, 1606, 1606)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dadfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmcxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3anx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4u6v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="HappyBoo" type="Node2D" unique_id=1091727253]
 script = ExtResource("1_kg7lb")
@@ -598,6 +640,7 @@ texture = ExtResource("2_62bos")
 metadata/_edit_lock_ = true
 
 [node name="Colorizer" type="Node2D" parent="." unique_id=838863822]
+visible = false
 modulate = Color(1, 0.572549, 0.176471, 1)
 
 [node name="SquareUpperLegL" type="Sprite2D" parent="Colorizer" unique_id=1796249940]
@@ -654,3 +697,11 @@ visible = false
 position = Vector2(0, -51)
 scale = Vector2(0.071249984, 0.07359375)
 texture = ExtResource("8_l3moq")
+
+[node name="AstonautAnimation" type="AnimatedSprite2D" parent="." unique_id=1344842355]
+unique_name_in_owner = true
+position = Vector2(0, -52.000004)
+scale = Vector2(0.0742528, 0.07471981)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.81925166
+script = ExtResource("10_yc1et")
