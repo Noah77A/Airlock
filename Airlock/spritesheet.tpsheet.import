@@ -3,11 +3,14 @@
 importer="codeandweb.texturepacker_import_spritesheet"
 type="Resource"
 uid="uid://d1oyupn5o2fh1"
-valid=false
+path="res://.godot/imported/spritesheet.tpsheet-d50affbede618312f874d42c0c3e5ed3.res"
 
 [deps]
 
+files=["res://spritesheet.sprites/pixil-frame-0 (10).tres", "res://spritesheet.sprites/pixil-frame-0 (11).tres", "res://spritesheet.sprites/pixil-frame-0 (12).tres"]
+
 source_file="res://spritesheet.tpsheet"
+dest_files=["res://.godot/imported/spritesheet.tpsheet-d50affbede618312f874d42c0c3e5ed3.res", "res://spritesheet.sprites/pixil-frame-0 (10).tres", "res://spritesheet.sprites/pixil-frame-0 (11).tres", "res://spritesheet.sprites/pixil-frame-0 (12).tres"]
 
 [params]
 
