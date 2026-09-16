@@ -24,8 +24,11 @@ func upgrade():
 	if(rando == 4):
 		option1 = "BulletSpd"
 		%Choice1.text = "Bullet Speed"
-	%Choice2.text = %Choice1.text
-	while(%Choice2.text == %Choice1.text):
+	if(rando == 5):
+		option1 = "Speed"
+		%Choice1.text = "Movement Speed"
+	option1 = option2
+	while(option1 == option2):
 		rando = randi_range(1,3)
 		if (rando == 1):
 			option2 = "Damage"
@@ -39,6 +42,9 @@ func upgrade():
 		if(rando == 4):
 			option2 = "BulletSpd"
 			%Choice2.text = "Bullet Speed"
+		if(rando == 5):
+			option2 = "Speed"
+			%Choice2.text = "Movement Speed"
 	
 
 
@@ -56,6 +62,8 @@ func _on_choice_1_pressed():
 		GameManager.regen +=1
 	if(select == "BulletSpd"):
 		GameManager.bulletSpeed+=0.5
+	if(select == "Speed"):
+		GameManager.movement += 0.5
 	visible = false
 	get_tree().paused = false
 	
@@ -75,5 +83,7 @@ func _on_choice_2_pressed() -> void:
 		GameManager.regen +=1
 	if(select == "BulletSpd"):
 		GameManager.bulletSpeed+=0.5
+	if(select == "Speed"):
+		GameManager.movement += 0.5
 	visible = false
 	get_tree().paused = false

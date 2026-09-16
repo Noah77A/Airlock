@@ -19,11 +19,11 @@ func _physics_process(delta):
 		# friction always applies, not just when input is released
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		if dir != Vector2.ZERO:
-			velocity += dir * accel * delta
+			velocity += dir * accel * delta*GameManager.movement
 		move_and_slide()
 	else:
 		var direction = Input.get_vector("move_left","move_right","move_up","move_down")
-		velocity = direction * 80
+		velocity = direction * 80 *GameManager.movement
 		move_and_slide()
 	
 	
