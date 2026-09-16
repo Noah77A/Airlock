@@ -50,13 +50,15 @@ Description:
 - menu buttons on credits  and version notes
 - New spritesheet for future intro sequence
 bug fixes 
+
 Version 0.3: 9/16/26
-tile sets created
-intro created
-more upgrades
-updated sprites
-menu art
-crates started
+- tile sets created
+- intro animation created
+- more upgrades
+- updated sprites
+- Implemented sprites with animations
+- updated menu art
+- crates started
 "
 horizontal_alignment = 1
 
