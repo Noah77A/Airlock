@@ -1,5 +1,6 @@
 extends AnimatedSprite2D
 
+@export var textLabel = RichTextLabel
 
 func _ready():
 	stop()
@@ -10,8 +11,6 @@ func increase_frame():
 		frame += 1
 	else:
 		get_tree().change_scene_to_file("res://survivors_game.tscn")
-	
-		
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

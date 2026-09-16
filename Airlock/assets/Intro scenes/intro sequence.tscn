@@ -69,17 +69,6 @@ top_level = true
 layout_mode = 3
 anchors_preset = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1511367163]
-top_level = true
-layout_mode = 0
-offset_left = 383.00006
-offset_top = 680.0
-offset_right = 1544.0
-offset_bottom = 1066.0
-text = "Click in this box to progress. story will be told here"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1409428546]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
@@ -326,12 +315,13 @@ offset_top = 895.0
 offset_right = 1732.0
 offset_bottom = 906.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1210530716]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1210530716 node_paths=PackedStringArray("textLabel")]
 position = Vector2(960, 540)
 scale = Vector2(4.0591674, 3.596662)
 sprite_frames = SubResource("SpriteFrames_ru1xy")
 frame_progress = 0.09635179
 script = ExtResource("2_gc2vk")
+textLabel = NodePath("Area2D/RichTextLabel")
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=161801490]
 unique_name_in_owner = true
@@ -341,4 +331,15 @@ position = Vector2(0.22824097, 90.979324)
 scale = Vector2(1.0000004, 1)
 shape = SubResource("RectangleShape2D_l8skm")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimatedSprite2D/Area2D" unique_id=1511367163]
+top_level = true
+offset_left = 383.00006
+offset_top = 680.0
+offset_right = 1544.0
+offset_bottom = 1066.0
+text = "Lore 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="input_event" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_input_event"]
+[connection signal="gui_input" from="AnimatedSprite2D/Area2D/RichTextLabel" to="AnimatedSprite2D" method="_on_rich_text_label_gui_input"]
