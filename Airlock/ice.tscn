@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://d1decyxhtb886"]
 
+[ext_resource type="Script" uid="uid://oqpcr2gy5iya" path="res://area_2d4.gd" id="1_mifcs"]
+
 [node name="Node2D" type="Node2D" unique_id=1120200773]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=309013098]
+script = ExtResource("1_mifcs")
 
 [node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=1869632500]
 color = Color(0.5761601, 0.9650268, 0.936408, 1)

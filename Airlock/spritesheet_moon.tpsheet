@@ -1,0 +1,108 @@
+{
+	"textures": [
+		{
+			"image": "spritesheet_moon.png",
+			"size": {
+				"w": 308,
+				"h": 204
+			},
+			"sprites": [
+				{
+					"filename": "pixil-frame-0 (2).png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pixil-frame-0 (3).png",
+					"region": {
+						"x": 1,
+						"y": 103,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pixil-frame-0 (5).png",
+					"region": {
+						"x": 103,
+						"y": 1,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pixil-frame-0 (6).png",
+					"region": {
+						"x": 103,
+						"y": 103,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pixil-frame-0 (7).png",
+					"region": {
+						"x": 205,
+						"y": 1,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pixil-frame-0 (9).png",
+					"region": {
+						"x": 205,
+						"y": 103,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:c1620aac92971d7758f1b633363170b4:7af973e3ca6102d33bd76bbf2283f7bd:5282d08c3386b7f4ff808836dd42ba4a$"
+	}
+}

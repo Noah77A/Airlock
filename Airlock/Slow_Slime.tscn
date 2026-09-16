@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://bsvon7wnuw6pa"]
 
-[ext_resource type="Script" uid="uid://bo6epsllpmxcj" path="res://polygon_2d.gd" id="1_jwf4x"]
+[ext_resource type="Script" uid="uid://claff25rqn6nn" path="res://area_2d.gd" id="1_jwf4x"]
 
 [node name="Node2D" type="Node2D" unique_id=1073721233]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=5124547]
+script = ExtResource("1_jwf4x")
 
 [node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=378549084]
 color = Color(1, 0.22745098, 0.72156864, 1)
 texture_scale = Vector2(100, 100)
 polygon = PackedVector2Array(0, -69, 2, -69, 3, -69, 4, -70, 4, -71, 4, -73, 5, -74, 6, -74, 9, -75, 10, -76, 12, -76, 13, -75, 14, -74, 15, -73, 15, -71, 14, -69, 13, -67, 13, -64, 17, -61, 20, -59, 22, -57, 23, -54, 22, -52, 20, -50, 12, -50, 6, -50, 0, -53, -5, -55, -7, -56, -10, -56, -11, -55, -13, -55, -16, -56, -17, -59, -17, -62, -16, -65, -13, -66, -10, -67, -5, -68, -1, -69, 0, -69)
-script = ExtResource("1_jwf4x")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1863594857]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2335433]
+build_mode = 1
+polygon = PackedVector2Array(15, -72, 15, -71, 13, -67, 13, -64, 20, -59, 22, -57, 23, -54, 22, -52, 20, -50, 6, -50, -7, -56, -10, -56, -11, -55, -13, -55, -16, -56, -17, -59, -17, -62, -16, -65, -10, -67, -1, -69, 3, -69, 4, -70, 4, -73, 5, -74, 6, -74, 9, -75, 10, -76, 12, -76, 15, -73)
