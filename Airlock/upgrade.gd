@@ -1,36 +1,49 @@
 extends CanvasLayer
-
+var option1
+var option2
 func _physics_process(delta):
-	if(GameManager.credits > 15): 
+	if(GameManager.credits >= 15): 
 		GameManager.credits -= 15
 		upgrade()
 
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,3)
+	var rando = randi_range(1,4)
 	if (rando == 1):
+		option1 = "Damage"
 		%Choice1.text = "Damage"
 		
 	if (rando == 2):
+		option1 = "Pierce"
 		%Choice1.text = "Pierce"
 		
 	if (rando == 3):
-		%Choice1.text = "Health"
+		option1 = "Regen"
+		%Choice1.text = "Regen"
+	if(rando == 4):
+		option1 = "BulletSpd"
+		%Choice1.text = "Bullet Speed"
 	%Choice2.text = %Choice1.text
 	while(%Choice2.text == %Choice1.text):
 		rando = randi_range(1,3)
 		if (rando == 1):
+			option2 = "Damage"
 			%Choice2.text = "Damage"
 		if (rando == 2):
+			option2 = "Pierce"
 			%Choice2.text = "Pierce"
 		if (rando == 3):
-			%Choice2.text = "Health"
+			option2 = "Regen"
+			%Choice2.text = "Regen"
+		if(rando == 4):
+			option2 = "BulletSpd"
+			%Choice2.text = "Bullet Speed"
 	
 
 
 func _on_choice_1_pressed():
-	var select = %Choice1.text
+	var select = option1
 	if(select == "Damage"):
 		GameManager.damage +=1
 	if(select == "Pierce"):
@@ -39,13 +52,17 @@ func _on_choice_1_pressed():
 		GameManager.health +=1
 	if(select == "Speed"):
 		GameManager.movement +=1
+	if(select == "Regen"):
+		GameManager.regen +=1
+	if(select == "BulletSpd"):
+		GameManager.bulletSpeed+=0.5
 	visible = false
 	get_tree().paused = false
 	
 
 
 func _on_choice_2_pressed() -> void:
-	var select = %Choice2.text
+	var select = option2
 	if(select == "Damage"):
 		GameManager.damage +=1
 	if(select == "Pierce"):
@@ -54,5 +71,9 @@ func _on_choice_2_pressed() -> void:
 		GameManager.health +=1
 	if(select == "Speed"):
 		GameManager.movement +=1
+	if(select == "Regen"):
+		GameManager.regen +=1
+	if(select == "BulletSpd"):
+		GameManager.bulletSpeed+=0.5
 	visible = false
 	get_tree().paused = false

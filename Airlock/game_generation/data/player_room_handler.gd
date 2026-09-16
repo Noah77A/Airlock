@@ -2,6 +2,9 @@ extends Node2D
 
 const collisionLayer = 1
 
+const doorCD: float = 2.0
+var lastTimeDoorUsed: float = 0
+
 @onready var player: CharacterBody2D = get_node("/root/Game/Player")
 
 var loadedData: roomData
@@ -41,7 +44,7 @@ func load_room(data: roomData):
 
 
 func load_floor():
-	curFloorData = load("res://game_generation/resources/test_floor.tres").duplicate()
+	curFloorData = load("res://game_generation/resources/floors/test_floor.tres").duplicate()
 	for x in range(-3, 3):
 		for y in range(-3, 3):
 			var r = randi_range(0, curFloorData.roomFiles.size() - 1)
@@ -65,18 +68,28 @@ func playerDoorCheck()->void:
 	if dir == 0:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(0,1)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,1)))
-	if dir == 1:
+		dir = 2
+	else: if dir == 1:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(1,0)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(1,0)))
-	if dir == 2:
+		dir = 3
+	else: if dir == 2:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(0,-1)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,-1)))
-	if dir == 3:
+		dir = 0
+	else: if dir == 3:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(-1,0)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(-1,0)))
-		
+		dir = 1
+	var nextExit = loadedExits.find_key(Vector3i(localPos.x, localPos.y ,dir))
+	if !nextExit: return
+	var globalTilePos = map.to_global(map.map_to_local(Vector2i(nextExit.x, nextExit.y)))
+	player.position = globalTilePos
+	lastTimeDoorUsed = 0
 
 func _process(delta: float) -> void:
+	lastTimeDoorUsed += delta
+	if(lastTimeDoorUsed < doorCD): return
 	playerDoorCheck()
 
 func _ready() -> void:

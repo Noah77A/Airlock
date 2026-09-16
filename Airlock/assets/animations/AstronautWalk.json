@@ -1,0 +1,75 @@
+{
+  "frames": {
+    "AstronautWalk1": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1600,
+        "h": 1600
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1600,
+        "h": 1600
+      },
+      "sourceSize": {
+        "w": 1600,
+        "h": 1600
+      }
+    },
+    "AstronautIdle": {
+      "frame": {
+        "x": 1608,
+        "y": 4,
+        "w": 1600,
+        "h": 1600
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1600,
+        "h": 1600
+      },
+      "sourceSize": {
+        "w": 1600,
+        "h": 1600
+      }
+    },
+    "AstronautWalk2": {
+      "frame": {
+        "x": 4,
+        "y": 1608,
+        "w": 1600,
+        "h": 1600
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1600,
+        "h": 1600
+      },
+      "sourceSize": {
+        "w": 1600,
+        "h": 1600
+      }
+    }
+  },
+  "meta": {
+    "app": "Sprite Sheet Maker",
+    "version": "1.0",
+    "image": "spritesheet.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3212,
+      "h": 3212
+    },
+    "scale": "1"
+  }
+}

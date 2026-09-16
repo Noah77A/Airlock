@@ -17,7 +17,8 @@ func take_damage():
 	%Slime.play_hurt()
 	
 	if (health <= 0):
-		GameManager.credits += 8
+		GameManager.credits += 1
+		GameManager.experiance += 1
 		
 		queue_free()
 		

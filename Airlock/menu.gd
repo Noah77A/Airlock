@@ -7,7 +7,7 @@ extends Control
 
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://survivors_game.tscn")
+	get_tree().change_scene_to_file("res://assets/Intro scenes/intro sequence.tscn")
 
 func _on_start_timer_timeout() -> void:
 	start_button.disabled = false

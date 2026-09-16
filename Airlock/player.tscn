@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://yh2ao5or56lq" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cyyh0hb1gomly" path="res://assets/Credit.png" id="4_hqtel"]
+[ext_resource type="Texture2D" uid="uid://c2nsrynj6atq1" path="res://assets/O2Icon.png" id="5_sweqy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 29.15
@@ -24,6 +25,24 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hs0m"]
+bg_color = Color(0.25565878, 0.25565878, 0.25565878, 0.34509805)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jxqw"]
+bg_color = Color(0.2216385, 0.43002972, 0.6377305, 0.68235296)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(9.62615e-07, 0.41269758, 0.119832866, 1)
 
 [node name="Player" type="CharacterBody2D" unique_id=227039421]
 scale = Vector2(0.25, 0.25)
@@ -49,7 +68,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_i3pqv")
 debug_color = Color(1, 0, 0, 0.41960785)
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1200308221]
+[node name="Health" type="ProgressBar" parent="." unique_id=1200308221]
 unique_name_in_owner = true
 offset_left = -107.0
 offset_top = -134.0
@@ -70,7 +89,32 @@ theme_override_colors/font_color = Color(0.2740714, 0.7829926, 0.9085662, 1)
 theme_override_font_sizes/font_size = 65
 text = "0"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1395919689]
+[node name="Credit" type="Sprite2D" parent="." unique_id=1395919689]
 position = Vector2(-727.99994, -364)
 scale = Vector2(0.054375015, 0.055625007)
 texture = ExtResource("4_hqtel")
+
+[node name="OxygenBar" type="ProgressBar" parent="." unique_id=1538337981]
+unique_name_in_owner = true
+offset_left = -692.0
+offset_top = -276.0
+offset_right = -388.0
+offset_bottom = -249.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2hs0m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1jxqw")
+value = 14.84
+
+[node name="O2" type="Sprite2D" parent="." unique_id=1273628642]
+position = Vector2(-720, -251.99997)
+scale = Vector2(0.053125, 0.051250007)
+texture = ExtResource("5_sweqy")
+
+[node name="ExpBar" type="ProgressBar" parent="." unique_id=577484477]
+unique_name_in_owner = true
+offset_left = -724.0
+offset_top = -180.0
+offset_right = -392.0
+offset_bottom = -153.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_g4v7s")
+max_value = 15.0
+value = 2.44

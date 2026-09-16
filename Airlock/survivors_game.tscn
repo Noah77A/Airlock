@@ -12,19 +12,6 @@ _data = {
 }
 point_count = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jj1j"]
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edxvn"]
-bg_color = Color(0.20462477, 0.49895602, 0.79832965, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
 [node name="Game" type="Node2D" unique_id=90994203]
 y_sort_enabled = true
 script = ExtResource("1_l26od")
@@ -49,25 +36,6 @@ curve = SubResource("Curve2D_qqaft")
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=1393536581]
 unique_name_in_owner = true
 position = Vector2(-75, -90)
-
-[node name="OxygenBar" type="ProgressBar" parent="Player" unique_id=343746548]
-unique_name_in_owner = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -716.0
-offset_top = -248.0
-offset_right = -107.0
-offset_bottom = -225.0
-grow_horizontal = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_7jj1j")
-theme_override_styles/fill = SubResource("StyleBoxFlat_edxvn")
-value = 100.0
-metadata/_edit_use_anchors_ = true
-
-[node name="OxygenMeter" type="Timer" parent="Player" unique_id=871822174]
-unique_name_in_owner = true
-wait_time = 0.056
 
 [node name="PineTree" parent="." unique_id=326243450 instance=ExtResource("2_l26od")]
 unique_name_in_owner = true
@@ -138,7 +106,6 @@ offset_bottom = 831.0
 text = "Test Box"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="Player/OxygenMeter" to="." method="_on_oxygen_meter_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Upgrade/Choice1" to="Upgrade" method="_on_choice_1_pressed"]
 [connection signal="pressed" from="Upgrade/Choice2" to="Upgrade" method="_on_choice_2_pressed"]
