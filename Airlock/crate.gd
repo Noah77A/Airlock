@@ -8,3 +8,9 @@ func _physics_process(delta):
 	else:
 		set = false
 		%CrateSprite.broke()
+func _on_body_entered(body):
+	if body.has_method("RoundStart"):
+		if(GameManager.credits >= GameManager.price):
+			GameManager.upgradeSignal = true
+			GameManager.credits -= GameManager.price
+			GameManager.price += GameManager.difficulty

@@ -1,15 +1,16 @@
 extends CanvasLayer
 var option1
 var option2
+
 func _physics_process(delta):
-	if(GameManager.credits >= 15): 
-		GameManager.credits -= 15
+	if(GameManager.upgradeSignal): 
+		GameManager.upgradeSignal = false
 		upgrade()
 
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,4)
+	var rando = randi_range(1,5)
 	if (rando == 1):
 		option1 = "Damage"
 		%Choice1.text = "Damage"
@@ -29,7 +30,7 @@ func upgrade():
 		%Choice1.text = "Movement Speed"
 	option1 = option2
 	while(option1 == option2):
-		rando = randi_range(1,3)
+		rando = randi_range(1,5)
 		if (rando == 1):
 			option2 = "Damage"
 			%Choice2.text = "Damage"
