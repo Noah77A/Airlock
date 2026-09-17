@@ -3,9 +3,13 @@ var option1
 var option2
 
 func _physics_process(delta):
-	if(GameManager.upgradeSignal): 
-		GameManager.upgradeSignal = false
-		upgrade()
+	if(GameManager.credits >= GameManager.price):
+			GameManager.credits -= GameManager.price
+			GameManager.price += GameManager.difficulty
+			upgrade()
+	##if(GameManager.upgradeSignal): 
+		##GameManager.upgradeSignal = false
+		##upgrade()
 
 func upgrade():
 	visible = true
