@@ -14,7 +14,7 @@ func _physics_process(delta):
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,6)
+	var rando = randi_range(1,7)
 	if (rando == 1):
 		option1 = "Damage"
 		%Choice1.text = "Damage"
@@ -22,7 +22,6 @@ func upgrade():
 	if (rando == 2):
 		option1 = "Pierce"
 		%Choice1.text = "Pierce"
-		
 	if (rando == 3):
 		option1 = "Regen"
 		%Choice1.text = "Regen"
@@ -35,9 +34,12 @@ func upgrade():
 	if(rando == 6):
 		option1 = "Hp"
 		%Choice1.text = "Maximum Health"
+	if(rando == 7):
+		option1 = "BulletSize"
+		%Choice1.text = "Bullet Size"
 	option1 = option2
 	while(option1 == option2):
-		rando = randi_range(1,6)
+		rando = randi_range(1,7)
 		if (rando == 1):
 			option2 = "Damage"
 			%Choice2.text = "Damage"
@@ -56,7 +58,9 @@ func upgrade():
 		if(rando == 6):
 			option2 = "Hp"
 			%Choice2.text = "Maximum Health"
-	
+		if(rando == 7):
+			option2 = "BulletSize"
+			%Choice2.text = "Bullet Size"
 
 
 func _on_choice_1_pressed():
@@ -68,7 +72,7 @@ func _on_choice_1_pressed():
 	if(select == "Health"):
 		GameManager.health +=1
 	if(select == "Speed"):
-		GameManager.movement +=1
+		GameManager.movement +=0.1
 	if(select == "Regen"):
 		GameManager.regen +=1
 	if(select == "BulletSpd"):
@@ -78,6 +82,8 @@ func _on_choice_1_pressed():
 	if(select == "Hp"):
 		GameManager.maxHealth += 15
 		GameManager.healthSignal = true
+	if(select == "BulletSize"):
+		GameManager.bulletSize += 0.05
 	visible = false
 	get_tree().paused = false
 	
@@ -92,7 +98,7 @@ func _on_choice_2_pressed() -> void:
 	if(select == "Health"):
 		GameManager.health +=1
 	if(select == "Speed"):
-		GameManager.movement +=1
+		GameManager.movement +=0.1
 	if(select == "Regen"):
 		GameManager.regen +=1
 	if(select == "BulletSpd"):
@@ -102,5 +108,7 @@ func _on_choice_2_pressed() -> void:
 	if(select == "Hp"):
 		GameManager.maxHealth += 15
 		GameManager.healthSignal = true
+	if(select == "BulletSize"):
+		GameManager.bulletSize += 0.05
 	visible = false
 	get_tree().paused = false
