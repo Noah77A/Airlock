@@ -14,7 +14,7 @@ func _physics_process(delta):
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,5)
+	var rando = randi_range(1,6)
 	if (rando == 1):
 		option1 = "Damage"
 		%Choice1.text = "Damage"
@@ -32,9 +32,12 @@ func upgrade():
 	if(rando == 5):
 		option1 = "Speed"
 		%Choice1.text = "Movement Speed"
+	if(rando == 6):
+		option1 = "Hp"
+		%Choice1.text = "Maximum Health"
 	option1 = option2
 	while(option1 == option2):
-		rando = randi_range(1,5)
+		rando = randi_range(1,6)
 		if (rando == 1):
 			option2 = "Damage"
 			%Choice2.text = "Damage"
@@ -50,6 +53,9 @@ func upgrade():
 		if(rando == 5):
 			option2 = "Speed"
 			%Choice2.text = "Movement Speed"
+		if(rando == 6):
+			option2 = "Hp"
+			%Choice2.text = "Maximum Health"
 	
 
 
@@ -69,6 +75,9 @@ func _on_choice_1_pressed():
 		GameManager.bulletSpeed+=0.5
 	if(select == "Speed"):
 		GameManager.movement += 0.5
+	if(select == "Hp"):
+		GameManager.maxHealth += 15
+		GameManager.healthSignal = true
 	visible = false
 	get_tree().paused = false
 	
@@ -90,5 +99,8 @@ func _on_choice_2_pressed() -> void:
 		GameManager.bulletSpeed+=0.5
 	if(select == "Speed"):
 		GameManager.movement += 0.5
+	if(select == "Hp"):
+		GameManager.maxHealth += 15
+		GameManager.healthSignal = true
 	visible = false
 	get_tree().paused = false
