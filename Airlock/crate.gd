@@ -17,3 +17,4 @@ func _on_unlock_box_body_entered(body: Node2D) -> void:
 			GameManager.upgradeSignal = true
 			GameManager.credits -= GameManager.price
 			GameManager.price += GameManager.difficulty
+			queue_free()
