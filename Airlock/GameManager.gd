@@ -16,3 +16,4 @@ var price = 1
 
 var upgradeSignal = false
 var healthSignal = false
+var haveKey = false

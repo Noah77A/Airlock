@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d0icjrj6tm4fl" path="res://crate.gd" id="1_44j4e"]
 [ext_resource type="Texture2D" uid="uid://ciaf7lqr50bje" path="res://assets/animations/Crate(locked).png" id="1_mo0jf"]
 [ext_resource type="Texture2D" uid="uid://ci1etblpqqi0" path="res://assets/animations/Chest(unlocked).png" id="2_ggnq6"]
-[ext_resource type="Script" uid="uid://0f0hfqutxgr4" path="res://crate_sprite.gd" id="4_c7plm"]
+[ext_resource type="Script" uid="uid://0f0hfqutxgr4" path="res://assets/animations/crate_sprite.gd" id="4_c7plm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
