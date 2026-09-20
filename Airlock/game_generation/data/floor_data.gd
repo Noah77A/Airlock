@@ -1,5 +1,6 @@
 class_name floorData extends Resource
 
+@export var name : String
 @export var roomFiles : Array[String] = []
 
 var occupiedNodes : Dictionary[Vector2i, int] = {}
