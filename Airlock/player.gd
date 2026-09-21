@@ -63,6 +63,8 @@ func _physics_process(delta):
 func RoundStart():
 	o2 = GameManager.oxygen
 	%OxygenBar.max_value = o2
+func get_hit(damage):
+	health -= damage
 
 #func _physics_process_ice(delta: float) -> void:
 	#var ground_accel: float = 0.0
