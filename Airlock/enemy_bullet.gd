@@ -11,7 +11,7 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body.has_method("get_hit"):
-		body.get_hit(15)
+		body.get_hit(15.0)
 		queue_free()
 	else: if !body.has_method("take_damage"):
 		queue_free()

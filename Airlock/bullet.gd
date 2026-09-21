@@ -22,6 +22,6 @@ func _on_body_entered(body):
 		
 		if(pierce <= 0):
 			queue_free()
-	else:
+	else: if !body.has_method("fire"):
 		queue_free()
 		

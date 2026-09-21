@@ -33,12 +33,15 @@ sprite_frames = SubResource("SpriteFrames_g4v7s")
 position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_yf5fn")
 
-[node name="EyeBlast" type="Marker2D" parent="." unique_id=188228010]
-position = Vector2(-1, -42)
+[node name="Eye" type="Marker2D" parent="." unique_id=1797856410]
+position = Vector2(0, -44)
+
+[node name="EyeBlast" type="Marker2D" parent="Eye" unique_id=188228010]
+position = Vector2(0, -2)
 script = ExtResource("3_ysxmq")
 
-[node name="Timer" type="Timer" parent="EyeBlast" unique_id=858719816]
+[node name="Timer" type="Timer" parent="Eye/EyeBlast" unique_id=858719816]
 wait_time = 0.5
 autostart = true
 
-[connection signal="timeout" from="EyeBlast/Timer" to="EyeBlast" method="_on_timer_timeout"]
+[connection signal="timeout" from="Eye/EyeBlast/Timer" to="Eye/EyeBlast" method="_on_timer_timeout"]
