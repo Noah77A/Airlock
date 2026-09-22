@@ -36,6 +36,7 @@ shape = SubResource("CircleShape2D_g4v7s")
 script = ExtResource("3_pvla8")
 
 [node name="Timer" type="Timer" parent="Summon" unique_id=1503707138]
+wait_time = 5.0
 autostart = true
 
 [node name="Spawn1" type="Marker2D" parent="Summon" unique_id=559459011]
