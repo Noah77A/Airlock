@@ -48,13 +48,14 @@ script = ExtResource("1_87y5x")
 modulate = Color(0.898039, 0.878431, 0.831373, 1)
 z_index = -1
 z_as_relative = false
-scale = Vector2(0.8, 0.8)
+position = Vector2(4.7683716e-07, 1.1920929e-07)
+scale = Vector2(0.13273811, 0.13365386)
 texture = ExtResource("1_cq7ej")
 
 [node name="AlienAnimation" type="AnimatedSprite2D" parent="." unique_id=748906893]
 unique_name_in_owner = true
-position = Vector2(0.9999962, -43)
-scale = Vector2(0.088885434, 0.06569116)
+position = Vector2(-1.9073486e-06, -10)
+scale = Vector2(0.01257005, 0.01299813)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 frame_progress = 0.31402805
 script = ExtResource("8_r4ywq")
