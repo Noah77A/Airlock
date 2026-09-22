@@ -12,7 +12,7 @@ var experiance = 0
 var regen = 0
 var bulletSpeed = 1
 var bulletSize = 0.25
-var price = 1
+var price = 10
 
 var upgradeSignal = false
 var healthSignal = false
