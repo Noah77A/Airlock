@@ -1,15 +1,20 @@
 extends CanvasLayer
 var option1
 var option2
+
 func _physics_process(delta):
-	if(GameManager.credits >= 15): 
-		GameManager.credits -= 15
-		upgrade()
+	if(GameManager.credits >= GameManager.price):
+			GameManager.credits -= GameManager.price
+			GameManager.price += GameManager.difficulty
+			upgrade()
+	##if(GameManager.upgradeSignal): 
+		##GameManager.upgradeSignal = false
+		##upgrade()
 
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,4)
+	var rando = randi_range(1,6)
 	if (rando == 1):
 		option1 = "Damage"
 		%Choice1.text = "Damage"
@@ -24,9 +29,15 @@ func upgrade():
 	if(rando == 4):
 		option1 = "BulletSpd"
 		%Choice1.text = "Bullet Speed"
-	%Choice2.text = %Choice1.text
-	while(%Choice2.text == %Choice1.text):
-		rando = randi_range(1,3)
+	if(rando == 5):
+		option1 = "Speed"
+		%Choice1.text = "Movement Speed"
+	if(rando == 6):
+		option1 = "Hp"
+		%Choice1.text = "Maximum Health"
+	option1 = option2
+	while(option1 == option2):
+		rando = randi_range(1,6)
 		if (rando == 1):
 			option2 = "Damage"
 			%Choice2.text = "Damage"
@@ -39,6 +50,12 @@ func upgrade():
 		if(rando == 4):
 			option2 = "BulletSpd"
 			%Choice2.text = "Bullet Speed"
+		if(rando == 5):
+			option2 = "Speed"
+			%Choice2.text = "Movement Speed"
+		if(rando == 6):
+			option2 = "Hp"
+			%Choice2.text = "Maximum Health"
 	
 
 
@@ -56,6 +73,11 @@ func _on_choice_1_pressed():
 		GameManager.regen +=1
 	if(select == "BulletSpd"):
 		GameManager.bulletSpeed+=0.5
+	if(select == "Speed"):
+		GameManager.movement += 0.5
+	if(select == "Hp"):
+		GameManager.maxHealth += 15
+		GameManager.healthSignal = true
 	visible = false
 	get_tree().paused = false
 	
@@ -75,5 +97,10 @@ func _on_choice_2_pressed() -> void:
 		GameManager.regen +=1
 	if(select == "BulletSpd"):
 		GameManager.bulletSpeed+=0.5
+	if(select == "Speed"):
+		GameManager.movement += 0.5
+	if(select == "Hp"):
+		GameManager.maxHealth += 15
+		GameManager.healthSignal = true
 	visible = false
 	get_tree().paused = false

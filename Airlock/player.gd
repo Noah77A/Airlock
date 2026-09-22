@@ -1,6 +1,6 @@
 extends CharacterBody2D
 signal health_depleted
-var health = 100.0
+var health = GameManager.maxHealth
 var o2 = 60
 func _ready():
 	RoundStart()
@@ -19,11 +19,11 @@ func _physics_process(delta):
 		# friction always applies, not just when input is released
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		if dir != Vector2.ZERO:
-			velocity += dir * accel * delta
+			velocity += dir * accel * delta*GameManager.movement
 		move_and_slide()
 	else:
 		var direction = Input.get_vector("move_left","move_right","move_up","move_down")
-		velocity = direction * 80
+		velocity = direction * 80 *GameManager.movement
 		move_and_slide()
 	
 	
@@ -33,12 +33,16 @@ func _physics_process(delta):
 		$HappyBoo.play_idle_animation()	
 	const DAMAGE_RATE = 5.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
-	
+	if(GameManager.healthSignal):
+		health +=25
+		GameManager.healthSignal = false
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
 		if health <= 0.0:
 			health_depleted.emit()
-	health += GameManager.regen * delta
+	if(health < GameManager.maxHealth):
+		health += GameManager.regen * delta
+	%Health.max_value = GameManager.maxHealth
 	%Health.value = health
 	%Money.text = str(GameManager.credits)
 	

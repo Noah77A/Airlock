@@ -68,6 +68,7 @@ libraries/ = SubResource("AnimationLibrary_vau7s")
 autoplay = &"wpi fade out"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=207586678]
+modulate = Color(0, 0, 0, 1)
 z_index = 9
 z_as_relative = false
 scale = Vector2(99.999985, 99.99998)

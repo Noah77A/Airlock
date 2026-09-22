@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylfvllklfhv1"
-path="res://.godot/imported/spritesheet.png-ca348044bfadf736f8fef9570aa84c56.ctex"
+uid="uid://ciaf7lqr50bje"
+path="res://.godot/imported/Crate(locked).png-5d1a540fd68251c415f1fc09044a66f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res:///spritesheet.png"
-dest_files=["res://.godot/imported/spritesheet.png-ca348044bfadf736f8fef9570aa84c56.ctex"]
+source_file="res://assets/animations/Crate(locked).png"
+dest_files=["res://.godot/imported/Crate(locked).png-5d1a540fd68251c415f1fc09044a66f1.ctex"]
 
 [params]
 

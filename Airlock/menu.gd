@@ -29,8 +29,3 @@ func _on_version_pressed() -> void:
 	if version_scene:
 		var versionScreen = version_scene.instantiate()
 		add_child(versionScreen)
-
-
-func _on_oxygen_meter_timeout() -> void:
-	%"Game Over".visible = true
-	get_tree().paused = true
