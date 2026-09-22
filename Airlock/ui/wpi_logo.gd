@@ -1,10 +1,12 @@
 extends Sprite2D
 
 #@onready var camera: CharacterBody2D = $"."
-@onready var sprite_2d: Sprite2D = $"."
+#@onready var sprite_2d: Sprite2D = $"."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print("My exact path is: ", get_path())
+	$AnimationPlayer.stop()
 	$AnimationPlayer.play("wpi fade out") # Replace with function body.
 
 
