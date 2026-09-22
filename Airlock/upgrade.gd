@@ -36,7 +36,7 @@ func upgrade():
 	if(rando == 7):
 		option1 = 7
 		%Choice1.text = "Bullet Size"
-	option1 = option2
+	option2 = option1
 	while(option1 == option2):
 		rando = randi_range(1,7)
 		if (rando == 1):
