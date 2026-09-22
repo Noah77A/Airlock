@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7oxd5v1b0xqs" path="res://bosses/boss_base.gd" id="1_0aesm"]
 [ext_resource type="Texture2D" uid="uid://doqk016wgpt5s" path="res://assets/Boss sprites/RobotBoss.png" id="2_e17h6"]
-[ext_resource type="Script" uid="uid://cnr5fcnt5fmur" path="res://bosses/eye_blast.gd" id="3_ysxmq"]
+[ext_resource type="PackedScene" uid="uid://c0yi8sofxny3" path="res://bosses/eye.tscn" id="3_0aesm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -33,15 +33,5 @@ sprite_frames = SubResource("SpriteFrames_g4v7s")
 position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_yf5fn")
 
-[node name="Eye" type="Marker2D" parent="." unique_id=1797856410]
+[node name="Eye" parent="." unique_id=529309476 instance=ExtResource("3_0aesm")]
 position = Vector2(0, -44)
-
-[node name="EyeBlast" type="Marker2D" parent="Eye" unique_id=188228010]
-position = Vector2(0, -2)
-script = ExtResource("3_ysxmq")
-
-[node name="Timer" type="Timer" parent="Eye/EyeBlast" unique_id=858719816]
-wait_time = 0.5
-autostart = true
-
-[connection signal="timeout" from="Eye/EyeBlast/Timer" to="Eye/EyeBlast" method="_on_timer_timeout"]
