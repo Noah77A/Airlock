@@ -11,6 +11,21 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqaft"]
+bg_color = Color(0.6, 0.6, 0.8980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jj1j"]
+bg_color = Color(0.65356296, 2.6351586e-06, 6.256998e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edxvn"]
+bg_color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pk6fm"]
+bg_color = Color(0.654902, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_getvi"]
+bg_color = Color(0.27607, 0.2760634, 0.27606502, 1)
+
 [node name="Game" type="Node2D" unique_id=90994203]
 y_sort_enabled = true
 script = ExtResource("1_l26od")
@@ -69,6 +84,34 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 174
 text = "Game Over"
 
+[node name="Return To Menu" type="Button" parent="Game Over/ColorRect" unique_id=660602704]
+process_mode = 2
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 704.0
+offset_right = 1406.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqaft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7jj1j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_edxvn")
+text = "Return To Menu"
+
+[node name="Quit Button" type="Button" parent="Game Over/ColorRect" unique_id=499033624]
+process_mode = 2
+layout_mode = 0
+offset_left = 520.0
+offset_top = 704.0
+offset_right = 854.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqaft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pk6fm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_getvi")
+text = "Quit"
+
 [node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
 
 [node name="Upgrade" type="CanvasLayer" parent="." unique_id=496219269]
@@ -103,5 +146,7 @@ text = "Test Box"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Game Over/ColorRect/Return To Menu" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Game Over/ColorRect/Quit Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Upgrade/Choice1" to="Upgrade" method="_on_choice_1_pressed"]
 [connection signal="pressed" from="Upgrade/Choice2" to="Upgrade" method="_on_choice_2_pressed"]
