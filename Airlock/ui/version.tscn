@@ -59,6 +59,11 @@ Version 0.3: 9/16/26
 - Implemented sprites with animations
 - updated menu art
 - crates started
+Version 0.4: 9/23/26
+-crates addes
+-fixed upgrade debug
+-bosses added (general, robot xeno)
+-more upgrades(health, bullet size and speed)
 "
 horizontal_alignment = 1
 
