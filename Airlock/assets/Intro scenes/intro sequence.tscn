@@ -63,6 +63,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8skm"]
 size = Vector2(287.70743, 105.22086)
 
+[sub_resource type="FontVariation" id="FontVariation_t3af3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3af3"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5ecx"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ql0d8"]
+bg_color = Color(0.43211022, 0.43211025, 0.43211013, 1)
+
 [node name="IntroSequence" type="Control" unique_id=2146729937]
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
@@ -337,9 +348,34 @@ offset_left = 383.00006
 offset_top = 680.0
 offset_right = 1544.0
 offset_bottom = 1066.0
-text = "Years ago, a terrible storm fell upon an island nation in the pacific ocean"
+theme_override_fonts/normal_font = SubResource("FontVariation_t3af3")
+theme_override_font_sizes/normal_font_size = 30
+text = "2000 miles off the coast of Asia sits the beautiful island of Viridia. An island known for its otherworldly nature, technological innovation, and diverse culture. The research labs on Viridia are what gave the world it's ability to fly through space. Viridia figured out a way to harness radiation from distant supernovas and convert it into fuel. Viridia is responsible for humanities mark on the universe. "
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="." unique_id=86177599]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 636.0
+offset_right = 410.0
+offset_bottom = 659.0
+theme_override_font_sizes/font_size = 17
+text = "Click anywhere in the text to continue!!!"
+
+[node name="Skip" type="Button" parent="." unique_id=1494301552]
+layout_mode = 0
+offset_left = 1580.0
+offset_top = 993.0
+offset_right = 1721.0
+offset_bottom = 1038.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_t3af3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c5ecx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ql0d8")
+text = "Skip"
+
 [connection signal="input_event" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_input_event"]
 [connection signal="gui_input" from="AnimatedSprite2D/Area2D/RichTextLabel" to="AnimatedSprite2D" method="_on_rich_text_label_gui_input"]
+[connection signal="pressed" from="Skip" to="AnimatedSprite2D" method="_on_skip_pressed"]
