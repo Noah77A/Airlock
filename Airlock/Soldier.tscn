@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://64rt181qe3gv"]
+
+[ext_resource type="Script" uid="uid://1u33idtwgye1" path="res://soldier.gd" id="1_qo6y8"]
+[ext_resource type="Script" uid="uid://mtcw5yhmgbeq" path="res://soldier_sprite.gd" id="2_sssc3"]
+[ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="3_yck40"]
+[ext_resource type="Texture2D" uid="uid://0l0tavf857ej" path="res://assets/animations/SoldierSprite.png" id="4_tmfmp"]
+[ext_resource type="Texture2D" uid="uid://cx8cr67hw36dr" path="res://assets/animations/SoldierWalk1.png" id="5_oeprs"]
+[ext_resource type="Texture2D" uid="uid://wt5pe0u3b32b" path="res://assets/animations/SoldierWalk2.png" id="6_fynin"]
+[ext_resource type="AudioStream" uid="uid://d3ycgaoy7uh3o" path="res://assets/sfx/artificiallyinspired-alien-talking-312011.mp3" id="6_tmfmp"]
+[ext_resource type="Script" uid="uid://c6p23gnx8oja2" path="res://soldier_animation.gd" id="7_acg77"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tmfmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oeprs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tmfmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fynin")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p11y5"]
+
+[node name="Soldier" type="CharacterBody2D" unique_id=121620099]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_qo6y8")
+
+[node name="SoldierSprite" type="Node2D" parent="." unique_id=2008890567]
+unique_name_in_owner = true
+script = ExtResource("2_sssc3")
+
+[node name="GroundShadow" type="Sprite2D" parent="SoldierSprite" unique_id=2019923751]
+modulate = Color(0.898039, 0.878431, 0.831373, 1)
+z_index = -1
+z_as_relative = false
+position = Vector2(4.7683716e-07, 1.1920929e-07)
+scale = Vector2(0.13273811, 0.13365386)
+texture = ExtResource("3_yck40")
+
+[node name="SoldierAnimation" type="AnimatedSprite2D" parent="SoldierSprite" unique_id=748906893]
+unique_name_in_owner = true
+position = Vector2(-1.9073486e-06, -10)
+scale = Vector2(0.01257005, 0.01299813)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.31402805
+script = ExtResource("7_acg77")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SoldierSprite" unique_id=302985231]
+stream = ExtResource("6_tmfmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1652750644]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_p11y5")

@@ -7,10 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://btqqq6g8x5cx1" path="res://assets/Boss sprites/XenoWalk2.png" id="5_pbe25"]
 [ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="6_6hoxh"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdx44"]
-radius = 15.0
-height = 64.0
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_pdx44"]
 animations = [{
 "frames": [{
@@ -31,14 +27,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdx44"]
+radius = 15.0
+height = 64.0
+
 [node name="XenoBoss" type="CharacterBody2D" unique_id=498159889]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("2_2ddmu")
-
-[node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
-position = Vector2(0, -24)
-shape = SubResource("CapsuleShape2D_pdx44")
 
 [node name="BossAnimate" type="Node2D" parent="." unique_id=1879427882]
 script = ExtResource("2_pg6rr")
@@ -49,3 +45,7 @@ position = Vector2(-4.7683716e-07, -23.000002)
 scale = Vector2(0.027890638, 0.029114578)
 sprite_frames = SubResource("SpriteFrames_pdx44")
 script = ExtResource("6_6hoxh")
+
+[node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
+position = Vector2(0, -24)
+shape = SubResource("CapsuleShape2D_pdx44")
