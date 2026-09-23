@@ -1,18 +1,28 @@
 [gd_scene format=3 uid="uid://cubnq3mgyhix8"]
 
 [ext_resource type="Script" uid="uid://7oxd5v1b0xqs" path="res://bosses/boss_base.gd" id="1_pdx44"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pdx44"]
+[ext_resource type="Script" uid="uid://ygjkyvb1w2y4" path="res://bosses/boss_animate.gd" id="2_rbqqq"]
+[ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="3_q1o08"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rdiey"]
 
 [node name="BossBase" type="CharacterBody2D" unique_id=498159889]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_pdx44")
 
-[node name="BossSprite" type="AnimatedSprite2D" parent="." unique_id=1487641996]
-sprite_frames = SubResource("SpriteFrames_pdx44")
-
 [node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
 shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="BossAnimate" type="Node2D" parent="." unique_id=454787475]
+unique_name_in_owner = true
+script = ExtResource("2_rbqqq")
+
+[node name="BossSprite" type="AnimatedSprite2D" parent="BossAnimate" unique_id=1356727339]
+unique_name_in_owner = true
+position = Vector2(1.1920929e-07, -17)
+scale = Vector2(0.02796875, 0.026718752)
+sprite_frames = SubResource("SpriteFrames_rdiey")
+script = ExtResource("3_q1o08")

@@ -3,7 +3,8 @@ extends CharacterBody2D
 var health = 3 + GameManager.difficulty*2
 
 @onready var player = get_node("/root/Game/Player")
-
+func _ready(): 
+	%BossAnimate.play_walk()
 
 
 
@@ -14,7 +15,7 @@ func _physics_process(delta):
 
 func take_damage():
 	health -= GameManager.damage
-	
+	%BossAnimate.play_hurt()
 	
 	if (health <= 0):
 		GameManager.credits += 5
