@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://dujaw04hlqblu" path="res://assets/test_tile_set.tres" id="1_0bd00"]
 [ext_resource type="PackedScene" uid="uid://y38gte5o0xf8" path="res://mob.tscn" id="2_00fak"]
+[ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="3_q6dgr"]
 
 [node name="Node2D" type="Node2D" unique_id=63089627]
 
@@ -25,3 +26,6 @@ position = Vector2(-2, 55)
 
 [node name="Mob4" parent="." unique_id=194341460 instance=ExtResource("2_00fak")]
 position = Vector2(137, 36)
+
+[node name="GeneralBoss" parent="." unique_id=498159889 instance=ExtResource("3_q6dgr")]
+position = Vector2(74, 69)

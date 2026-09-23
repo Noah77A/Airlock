@@ -94,3 +94,6 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	load_floor()
+
+func get_room_scene():
+	return loadedRoomInstance
