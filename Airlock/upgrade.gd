@@ -3,104 +3,87 @@ var option1
 var option2
 
 func _physics_process(delta):
-	if(GameManager.credits >= GameManager.price):
-			GameManager.credits -= GameManager.price
-			GameManager.price += GameManager.difficulty
-			upgrade()
-	##if(GameManager.upgradeSignal): 
-		##GameManager.upgradeSignal = false
-		##upgrade()
+	#if(GameManager.credits >= GameManager.price):
+			#GameManager.credits -= GameManager.price
+			#GameManager.price += GameManager.difficulty
+			#upgrade()
+	if(GameManager.upgradeSignal): 
+		GameManager.upgradeSignal = false
+		upgrade()
 
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,6)
+	var rando = randi_range(1,7)
 	if (rando == 1):
-		option1 = "Damage"
+		option1 = 1
 		%Choice1.text = "Damage"
-		
 	if (rando == 2):
-		option1 = "Pierce"
+		option1 = 2
 		%Choice1.text = "Pierce"
-		
 	if (rando == 3):
-		option1 = "Regen"
+		option1 = 3
 		%Choice1.text = "Regen"
 	if(rando == 4):
-		option1 = "BulletSpd"
+		option1 = 4
 		%Choice1.text = "Bullet Speed"
 	if(rando == 5):
-		option1 = "Speed"
+		option1 = 5
 		%Choice1.text = "Movement Speed"
 	if(rando == 6):
-		option1 = "Hp"
+		option1 = 6
 		%Choice1.text = "Maximum Health"
-	option1 = option2
+	if(rando == 7):
+		option1 = 7
+		%Choice1.text = "Bullet Size"
+	option2 = option1
 	while(option1 == option2):
-		rando = randi_range(1,6)
+		rando = randi_range(1,7)
 		if (rando == 1):
-			option2 = "Damage"
+			option2 = 1
 			%Choice2.text = "Damage"
 		if (rando == 2):
-			option2 = "Pierce"
+			option2 = 2
 			%Choice2.text = "Pierce"
 		if (rando == 3):
-			option2 = "Regen"
+			option2 = 3
 			%Choice2.text = "Regen"
 		if(rando == 4):
-			option2 = "BulletSpd"
+			option2 = 4
 			%Choice2.text = "Bullet Speed"
 		if(rando == 5):
-			option2 = "Speed"
+			option2 = 5
 			%Choice2.text = "Movement Speed"
 		if(rando == 6):
-			option2 = "Hp"
+			option2 = 6
 			%Choice2.text = "Maximum Health"
-	
+		if(rando == 7):
+			option2 = 7
+			%Choice2.text = "Bullet Size"
 
 
 func _on_choice_1_pressed():
-	var select = option1
-	if(select == "Damage"):
-		GameManager.damage +=1
-	if(select == "Pierce"):
-		GameManager.pierce +=1
-	if(select == "Health"):
-		GameManager.health +=1
-	if(select == "Speed"):
-		GameManager.movement +=1
-	if(select == "Regen"):
-		GameManager.regen +=1
-	if(select == "BulletSpd"):
-		GameManager.bulletSpeed+=0.5
-	if(select == "Speed"):
-		GameManager.movement += 0.5
-	if(select == "Hp"):
-		GameManager.maxHealth += 15
-		GameManager.healthSignal = true
-	visible = false
-	get_tree().paused = false
+	selected(option1)
 	
 
 
 func _on_choice_2_pressed() -> void:
-	var select = option2
-	if(select == "Damage"):
+	selected(option2)
+func selected(select):
+	if(select == 1):
 		GameManager.damage +=1
-	if(select == "Pierce"):
+	if(select == 2):
 		GameManager.pierce +=1
-	if(select == "Health"):
-		GameManager.health +=1
-	if(select == "Speed"):
-		GameManager.movement +=1
-	if(select == "Regen"):
+	if(select == 3):
 		GameManager.regen +=1
-	if(select == "BulletSpd"):
+	if(select == 4):
 		GameManager.bulletSpeed+=0.5
-	if(select == "Speed"):
-		GameManager.movement += 0.5
-	if(select == "Hp"):
+	if(select == 5):
+		GameManager.movement += 0.1
+	if(select == 6):
 		GameManager.maxHealth += 15
 		GameManager.healthSignal = true
+	if(select == 7):
+		GameManager.bulletSize += 0.05
 	visible = false
 	get_tree().paused = false

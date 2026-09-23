@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://budbgdcucpb0b"]
+
+[ext_resource type="Script" uid="uid://7oxd5v1b0xqs" path="res://bosses/boss_base.gd" id="1_fakaj"]
+[ext_resource type="Texture2D" uid="uid://i1mtxy77qahy" path="res://assets/Boss sprites/General(Boss).png" id="2_u36mo"]
+[ext_resource type="Script" uid="uid://di4oiq182a88j" path="res://bosses/summon.gd" id="3_pvla8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqgl0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u36mo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 16.0
+
+[node name="GeneralBoss" type="CharacterBody2D" unique_id=498159889]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_fakaj")
+
+[node name="BossSprite" type="AnimatedSprite2D" parent="." unique_id=1487641996]
+position = Vector2(1.1920929e-07, -17)
+scale = Vector2(0.02796875, 0.026718752)
+sprite_frames = SubResource("SpriteFrames_pqgl0")
+
+[node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="Summon" type="Node2D" parent="." unique_id=1191864500]
+script = ExtResource("3_pvla8")
+
+[node name="Timer" type="Timer" parent="Summon" unique_id=1503707138]
+wait_time = 5.0
+autostart = true
+
+[node name="Spawn1" type="Marker2D" parent="Summon" unique_id=559459011]
+unique_name_in_owner = true
+top_level = true
+position = Vector2(-15, 8)
+
+[node name="Spawn2" type="Marker2D" parent="Summon" unique_id=1352108342]
+unique_name_in_owner = true
+top_level = true
+position = Vector2(18, 8)
+
+[node name="Spawn3" type="Marker2D" parent="Summon" unique_id=1036689575]
+unique_name_in_owner = true
+top_level = true
+position = Vector2(27, -37)
+
+[node name="Spawn4" type="Marker2D" parent="Summon" unique_id=848852524]
+unique_name_in_owner = true
+top_level = true
+position = Vector2(-25, -35)
+
+[connection signal="timeout" from="Summon/Timer" to="Summon" method="_on_timer_timeout"]

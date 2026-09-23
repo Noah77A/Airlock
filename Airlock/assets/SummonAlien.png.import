@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylfvllklfhv1"
-path="res://.godot/imported/spritesheet.png-59f7dfdebfc035c80a63445e3bd8a9bd.ctex"
+uid="uid://d4mo3cmeegp6y"
+path="res://.godot/imported/SummonAlien.png-c496478aeb6ff06aae13ad91a07b6085.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spritesheet.png"
-dest_files=["res://.godot/imported/spritesheet.png-59f7dfdebfc035c80a63445e3bd8a9bd.ctex"]
+source_file="res://assets/SummonAlien.png"
+dest_files=["res://.godot/imported/SummonAlien.png-c496478aeb6ff06aae13ad91a07b6085.ctex"]
 
 [params]
 

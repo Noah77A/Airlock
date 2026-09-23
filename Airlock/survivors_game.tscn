@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c1bfau31nfqio" path="res://survivors_game.gd" id="1_l26od"]
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_y3pti"]
-[ext_resource type="PackedScene" uid="uid://c4id02rt1qhvl" path="res://trees/pine_tree.tscn" id="2_l26od"]
 [ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data/player_room_handler.tscn" id="6_edxvn"]
 [ext_resource type="Script" uid="uid://bmppfghwps46y" path="res://upgrade.gd" id="7_pk6fm"]
 
@@ -11,6 +10,21 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -75, -90, 0, 0, 0, 0, 2031, -90, 0, 0, 0, 0, 2033, 1120, 0, 0, 0, 0, -81, 1114, 0, 0, 0, 0, -72, -87)
 }
 point_count = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqaft"]
+bg_color = Color(0.6, 0.6, 0.8980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jj1j"]
+bg_color = Color(0.65356296, 2.6351586e-06, 6.256998e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edxvn"]
+bg_color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pk6fm"]
+bg_color = Color(0.654902, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_getvi"]
+bg_color = Color(0.27607, 0.2760634, 0.27606502, 1)
 
 [node name="Game" type="Node2D" unique_id=90994203]
 y_sort_enabled = true
@@ -25,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=227039421 instance=ExtResource("1_y3pti")]
@@ -36,10 +51,6 @@ curve = SubResource("Curve2D_qqaft")
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=1393536581]
 unique_name_in_owner = true
 position = Vector2(-75, -90)
-
-[node name="PineTree" parent="." unique_id=326243450 instance=ExtResource("2_l26od")]
-unique_name_in_owner = true
-position = Vector2(221, 234)
 
 [node name="Timer" type="Timer" parent="." unique_id=1461454430]
 unique_name_in_owner = true
@@ -72,6 +83,34 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 174
 text = "Game Over"
+
+[node name="Return To Menu" type="Button" parent="Game Over/ColorRect" unique_id=660602704]
+process_mode = 2
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 704.0
+offset_right = 1406.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqaft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7jj1j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_edxvn")
+text = "Return To Menu"
+
+[node name="Quit Button" type="Button" parent="Game Over/ColorRect" unique_id=499033624]
+process_mode = 2
+layout_mode = 0
+offset_left = 520.0
+offset_top = 704.0
+offset_right = 854.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqaft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pk6fm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_getvi")
+text = "Quit"
 
 [node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
 
@@ -107,5 +146,7 @@ text = "Test Box"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Game Over/ColorRect/Return To Menu" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Game Over/ColorRect/Quit Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Upgrade/Choice1" to="Upgrade" method="_on_choice_1_pressed"]
 [connection signal="pressed" from="Upgrade/Choice2" to="Upgrade" method="_on_choice_2_pressed"]

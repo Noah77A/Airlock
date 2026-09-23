@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="floorData" format=3 uid="uid://bisxterndgbdf"]
+
+[ext_resource type="Script" uid="uid://bp836rmhjq1t" path="res://game_generation/data/floor_data.gd" id="1_32ow5"]
+
+[resource]
+script = ExtResource("1_32ow5")
+metadata/_custom_type_script = "uid://bp836rmhjq1t"

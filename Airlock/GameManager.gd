@@ -11,8 +11,9 @@ var movement = 1
 var experiance = 0
 var regen = 0
 var bulletSpeed = 1
-var bulletSize =0
-var price = 15
+var bulletSize = 0.25
+var price = 10
 
 var upgradeSignal = false
 var healthSignal = false
+var haveKey = false

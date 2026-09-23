@@ -12,7 +12,7 @@ func increase_frame():
 	else:
 		get_tree().change_scene_to_file("res://survivors_game.tscn")
 
-
+"position"
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if (event.is_action_pressed("shoot")):
 		increase_frame()
@@ -20,7 +20,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 func change_text():
 	if(frame == 1):
-		textLabel.text = "Lore 2"
+		textLabel.text = ""
 	elif (frame == 2):
 		textLabel.text = "Lore 3"
 	elif (frame == 3):

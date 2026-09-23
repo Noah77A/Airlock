@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylfvllklfhv1"
-path="res://.godot/imported/spritesheet.png-59f7dfdebfc035c80a63445e3bd8a9bd.ctex"
+uid="uid://d380qxsg07s24"
+path="res://.godot/imported/Xeno(Boss).png-5db0ca3dd035b390c718658c1d58e81a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spritesheet.png"
-dest_files=["res://.godot/imported/spritesheet.png-59f7dfdebfc035c80a63445e3bd8a9bd.ctex"]
+source_file="res://assets/Boss sprites/Xeno(Boss).png"
+dest_files=["res://.godot/imported/Xeno(Boss).png-5db0ca3dd035b390c718658c1d58e81a.ctex"]
 
 [params]
 

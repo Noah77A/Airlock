@@ -6,7 +6,7 @@ var pierce = GameManager.pierce
 func _physics_process(delta):
 	const SPEED = 100
 	const RANGE = 1200
-		
+	scale = Vector2(GameManager.bulletSize, GameManager.bulletSize)
 	var direction = Vector2.RIGHT.rotated(rotation)
 	position += direction * SPEED * delta *GameManager.bulletSpeed
 	
@@ -22,6 +22,6 @@ func _on_body_entered(body):
 		
 		if(pierce <= 0):
 			queue_free()
-	else:
+	else: if !body.has_method("fire"):
 		queue_free()
 		
