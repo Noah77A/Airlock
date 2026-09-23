@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="roomData" format=3 uid="uid://33swf1fyvtif"]
+
+[ext_resource type="Script" uid="uid://cjuncqqyo0m2k" path="res://game_generation/data/room_data.gd" id="1_h630n"]
+
+[resource]
+script = ExtResource("1_h630n")
+scenePath = null
+metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

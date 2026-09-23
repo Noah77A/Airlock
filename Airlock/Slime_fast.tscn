@@ -6,6 +6,7 @@
 script = ExtResource("1_w1w6i")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1229273364]
+polygon = PackedVector2Array(-30, -27, -108, -75, -84, -142, -117, -161, -193, -149, -246, -96, -262, -61, -184, 56, -110, 107, 3, 103, 72, 100, 252, 98, 295, 60, 272, 37, 210, 29, 169, -8, 143, -58, 124, -97, 99, -32, 44, -14, -68, -118, -89, -91)
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=936970941]
 color = Color(0.4627661, 0.00015050486, 0.46277833, 1)
