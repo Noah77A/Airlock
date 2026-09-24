@@ -7,7 +7,7 @@ var summon = false
 func _ready():  
 	summon = false
 	%SummonSprite.visible = true
-	await get_tree().create_timer(0.4).timeout
+	await get_tree().create_timer(0.6).timeout
 	%SummonSprite.visible = false
 	summon = true
 	%Slime.play_walk()
