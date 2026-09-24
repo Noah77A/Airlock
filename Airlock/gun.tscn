@@ -29,7 +29,6 @@ position = Vector2(777.394, -111.64916)
 
 [node name="FireRate" type="Timer" parent="." unique_id=57949276]
 unique_name_in_owner = true
-wait_time = 0.575
 autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1501804280]
