@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://7oxd5v1b0xqs" path="res://bosses/boss_base.gd" id="1_pdx44"]
 [ext_resource type="Script" uid="uid://ygjkyvb1w2y4" path="res://bosses/boss_animate.gd" id="2_rbqqq"]
 [ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="3_q1o08"]
+[ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="3_rdiey"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 
@@ -19,6 +20,14 @@ shape = SubResource("CapsuleShape2D_g4v7s")
 [node name="BossAnimate" type="Node2D" parent="." unique_id=454787475]
 unique_name_in_owner = true
 script = ExtResource("2_rbqqq")
+
+[node name="GroundShadow" type="Sprite2D" parent="BossAnimate" unique_id=1171267053]
+self_modulate = Color(0.59607846, 0.59607846, 0.59607846, 0.53333336)
+z_index = -1
+z_as_relative = false
+position = Vector2(4.7683716e-07, 1.1920929e-07)
+scale = Vector2(0.13273811, 0.13365386)
+texture = ExtResource("3_rdiey")
 
 [node name="BossSprite" type="AnimatedSprite2D" parent="BossAnimate" unique_id=1356727339]
 unique_name_in_owner = true

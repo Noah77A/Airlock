@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://di4oiq182a88j" path="res://bosses/summon.gd" id="3_pvla8"]
 [ext_resource type="Texture2D" uid="uid://cyj5bif2oxhho" path="res://assets/Boss sprites/GeneralWalk1.png" id="5_cwqjb"]
 [ext_resource type="Texture2D" uid="uid://db128imh1qao3" path="res://assets/Boss sprites/GeneralWalk2.png" id="6_wxx8a"]
+[ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="7_cwqjb"]
 [ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="7_hkfax"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqgl0"]
@@ -39,6 +40,14 @@ script = ExtResource("1_fakaj")
 [node name="BossAnimate" type="Node2D" parent="." unique_id=1209260153]
 unique_name_in_owner = true
 script = ExtResource("3_ouggf")
+
+[node name="GroundShadow" type="Sprite2D" parent="BossAnimate" unique_id=1010502310]
+self_modulate = Color(0.59607846, 0.59607846, 0.59607846, 0.53333336)
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 4)
+scale = Vector2(0.30874896, 0.17365295)
+texture = ExtResource("7_cwqjb")
 
 [node name="BossSprite" type="AnimatedSprite2D" parent="BossAnimate" unique_id=1487641996]
 unique_name_in_owner = true

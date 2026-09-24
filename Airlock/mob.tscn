@@ -56,7 +56,7 @@ unique_name_in_owner = true
 script = ExtResource("2_1qmh0")
 
 [node name="GroundShadow" type="Sprite2D" parent="Slime" unique_id=2019923751]
-modulate = Color(0.898039, 0.878431, 0.831373, 1)
+self_modulate = Color(0.59607846, 0.59607846, 0.59607846, 0.53333336)
 z_index = -1
 z_as_relative = false
 position = Vector2(4.7683716e-07, 1.1920929e-07)

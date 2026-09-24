@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c5w1vo6rj0woj" path="res://bosses/xeno_boss.gd" id="2_2ddmu"]
 [ext_resource type="Script" uid="uid://ygjkyvb1w2y4" path="res://bosses/boss_animate.gd" id="2_pg6rr"]
 [ext_resource type="Texture2D" uid="uid://d380qxsg07s24" path="res://assets/Boss sprites/Xeno(Boss).png" id="3_apk3s"]
+[ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="3_h6u1s"]
 [ext_resource type="Texture2D" uid="uid://b04ixvs4f31ew" path="res://assets/Boss sprites/XenoWalk1.png" id="4_h6u1s"]
 [ext_resource type="Texture2D" uid="uid://btqqq6g8x5cx1" path="res://assets/Boss sprites/XenoWalk2.png" id="5_pbe25"]
 [ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="6_6hoxh"]
@@ -38,6 +39,14 @@ script = ExtResource("2_2ddmu")
 
 [node name="BossAnimate" type="Node2D" parent="." unique_id=1879427882]
 script = ExtResource("2_pg6rr")
+
+[node name="GroundShadow" type="Sprite2D" parent="BossAnimate" unique_id=972141483]
+self_modulate = Color(0.59607846, 0.59607846, 0.59607846, 0.53333336)
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 2)
+scale = Vector2(0.3327384, 0.29365402)
+texture = ExtResource("3_h6u1s")
 
 [node name="BossSprite" type="AnimatedSprite2D" parent="BossAnimate" unique_id=1487641996]
 unique_name_in_owner = true
