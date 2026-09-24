@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://wt5pe0u3b32b" path="res://assets/animations/SoldierWalk2.png" id="6_fynin"]
 [ext_resource type="AudioStream" uid="uid://d3ycgaoy7uh3o" path="res://assets/sfx/artificiallyinspired-alien-talking-312011.mp3" id="6_tmfmp"]
 [ext_resource type="Script" uid="uid://c6p23gnx8oja2" path="res://soldier_animation.gd" id="7_acg77"]
+[ext_resource type="Texture2D" uid="uid://d4mo3cmeegp6y" path="res://assets/SummonAlien.png" id="8_sssc3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -55,6 +56,13 @@ scale = Vector2(0.01257005, 0.01299813)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 frame_progress = 0.31402805
 script = ExtResource("7_acg77")
+
+[node name="SummonSprite" type="Sprite2D" parent="SoldierSprite" unique_id=1031812200]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-8.34465e-07, -10)
+scale = Vector2(0.013749999, 0.013333333)
+texture = ExtResource("8_sssc3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SoldierSprite" unique_id=302985231]
 stream = ExtResource("6_tmfmp")
