@@ -2,9 +2,18 @@ extends Area2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var marker_2d: Marker2D = %ShootingPoint
 @onready var roomHandler = get_node("/root/Game/PlayerRoomHandler")
-
+var autofire = false
+var fire = false
 func _physics_process(delta):
-	look_at(get_global_mouse_position())
+	
+	if(autofire):
+		var enemies_in_range = get_overlapping_bodies()
+		if enemies_in_range.size() > 0:
+			var target_enemy = enemies_in_range[0]
+			look_at(target_enemy.global_position)
+		else:
+			look_at(get_global_mouse_position())
+	else: look_at(get_global_mouse_position())
 
 
 
@@ -22,6 +31,21 @@ func shoot():
 	
 	
 func _input(event) -> void:
-	if event.is_action_pressed("shoot"):
+	if event.is_action_pressed("shoot") && fire:
 		shoot()
-	
+		fire = false
+	if event.is_action_pressed("autofire"):
+		if(autofire):
+			autofire = false
+		else:
+			autofire = true
+
+
+func _on_timer_timeout() -> void:
+	%FireRate.wait_time = GameManager.fireRate
+	fire = true
+	if(autofire):
+		var enemies_in_range = get_overlapping_bodies()
+		if enemies_in_range.size() > 0:
+			shoot()
+			fire = false

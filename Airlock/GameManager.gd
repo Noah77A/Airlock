@@ -13,6 +13,7 @@ var regen = 0
 var bulletSpeed = 1
 var bulletSize = 0.25
 var price = 10
+var fireRate = 0.5
 
 var upgradeSignal = false
 var healthSignal = false

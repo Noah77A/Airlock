@@ -133,6 +133,7 @@ offset_left = 143.0
 offset_top = 205.0
 offset_right = 875.0
 offset_bottom = 829.0
+theme_override_font_sizes/font_size = 30
 text = "Test Box"
 
 [node name="Choice2" type="Button" parent="Upgrade" unique_id=1982936725]
@@ -142,6 +143,7 @@ offset_left = 1110.0
 offset_top = 173.0
 offset_right = 1736.0
 offset_bottom = 831.0
+theme_override_font_sizes/font_size = 30
 text = "Test Box"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]

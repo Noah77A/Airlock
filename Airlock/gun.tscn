@@ -27,11 +27,12 @@ texture = ExtResource("2_dk5gl")
 unique_name_in_owner = true
 position = Vector2(777.394, -111.64916)
 
-[node name="Timer" type="Timer" parent="." unique_id=57949276]
-wait_time = 0.3
+[node name="FireRate" type="Timer" parent="." unique_id=57949276]
+unique_name_in_owner = true
+wait_time = 0.575
 autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1501804280]
 stream = ExtResource("3_kw0bs")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FireRate" to="." method="_on_timer_timeout"]
