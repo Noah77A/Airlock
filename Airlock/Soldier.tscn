@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://wt5pe0u3b32b" path="res://assets/animations/SoldierWalk2.png" id="6_fynin"]
 [ext_resource type="AudioStream" uid="uid://d3ycgaoy7uh3o" path="res://assets/sfx/artificiallyinspired-alien-talking-312011.mp3" id="6_tmfmp"]
 [ext_resource type="Script" uid="uid://c6p23gnx8oja2" path="res://soldier_animation.gd" id="7_acg77"]
-[ext_resource type="Texture2D" uid="uid://d4mo3cmeegp6y" path="res://assets/SummonAlien.png" id="8_sssc3"]
+[ext_resource type="Texture2D" uid="uid://d4mo3cmeegp6y" path="res://assets/SummonSoldier.png" id="8_sssc3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{

@@ -1,16 +1,22 @@
 extends CharacterBody2D
 var health = 3 + GameManager.difficulty
-
+var summon = false
 @onready var player = get_node("/root/Game/Player")
 
 
-func _ready(): 
+func _ready():  
+	summon = false
+	%SummonSprite.visible = true
+	await get_tree().create_timer(0.4).timeout
+	%SummonSprite.visible = false
+	summon = true
 	%Slime.play_walk()
 
 func _physics_process(delta):
-	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 30.0
-	move_and_slide()
+	if(summon):
+		var direction = global_position.direction_to(player.global_position)
+		velocity = direction * 30.0
+		move_and_slide()
 	
 func take_damage():
 	health -= GameManager.damage

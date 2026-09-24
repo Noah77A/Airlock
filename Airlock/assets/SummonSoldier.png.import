@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi8olbekltnar"
-path="res://.godot/imported/SummonAlien.png-c496478aeb6ff06aae13ad91a07b6085.ctex"
+uid="uid://d4mo3cmeegp6y"
+path="res://.godot/imported/SummonSoldier.png-61a5d18798b3338a1d9b5f07382a6fa0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SummonAlien.png"
-dest_files=["res://.godot/imported/SummonAlien.png-c496478aeb6ff06aae13ad91a07b6085.ctex"]
+source_file="res://assets/SummonSoldier.png"
+dest_files=["res://.godot/imported/SummonSoldier.png-61a5d18798b3338a1d9b5f07382a6fa0.ctex"]
 
 [params]
 
