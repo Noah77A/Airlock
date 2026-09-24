@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cn1uq6ogmlme6"]
+
+[ext_resource type="Script" uid="uid://chyfqljd7ml4q" path="res://turret.gd" id="1_tjdg3"]
+[ext_resource type="Texture2D" uid="uid://ea0sitd3hn7g" path="res://assets/TurretSprite.png" id="2_c5apd"]
+[ext_resource type="Script" uid="uid://7r7pgciwi7m3" path="res://energy_ball.gd" id="3_c5apd"]
+[ext_resource type="Script" uid="uid://c06isgapd01fd" path="res://turret_sprite.gd" id="3_coqkk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 11.045361
+
+[node name="Turret" type="StaticBody2D" unique_id=1718083494]
+script = ExtResource("1_tjdg3")
+
+[node name="TurretSprite" type="Sprite2D" parent="." unique_id=2005250649]
+unique_name_in_owner = true
+position = Vector2(0, -13)
+scale = Vector2(0.0184375, 0.021250002)
+texture = ExtResource("2_c5apd")
+script = ExtResource("3_coqkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=606593738]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="EnergyBall" type="Marker2D" parent="." unique_id=174006649]
+position = Vector2(0, -20)
+script = ExtResource("3_c5apd")
+
+[node name="Timer" type="Timer" parent="EnergyBall" unique_id=466265209]
+autostart = true
+
+[connection signal="timeout" from="EnergyBall/Timer" to="EnergyBall" method="_on_timer_timeout"]

@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dujaw04hlqblu" path="res://assets/test_tile_set.tres" id="1_0bd00"]
 [ext_resource type="PackedScene" uid="uid://y38gte5o0xf8" path="res://mob.tscn" id="2_00fak"]
 [ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="3_q6dgr"]
+[ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="4_4dl2i"]
 
 [node name="Node2D" type="Node2D" unique_id=63089627]
 
@@ -28,4 +29,7 @@ position = Vector2(-2, 55)
 position = Vector2(137, 36)
 
 [node name="GeneralBoss" parent="." unique_id=498159889 instance=ExtResource("3_q6dgr")]
-position = Vector2(74, 69)
+position = Vector2(96, 75)
+
+[node name="Turret" parent="." unique_id=1718083494 instance=ExtResource("4_4dl2i")]
+position = Vector2(30, 70)

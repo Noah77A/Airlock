@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
-
+var baseColor : Color = Color(1.0, 1.0, 1.0, 1.0)
 
 func play_walk():
 	%AlienAnimation.walk()
@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 func play_hurt():
 	modulate = Color(0.651, 0.0, 0.0, 1.0)
 	await get_tree().create_timer(0.4).timeout
-	modulate = Color(1.0, 1.0, 1.0, 1.0)
+	modulate = baseColor

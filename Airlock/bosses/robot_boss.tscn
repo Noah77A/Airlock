@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://7oxd5v1b0xqs" path="res://bosses/boss_base.gd" id="1_0aesm"]
 [ext_resource type="Texture2D" uid="uid://doqk016wgpt5s" path="res://assets/Boss sprites/RobotBoss.png" id="2_e17h6"]
-[ext_resource type="PackedScene" uid="uid://c0yi8sofxny3" path="res://bosses/eye.tscn" id="3_0aesm"]
 [ext_resource type="Script" uid="uid://ygjkyvb1w2y4" path="res://bosses/boss_animate.gd" id="3_mhma6"]
 [ext_resource type="Texture2D" uid="uid://b1ij7mo4lj1vp" path="res://assets/Boss sprites/RobotWalk1.png" id="5_oq51v"]
 [ext_resource type="Texture2D" uid="uid://ckfud3f8hmv2n" path="res://assets/Boss sprites/RobotWalk2.png" id="6_pujlx"]
 [ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="7_2mmbw"]
+[ext_resource type="Script" uid="uid://cnr5fcnt5fmur" path="res://bosses/eye.gd" id="7_mhma6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kj0ek"]
 animations = [{
@@ -28,9 +28,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
-radius = 14.0
-height = 66.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_4dl2i"]
+radius = 14.142136
 
 [node name="Robot_Boss" type="CharacterBody2D" unique_id=498159889]
 collision_layer = 2
@@ -49,8 +48,15 @@ sprite_frames = SubResource("SpriteFrames_kj0ek")
 script = ExtResource("7_2mmbw")
 
 [node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
-position = Vector2(0, -24)
-shape = SubResource("CapsuleShape2D_yf5fn")
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_4dl2i")
 
-[node name="Eye" parent="." unique_id=529309476 instance=ExtResource("3_0aesm")]
-position = Vector2(0, -44)
+[node name="Eye" type="Marker2D" parent="." unique_id=529309476]
+position = Vector2(0, -32)
+script = ExtResource("7_mhma6")
+
+[node name="Timer" type="Timer" parent="Eye" unique_id=1374559232]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Eye/Timer" to="Eye" method="_on_timer_timeout"]

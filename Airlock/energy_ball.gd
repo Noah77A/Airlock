@@ -6,7 +6,6 @@ extends Marker2D
 
 func _physics_process(delta):
 	look_at(player.global_position)
-	
 func fire():
 	var roomScene = roomHandler.loadedRoomInstance
 	const BLAST = preload("res://enemy_bullet.tscn")
@@ -19,4 +18,3 @@ func fire():
 
 func _on_timer_timeout() -> void:
 	fire()
-	
