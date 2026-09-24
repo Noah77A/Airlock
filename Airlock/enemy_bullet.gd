@@ -1,6 +1,7 @@
 extends Area2D
 var travelled_distance = 0
 var target_position
+var damage = (GameManager.difficulty+2) * 2.5
 func _physics_process(delta):
 	const SPEED = 100
 	const RANGE = 1200
@@ -11,7 +12,7 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body.has_method("get_hit"):
-		body.get_hit(15.0)
+		body.get_hit(damage)
 		queue_free()
 	else: if !body.has_method("take_damage"):
 		queue_free()

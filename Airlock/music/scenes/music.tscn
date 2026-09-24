@@ -9,6 +9,7 @@ mix_rate = 48000
 stereo = true
 
 [node name="Music" type="AudioStreamPlayer2D" unique_id=4416724]
+process_mode = 3
 stream = SubResource("AudioStreamWAV_v7xn1")
 autoplay = true
 bus = &"Music"
