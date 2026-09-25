@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_6qcdk")
 name = "test"
-roomFiles = Array[String](["res://game_generation/resources/rooms/test_room1.tres", "res://game_generation/resources/rooms/test_room2.tres"])
+roomFiles = Array[String](["res://game_generation/resources/rooms/test_room1.tres", "res://game_generation/resources/rooms/test_room2.tres", "res://game_generation/resources/rooms/lava_room.tres"])
 metadata/_custom_type_script = "uid://bp836rmhjq1t"

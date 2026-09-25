@@ -5,12 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://6iue8ok2oj4p" path="res://game_generation/data/player_room_handler.tscn" id="6_edxvn"]
 [ext_resource type="Script" uid="uid://bmppfghwps46y" path="res://upgrade.gd" id="7_pk6fm"]
 
-[sub_resource type="Curve2D" id="Curve2D_qqaft"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -75, -90, 0, 0, 0, 0, 2031, -90, 0, 0, 0, 0, 2033, 1120, 0, 0, 0, 0, -81, 1114, 0, 0, 0, 0, -72, -87)
-}
-point_count = 5
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqaft"]
 bg_color = Color(0.6, 0.6, 0.8980392, 1)
 
@@ -43,14 +37,6 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=227039421 instance=ExtResource("1_y3pti")]
-
-[node name="Path2D" type="Path2D" parent="Player" unique_id=610517452]
-position = Vector2(-1007, -410)
-curve = SubResource("Curve2D_qqaft")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=1393536581]
-unique_name_in_owner = true
-position = Vector2(-75, -90)
 
 [node name="Timer" type="Timer" parent="." unique_id=1461454430]
 unique_name_in_owner = true

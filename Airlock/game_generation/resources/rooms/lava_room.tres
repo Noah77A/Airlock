@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_030t6")
-scenePath = null
+name = "Lava"
+scenePath = "lava.tscn"
+roomExits = [[Vector2i(-4, -3), Vector2i(0, 0), "W"], [Vector2i(10, 4), Vector2i(0, 0), "E"]]
 metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

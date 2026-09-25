@@ -39,7 +39,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4h01i")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
@@ -53,6 +53,7 @@ script = ExtResource("1_nokgg")
 
 [node name="Slime" type="Node2D" parent="." unique_id=2008890567]
 unique_name_in_owner = true
+visibility_layer = 4
 script = ExtResource("2_1qmh0")
 
 [node name="GroundShadow" type="Sprite2D" parent="Slime" unique_id=2019923751]

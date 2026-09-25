@@ -61,13 +61,14 @@ Version 0.3: 9/16/26
 - crates started
 
 Version 0.4: 9/23/26
--crates addes
--fixed upgrade debug
--bosses added (general, robot xeno)
+-crates added
+-more tilesets created
+-fixed duplicate upgrade bug and debugged upgrades
+-bosses added (general and robot)
 -more upgrades(health, bullet size and speed)
 - added text to intro sequence along with a skip button
 - added background music that loops
-"
+- Created a 3rd room (will be fully implemented for the next sprint, we had some issues with implementing it)"
 horizontal_alignment = 1
 
 [node name="Menu" type="Button" parent="Background" unique_id=73407062]
