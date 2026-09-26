@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="4_onocx"]
 [ext_resource type="Texture2D" uid="uid://dofkc4vay1n5a" path="res://assets/Portal(deactive).png" id="4_we4e0"]
 [ext_resource type="Script" uid="uid://dgvh4v0evxahj" path="res://game_generation/rooms/animated_sprite_2d.gd" id="7_8tk0p"]
+[ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="8_we4e0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nkng"]
 texture = ExtResource("1_j1bf6")
@@ -14655,7 +14656,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_agex3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -14726,5 +14727,8 @@ scale = Vector2(0.022, 0.025)
 sprite_frames = SubResource("SpriteFrames_1hk80")
 frame_progress = 0.5465161
 script = ExtResource("7_8tk0p")
+
+[node name="GeneralBoss" parent="." unique_id=498159889 instance=ExtResource("8_we4e0")]
+position = Vector2(-736, -268)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

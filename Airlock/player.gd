@@ -28,9 +28,9 @@ func _physics_process(delta):
 	
 	
 	if velocity.length() > 0.0:
-		$HappyBoo.play_walk_animation()	
-	else: 	
-		$HappyBoo.play_idle_animation()	
+		$HappyBoo.play_walk_animation()
+	else: 
+		$HappyBoo.play_idle_animation()
 	const DAMAGE_RATE = 5.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if(GameManager.healthSignal):

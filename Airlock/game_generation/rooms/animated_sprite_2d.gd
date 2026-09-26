@@ -1,4 +1,4 @@
 extends AnimatedSprite2D
 
-#if (key)
+#if (GameManager.haveKey)
 	#frame = 1

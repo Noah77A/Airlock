@@ -3,8 +3,7 @@ extends CharacterBody2D
 var health = 3 + GameManager.difficulty*2
 
 @onready var player = get_node("/root/Game/Player")
-func _ready(): 
-	%BossAnimate.play_walk()
+
 
 
 
@@ -14,6 +13,10 @@ func _physics_process(delta):
 		var direction = global_position.direction_to(player.global_position)
 		velocity = direction * 30.0
 		move_and_slide()
+	if velocity.length() > 0.0:
+		$BossAnimate.play_walk()
+	else: 
+		$BossAnimate.play_idle()
 
 func take_damage():
 	health -= GameManager.damage

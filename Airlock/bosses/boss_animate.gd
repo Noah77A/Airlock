@@ -6,4 +6,4 @@ func play_hurt():
 	await get_tree().create_timer(0.4).timeout
 	modulate = Color(1.0, 1.0, 1.0, 1.0)
 func play_idle():
-	%boss_sprite.idle()
+	%BossSprite.idle()
