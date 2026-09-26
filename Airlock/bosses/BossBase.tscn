@@ -9,6 +9,9 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rdiey"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1o08"]
+radius = 147.0
+
 [node name="BossBase" type="CharacterBody2D" unique_id=498159889]
 collision_layer = 2
 collision_mask = 3
@@ -35,3 +38,12 @@ position = Vector2(1.1920929e-07, -17)
 scale = Vector2(0.02796875, 0.026718752)
 sprite_frames = SubResource("SpriteFrames_rdiey")
 script = ExtResource("3_q1o08")
+
+[node name="DetectionBox" type="Area2D" parent="." unique_id=68406153]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+
+[node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=234974410]
+position = Vector2(0, 20)
+shape = SubResource("CircleShape2D_q1o08")

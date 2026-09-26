@@ -2,6 +2,7 @@ extends Area2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var marker_2d: Marker2D = %ShootingPoint
 @onready var roomHandler = get_node("/root/Game/PlayerRoomHandler")
+
 var autofire = false
 var fire = false
 func _physics_process(delta):

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://mufyluvjhcud" path="res://game_generation/rooms/lava.gd" id="1_hpw0u"]
 [ext_resource type="Texture2D" uid="uid://8gy3nh422bhb" path="res://game_generation/Worlddesignsheets/lava.png" id="1_j1bf6"]
 [ext_resource type="PackedScene" uid="uid://bopmpvunwncgk" path="res://crate.tscn" id="2_onocx"]
+[ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="4_onocx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nkng"]
 texture = ExtResource("1_j1bf6")
@@ -503,5 +504,32 @@ rotation = -0.45344388
 [node name="Timer" type="Timer" parent="." unique_id=1648509750]
 unique_name_in_owner = true
 wait_time = 0.5
+
+[node name="Turret" parent="." unique_id=1718083494 instance=ExtResource("4_onocx")]
+position = Vector2(-605, 363)
+
+[node name="Turret2" parent="." unique_id=1525635991 instance=ExtResource("4_onocx")]
+position = Vector2(284, -466)
+
+[node name="Turret3" parent="." unique_id=624314239 instance=ExtResource("4_onocx")]
+position = Vector2(662, 860)
+
+[node name="Turret4" parent="." unique_id=418046431 instance=ExtResource("4_onocx")]
+position = Vector2(-268, 918)
+
+[node name="Turret5" parent="." unique_id=591073173 instance=ExtResource("4_onocx")]
+position = Vector2(811, 366)
+
+[node name="Crate5" parent="." unique_id=1873710598 instance=ExtResource("2_onocx")]
+position = Vector2(140, 717)
+
+[node name="Crate6" parent="." unique_id=1622382911 instance=ExtResource("2_onocx")]
+position = Vector2(610, -277)
+
+[node name="Crate7" parent="." unique_id=1997923784 instance=ExtResource("2_onocx")]
+position = Vector2(878, 615)
+
+[node name="Crate8" parent="." unique_id=547530201 instance=ExtResource("2_onocx")]
+position = Vector2(-616, 761)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

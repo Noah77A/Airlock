@@ -18,5 +18,7 @@ func fire():
 
 
 func _on_timer_timeout() -> void:
-	fire()
+	var things_in_range = %DetectionBox.get_overlapping_bodies()
+	if things_in_range.any(func(body): return body.has_method("get_hit")):
+		fire()
 	

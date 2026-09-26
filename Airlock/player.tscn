@@ -46,6 +46,7 @@ bg_color = Color(9.62615e-07, 0.41269758, 0.119832866, 1)
 
 [node name="Player" type="CharacterBody2D" unique_id=227039421]
 scale = Vector2(0.25, 0.25)
+collision_layer = 9
 script = ExtResource("1_onrkg")
 
 [node name="HappyBoo" parent="." unique_id=1091727253 instance=ExtResource("1_4flbx")]

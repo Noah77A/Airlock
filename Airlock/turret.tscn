@@ -8,6 +8,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 11.045361
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_57qmd"]
+radius = 147.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
 radius = 6.0
 
@@ -31,6 +34,15 @@ script = ExtResource("3_c5apd")
 [node name="Timer" type="Timer" parent="EnergyBall" unique_id=466265209]
 autostart = true
 
+[node name="DetectionBox" type="Area2D" parent="EnergyBall" unique_id=1925573843]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+
+[node name="DetectionArea" type="CollisionShape2D" parent="EnergyBall/DetectionBox" unique_id=1739769276]
+position = Vector2(0, 20)
+shape = SubResource("CircleShape2D_57qmd")
+
 [node name="Target" type="CharacterBody2D" parent="." unique_id=882214077]
 collision_layer = 2
 collision_mask = 3
@@ -39,3 +51,4 @@ collision_mask = 3
 shape = SubResource("CircleShape2D_yf5fn")
 
 [connection signal="timeout" from="EnergyBall/Timer" to="EnergyBall" method="_on_timer_timeout"]
+[connection signal="body_entered" from="EnergyBall/DetectionBox" to="EnergyBall" method="_on_detection_box_body_entered"]
