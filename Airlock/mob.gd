@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health = 3 + GameManager.difficulty
+var health = 30 + (GameManager.difficulty*10)
 var summon = false
 @onready var player = get_node("/root/Game/Player")
 

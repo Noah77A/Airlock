@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health = 3 + GameManager.difficulty*2
+var health = 30 + (GameManager.difficulty*20)
 var speed = 85
 @onready var player = get_node("/root/Game/Player")
 

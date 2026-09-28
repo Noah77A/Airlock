@@ -1,5 +1,5 @@
 extends StaticBody2D
-var health = 2 + GameManager.difficulty
+var health = 20 + (GameManager.difficulty*10)
 
 @onready var player = get_node("/root/Game/Player")
 

@@ -77,7 +77,7 @@ func _on_choice_2_pressed() -> void:
 	selected(option2)
 func selected(select):
 	if(select == 1):
-		GameManager.damage +=1
+		GameManager.damage +=5
 	if(select == 2):
 		GameManager.pierce +=1
 	if(select == 3):

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 ## basic structure for a boss enemy, bosses with inherit this with their own unique features
-var health = 3 + GameManager.difficulty*2
+var health = 30 + (GameManager.difficulty*20)
 
 @onready var player = get_node("/root/Game/Player")
 
