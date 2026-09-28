@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func _ready() -> void:
 	%Timer.start()
 	
@@ -18,5 +17,5 @@ func spawn_mob():
 	
 	
 
-
+func _on_timer_timeout() -> void:
 	spawn_mob() # Replace with function body.
