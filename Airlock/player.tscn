@@ -46,6 +46,8 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 bg_color = Color(9.62615e-07, 0.41269758, 0.119832866, 1)
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -144,6 +146,6 @@ texture = ExtResource("6_2hs0m")
 
 [node name="WormholeKey" type="AnimatedSprite2D" parent="." unique_id=2018081716]
 unique_name_in_owner = true
-position = Vector2(-564, -216)
+position = Vector2(-424, -220.00002)
 scale = Vector2(0.061249997, 0.056249958)
 sprite_frames = SubResource("SpriteFrames_g4v7s")

@@ -1,7 +1,7 @@
 extends Area2D
 var travelled_distance = 0
 var target_position
-var damage = (GameManager.difficulty+2) * 2.5
+var damage = (GameManager.difficulty+2) * 5
 func _physics_process(delta):
 	const SPEED = 100
 	const RANGE = 1200
