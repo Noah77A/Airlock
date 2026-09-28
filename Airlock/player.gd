@@ -31,6 +31,10 @@ func _physics_process(delta):
 		$HappyBoo.play_walk_animation()
 	else: 
 		$HappyBoo.play_idle_animation()
+	if(GameManager.haveKey):
+		%WormholeKey.frame= 1
+	else:
+		%WormholeKey.frame= 0
 	const DAMAGE_RATE = 5.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if(GameManager.healthSignal):
