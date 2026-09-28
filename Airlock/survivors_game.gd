@@ -38,7 +38,7 @@ func _on_return_to_menu_pressed() -> void:
 	GameManager.oxygen = 120
 	GameManager.level = 1
 	GameManager.pierce = 1
-	GameManager.damage = 1
+	GameManager.damage = 10
 	GameManager.maxHealth = 100
 	GameManager.movement = 1
 	GameManager.experiance = 0
@@ -46,6 +46,7 @@ func _on_return_to_menu_pressed() -> void:
 	GameManager.bulletSpeed = 1
 	GameManager.bulletSize = 0.25
 	GameManager.price = 10
+	GameManager.fireRate = 0.1
 
 	GameManager.upgradeSignal = false
 	GameManager.healthSignal = false
