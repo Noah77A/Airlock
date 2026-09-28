@@ -64,7 +64,10 @@ func playerDoorCheck()->void:
 	var dir: int = exit[2]
 	var localPos: Vector2i = Vector2i(exit[0], exit[1])
 	var globalPos: Vector2i = loadedData.globalOrigin
-	
+	if(exit.length() > 3):## key check
+		if(exit[3] && GameManager.haveKey):
+			GameManager.haveKey = false
+		else:return
 	if dir == 0:
 		if !curFloorData.contains(globalPos + localPos + Vector2i(0,1)) : return
 		load_room(curFloorData.get_room(globalPos + localPos + Vector2i(0,1)))
