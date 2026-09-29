@@ -45,5 +45,4 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=234974410]
-position = Vector2(0, 20)
 shape = SubResource("CircleShape2D_q1o08")

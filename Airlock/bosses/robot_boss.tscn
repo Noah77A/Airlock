@@ -77,7 +77,6 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=1782247132]
-position = Vector2(0, 20)
 shape = SubResource("CircleShape2D_oq51v")
 
 [connection signal="timeout" from="Eye/Timer" to="Eye" method="_on_timer_timeout"]

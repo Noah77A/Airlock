@@ -528,7 +528,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_h3prq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -548,7 +548,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_h3prq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -603,7 +603,7 @@ rotation = -0.0045010955
 
 [node name="Timer" type="Timer" parent="." unique_id=1941416405]
 unique_name_in_owner = true
-wait_time = 0.5
+wait_time = 0.6
 
 [node name="Crate" parent="." unique_id=1188059626 instance=ExtResource("9_elmg1")]
 position = Vector2(-285, 293)
@@ -633,7 +633,7 @@ position = Vector2(-322, -516)
 position = Vector2(723, 581)
 
 [node name="GeneralBoss" parent="." unique_id=498159889 instance=ExtResource("11_d5qxy")]
-position = Vector2(319, -258)
+position = Vector2(315, -267)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2024066401]
 position = Vector2(838, -157)

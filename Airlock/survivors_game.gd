@@ -46,7 +46,7 @@ func _on_return_to_menu_pressed() -> void:
 	GameManager.bulletSpeed = 1
 	GameManager.bulletSize = 0.25
 	GameManager.price = 10
-	GameManager.fireRate = 0.5
+	GameManager.fireRate = 0.4
 
 	GameManager.upgradeSignal = false
 	GameManager.healthSignal = false
