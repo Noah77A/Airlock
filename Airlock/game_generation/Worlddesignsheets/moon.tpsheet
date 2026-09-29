@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "moon.png",
+			"size": {
+				"w": 200,
+				"h": 100
+			},
+			"sprites": [
+				{
+					"filename": "pixil-frame-0 (49).png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pixil-frame-0 (50).png",
+					"region": {
+						"x": 100,
+						"y": 0,
+						"w": 100,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:6c453fae9ad478727b1b5599c007864d:f5eb2e756306cc789217b05d9fd8b12f:9c972da9617ccb8e52c919fe9be4301b$"
+	}
+}
