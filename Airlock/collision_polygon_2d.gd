@@ -30,22 +30,17 @@ func combo_as_string() -> String:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not is_trapped():
 		return
-var key := event as InputEventKey
+	var key := event as InputEventKey
 	if key == null or not key.pressed or key.echo:
-	return
+		return
 	if key.keycode < KEY_A or key.keycode > KEY_Z:
-	return
-
-if key.keycode == _combo[_combo_index]:
-	_combo_index += 1
+		return
+	if key.keycode == _combo[_combo_index]:
+		_combo_index += 1
 	if _combo_index >= _combo.size():
-	_solved = true
-			combo_escaped.emit()
-		else:
-			combo_progress.emit(_combo_index)
+		_solved = true
+		combo_escaped.emit()
 	else:
-		# wrong letter resets, but still counts if it's the opening letter
-		_combo_index = 1 if key.keycode == _combo[0] else 0
 		combo_progress.emit(_combo_index)
 func _on_trap_entered(area: Area2D) -> void:
 	_trap_count += 1
