@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://vtt2qlpxamgi"
+path="res://.godot/imported/snow.tpsheet-58f27cbcb5669fa0de1b9c1c40c3f853.res"
+
+[deps]
+
+files=["res://game_generation/Worlddesignsheets/snow.sprites/pixil-frame-0 (56).tres"]
+
+source_file="res://game_generation/Worlddesignsheets/snow.tpsheet"
+dest_files=["res://.godot/imported/snow.tpsheet-58f27cbcb5669fa0de1b9c1c40c3f853.res", "res://game_generation/Worlddesignsheets/snow.sprites/pixil-frame-0 (56).tres"]
+
+[params]
+

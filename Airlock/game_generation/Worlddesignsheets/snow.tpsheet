@@ -1,0 +1,33 @@
+{
+	"textures": [
+		{
+			"image": "ice.png",
+			"size": {
+				"w": 16,
+				"h": 16
+			},
+			"sprites": [
+				{
+					"filename": "pixil-frame-0 (56).png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:b5a3647a906c8d38256cdda76e1ac9b7:ee4bcb32f1bcb4b42e980384a0934f52:a4a6737e604f518cf2f8a78e47b35756$"
+	}
+}

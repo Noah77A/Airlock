@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp4lnpoiaxmak"
-path="res://.godot/imported/iceworld.png-a5e8824c5bc835b73dee8e604010e3cf.ctex"
+uid="uid://bxkhvd5com2yd"
+path="res://.godot/imported/snow.png-bbfb80110c1d4efff5aece3d7f21ca86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_generation/Worlddesignsheets/moon.sprites/iceworld.png"
-dest_files=["res://.godot/imported/iceworld.png-a5e8824c5bc835b73dee8e604010e3cf.ctex"]
+source_file="res://game_generation/Worlddesignsheets/snow.png"
+dest_files=["res://.godot/imported/snow.png-bbfb80110c1d4efff5aece3d7f21ca86.ctex"]
 
 [params]
 
