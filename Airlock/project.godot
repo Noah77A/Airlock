@@ -77,7 +77,7 @@ Settings/Show_Tooltips=true
 config/name="Airlock"
 run/main_scene="uid://62tve1d2ch2d"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.png"
+config/icon="uid://bn74ii3rhumr1"
 
 [audio]
 
