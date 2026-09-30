@@ -14,7 +14,7 @@ var bulletSpeed = 1
 var bulletSize = 0.25
 var price = 10
 var fireRate = 0.4#change to 0.5
-
+var range = 155 
 var upgradeSignal = false
 var healthSignal = false
 var haveKey = false

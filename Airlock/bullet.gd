@@ -5,13 +5,11 @@ var target_position
 var pierce = GameManager.pierce
 func _physics_process(delta):
 	const SPEED = 100
-	const RANGE = 1200
 	scale = Vector2(GameManager.bulletSize, GameManager.bulletSize)
 	var direction = Vector2.RIGHT.rotated(rotation)
 	position += direction * SPEED * delta *GameManager.bulletSpeed
-	
 	travelled_distance += SPEED * delta * GameManager.bulletSpeed
-	if travelled_distance > RANGE:
+	if travelled_distance > GameManager.range:
 		queue_free()
 
 

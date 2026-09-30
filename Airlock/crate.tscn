@@ -30,9 +30,9 @@ script = ExtResource("1_44j4e")
 [node name="Cost" type="Label" parent="." unique_id=437625118]
 unique_name_in_owner = true
 offset_left = -6.0000005
-offset_top = -19.0
+offset_top = -18.999998
 offset_right = 47.0
-offset_bottom = 12.0
+offset_bottom = 12.000002
 scale = Vector2(0.208, 0.22)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5

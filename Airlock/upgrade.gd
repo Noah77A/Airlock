@@ -14,7 +14,7 @@ func _physics_process(delta):
 func upgrade():
 	visible = true
 	get_tree().paused = true
-	var rando = randi_range(1,8)
+	var rando = randi_range(1,9)
 	if (rando == 1):
 		option1 = 1
 		%Choice1.text = "Damage"
@@ -39,9 +39,12 @@ func upgrade():
 	if(rando == 8):
 		option1 = 8  
 		%Choice1.text = "Fire Rate"
+	if(rando == 9):
+		option1 = 9
+		%Choice1.text = "Range"
 	option2 = option1
 	while(option1 == option2):
-		rando = randi_range(1,8)
+		rando = randi_range(1,9)
 		if (rando == 1):
 			option2 = 1
 			%Choice2.text = "Damage"
@@ -66,6 +69,9 @@ func upgrade():
 		if(rando == 8):
 			option2 = 8  
 			%Choice2.text = "Fire Rate"
+		if(rando == 9):
+			option2 = 9
+			%Choice2.text = "Range"
 
 
 func _on_choice_1_pressed():
@@ -94,5 +100,7 @@ func selected(select):
 	if(select == 8):
 		if(GameManager.fireRate > 0.05):
 			GameManager.fireRate -= 0.05
+	if(select == 9):
+		GameManager.range += 20
 	visible = false
 	get_tree().paused = false
