@@ -18,3 +18,4 @@ var fireRate = 0.4#change to 0.5
 var upgradeSignal = false
 var healthSignal = false
 var haveKey = false
+var ice = false

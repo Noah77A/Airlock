@@ -66,6 +66,7 @@ func playerDoorCheck()->void:
 	var globalPos: Vector2i = loadedData.globalOrigin
 	if(exit.length() > 3):## key check
 		if(exit[3] && GameManager.haveKey):
+			print("test1")
 			GameManager.haveKey = false
 		else:return
 	if dir == 0:

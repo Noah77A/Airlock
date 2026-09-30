@@ -5,8 +5,7 @@ var o2 = 60
 func _ready():
 	RoundStart()
 func _physics_process(delta):
-	var ice = false
-	if(ice):
+	if(GameManager.ice):
 		var ground_accel: float = 0.0
 		var ground_friction: float = 0.0
 		var ice_accel: float = 1.0
@@ -32,8 +31,10 @@ func _physics_process(delta):
 	else: 
 		$HappyBoo.play_idle_animation()
 	if(GameManager.haveKey):
+		print("test3")
 		%WormholeKey.frame= 1
 	else:
+		print("test2")
 		%WormholeKey.frame= 0
 	const DAMAGE_RATE = 5.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
