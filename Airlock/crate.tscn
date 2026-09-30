@@ -15,7 +15,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_ggnq6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 2.0
 }]
@@ -29,13 +29,16 @@ script = ExtResource("1_44j4e")
 
 [node name="Cost" type="Label" parent="." unique_id=437625118]
 unique_name_in_owner = true
-offset_left = -7.0
-offset_top = -17.0
-offset_right = 7.0
-offset_bottom = -9.0
+offset_left = -6.0000005
+offset_top = -19.0
+offset_right = 47.0
+offset_bottom = 12.0
+scale = Vector2(0.208, 0.22)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_c7plm")
-theme_override_font_sizes/font_size = 8
-text = "12"
+theme_override_font_sizes/font_size = 30
+text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
