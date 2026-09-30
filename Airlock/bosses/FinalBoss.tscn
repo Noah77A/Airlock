@@ -7,11 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cte1sbh4kver2" path="res://assets/Boss sprites/FinalBoss.png" id="4_ewfwg"]
 [ext_resource type="Script" uid="uid://dgkwu1bwkmwfk" path="res://bosses/cloud.gd" id="6_0qnvo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q1o08"]
-radius = 147.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_rdiey"]
 animations = [{
 "frames": [{
@@ -23,21 +18,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1o08"]
+radius = 147.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+
 [node name="FinalBoss" type="CharacterBody2D" unique_id=498159889]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_ewfwg")
-
-[node name="DetectionBox" type="Area2D" parent="." unique_id=68406153]
-unique_name_in_owner = true
-collision_layer = 8
-collision_mask = 8
-
-[node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=234974410]
-shape = SubResource("CircleShape2D_q1o08")
-
-[node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
-shape = SubResource("CapsuleShape2D_g4v7s")
 
 [node name="BossAnimate" type="Node2D" parent="." unique_id=454787475]
 unique_name_in_owner = true
@@ -53,10 +42,20 @@ texture = ExtResource("3_ewfwg")
 
 [node name="BossSprite" type="AnimatedSprite2D" parent="BossAnimate" unique_id=1356727339]
 unique_name_in_owner = true
-position = Vector2(0, -1.9999998)
-scale = Vector2(0.012109375, 0.010859376)
+scale = Vector2(0.017304689, 0.01730469)
 sprite_frames = SubResource("SpriteFrames_rdiey")
 script = ExtResource("4_0qnvo")
+
+[node name="DetectionBox" type="Area2D" parent="." unique_id=68406153]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+
+[node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=234974410]
+shape = SubResource("CircleShape2D_q1o08")
+
+[node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
+shape = SubResource("CapsuleShape2D_g4v7s")
 
 [node name="Cloud" type="Marker2D" parent="." unique_id=1248636568]
 position = Vector2(0, -32)
