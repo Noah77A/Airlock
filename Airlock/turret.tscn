@@ -44,8 +44,8 @@ position = Vector2(0, 20)
 shape = SubResource("CircleShape2D_57qmd")
 
 [node name="Target" type="CharacterBody2D" parent="." unique_id=882214077]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 16
+collision_mask = 16
 
 [node name="CheeseBox" type="CollisionShape2D" parent="Target" unique_id=1710906180]
 shape = SubResource("CircleShape2D_yf5fn")

@@ -31,10 +31,8 @@ func _physics_process(delta):
 	else: 
 		$HappyBoo.play_idle_animation()
 	if(GameManager.haveKey):
-		print("test3")
 		%WormholeKey.frame= 1
 	else:
-		print("test2")
 		%WormholeKey.frame= 0
 	const DAMAGE_RATE = 5.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
