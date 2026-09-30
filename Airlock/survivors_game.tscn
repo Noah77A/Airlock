@@ -98,8 +98,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pk6fm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_getvi")
 text = "Quit"
 
-[node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
-
 [node name="Upgrade" type="CanvasLayer" parent="." unique_id=496219269]
 unique_name_in_owner = true
 visible = false
@@ -141,6 +139,8 @@ theme_override_font_sizes/font_size = 61
 text = "Upgrade"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PlayerRoomHandler" parent="." unique_id=1494511931 instance=ExtResource("6_edxvn")]
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
