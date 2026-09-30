@@ -5,8 +5,7 @@ var o2 = 60
 func _ready():
 	RoundStart()
 func _physics_process(delta):
-	var ice = false
-	if(ice):
+	if(GameManager.ice):
 		var ground_accel: float = 0.0
 		var ground_friction: float = 0.0
 		var ice_accel: float = 1.0
