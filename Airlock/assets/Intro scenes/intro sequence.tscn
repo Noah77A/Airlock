@@ -55,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ijd87")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 2.0
 }]
@@ -350,7 +350,7 @@ offset_right = 1544.0
 offset_bottom = 1066.0
 theme_override_fonts/normal_font = SubResource("FontVariation_t3af3")
 theme_override_font_sizes/normal_font_size = 30
-text = "2000 miles off the coast of Asia sits the beautiful island of Viridia. An island known for its otherworldly nature, technological innovation, and diverse culture. The research labs on Viridia are what gave the world it's ability to fly through space. Viridia figured out a way to harness radiation from distant supernovas and convert it into fuel. Viridia is responsible for humanities mark on the universe. "
+text = "It’s been almost 2 months since the legendary astronaut Isaac Cadia set off on his journey. Before Isaac left, he lost everything. Isaac couldn’t let the rest of the world suffer the same fate"
 horizontal_alignment = 1
 vertical_alignment = 1
 

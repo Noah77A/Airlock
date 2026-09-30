@@ -11,13 +11,13 @@ func add_room(data: roomData, location : Vector2i) -> bool:
 	for l in data.nodesOccupying:
 		if occupiedNodes.find_key(l+location):
 			return false
-	
 	var dataptr = nodeData.size()
 	data.globalOrigin = location
 	nodeData.set(dataptr, data)
 	
 	for l in data.nodesOccupying:
 		occupiedNodes.set(l + location, dataptr)
+	
 	return true
 
 func contains(location : Vector2i) -> bool:

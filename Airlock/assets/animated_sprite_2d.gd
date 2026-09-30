@@ -12,6 +12,7 @@ func increase_frame():
 	else:
 		get_tree().change_scene_to_file("res://survivors_game.tscn")
 
+
 "position"
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if (event.is_action_pressed("shoot")):
@@ -20,25 +21,27 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 func change_text():
 	if(frame == 1):
-		textLabel.text = "Despite Viridias technical prowess, there was an problem, close to home, that just kept evolving..
-	Storms.
-		Even though they could harness energy from the stars, they could never control the clouds above. No matter how much research and time they spent, nature's wrath was always smarter. A few months ago, Viridia faced their worst one yet..."
+		textLabel.text = "
+Isaac hailed from a beautiful island about 2000 miles off the coast of Asia. An island known for its otherworldly nature, technological innovation, and diverse culture. 
+Viridia
+Viridians are the architects of space travel. They figured out a way to convert the endless radiation from supernovas into fuel, providing humanity with the means to travel the stars. Isaac was their main researcher and astronaut. He was the one who made this discovery
+"
 	elif (frame == 2):
-		textLabel.text = "One random, fateful day, a collection of dark clouds materialized above the capitol city. Within a few hours, cataclysmic winds started to rip through the island. This was a catastrophe of otherwordly proportions. The protections Viridia created for storms, were completely destroyed. There was nothing they could've done. The civilization who brought so much to this world, was in their final hour"
+		textLabel.text = "However… despite Viridias technical prowess, there was a problem, close to home, that just kept evolving..
+	Storms.
+		Even though they could harness energy from the stars, they could never control the clouds above. No matter how much research and time they spent, nature's wrath was always smarter. And 3 months ago, Viridia faced their worst one yet...
+"
 	elif (frame == 3):
-		textLabel.text  = "In their last moments, the nations leaders called upon Isaac Cadia, a former military combat pilot and now astronaut to venture to mainland by submarine with Viridia's classified research and technology. Isaac was sent to warn the rest of the world, and keep ISLANDS legacy alive. The moment he charted his course, he knew his home was gone. 
-		The moment he made landfall days later, he was met with by the commander of the global space force, Isaacs commander. A man he's only heard legends of. The two have never met in person before, but the commander knew this day would come."	
+		textLabel.text  = "One random, fateful day, a collection of dark clouds materialized above the capitol city. Within a few hours, cataclysmic winds started to rip through the island. This was a catastrophe of otherworldly proportions. The protections Viridia created for storms were completely destroyed. There was nothing they could've done. The civilization who brought so much to this world, was in their final hour"	
 	elif (frame == 4):
-		textLabel.text  = "The GSF has been monitoring nearby alien systems for decades, and this storm is something they've seen time and time again, wiping out planet after planet. 
-		
-		Except for one: Expeditition IV. 
-		A planet system only a few light years away, faced this exact same storm, but seemed to figure out a way to make it pass. Commander realized our only hope was to venture to Expeditition, and learn how they survived the storm. Isaac, couldn't let the rest of the world suffer the fate of his home. He was perfect for this mission."
+		textLabel.text  = "As it turns out, this very storm was something Isaac was specifically afraid of. Viridia has been monitoring other planet systems for years now, and this exact storm was something they’ve seen a few times before. The storm has afflicted 4 separate systems now, and in 3 of them, all life signatures were totally wiped off the map. However, the 4th one, Expeditition IV was able to repel the storm… Isaac immediately knew the world's only hope was to journey out to Expeditition himself, and find out how." 
 	elif (frame == 5):
-		textLabel.text  = "Isaac took off that same day, without hesitation, on a spaceship that he helped create. He's been on missions like this before, he was hoping the Expiditioners were peaceful, but he came prepared for the worst. 
-		
-		After a week of spacetravel, he arrived at Expidtition, and sent out a diplomatic signal.
-		
-		Isaac was ready to save his world. "
+		textLabel.text  = "Isaac sent out a warning to the rest of the world, telling them to prepare as best they can, and then took off that same day.
+
+And after 3 grueling months of space travel, Isaac successfully made it to Expeditition. He didn’t know what to expect, but absolutely came prepared for the worst. He knew this journey would not be easy, but he was ready.
+
+Once he reached the system, he sent out a diplomatic signal. He came here to learn from the Expedititioners, not harm them. 
+"
 	elif (frame == 6):
 
 		textLabel.text = "However, the Expidititioners had other plans...."

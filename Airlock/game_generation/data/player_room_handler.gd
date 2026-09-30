@@ -43,14 +43,14 @@ func load_room(data: roomData):
 		loadedExits.set(localPos, Vector3i(localRoomPos.x, localRoomPos.y, exitDirNum))
 
 
-func load_floor():
-	curFloorData = load("res://game_generation/resources/floors/lava_floor.tres").duplicate()
+func load_floor(floorPath : String):
+	curFloorData = load(floorPath).duplicate()
 	for x in range(-3, 3):
 		for y in range(-3, 3):
 			var r = randi_range(0, curFloorData.roomFiles.size() - 1)
 			curFloorData.add_room(load(curFloorData.roomFiles[r]).duplicate(), Vector2i(x,y))
-	
-	load_room(curFloorData.get_room(Vector2i(0,0)))
+	var room = curFloorData.get_room(Vector2i(0,0))
+	load_room(room)
 
 func playerDoorCheck()->void:
 	if (loadedRoomInstance == null): return
@@ -95,9 +95,6 @@ func _process(delta: float) -> void:
 	lastTimeDoorUsed += delta
 	if(lastTimeDoorUsed < doorCD): return
 	playerDoorCheck()
-
-func _ready() -> void:
-	load_floor()
 
 func get_room_scene():
 	return loadedRoomInstance

@@ -3,11 +3,14 @@
 importer="codeandweb.texturepacker_import_spritesheet"
 type="Resource"
 uid="uid://b5yxaw305opps"
-valid=false
+path="res://.godot/imported/moon.tpsheet-3fb26a0779258e945356961f611b09ad.res"
 
 [deps]
 
+files=["res://game_generation/Worlddesignsheets/moon.sprites/pixil-frame-0 (49).tres", "res://game_generation/Worlddesignsheets/moon.sprites/pixil-frame-0 (50).tres"]
+
 source_file="res://game_generation/Worlddesignsheets/moon.tpsheet"
+dest_files=["res://.godot/imported/moon.tpsheet-3fb26a0779258e945356961f611b09ad.res", "res://game_generation/Worlddesignsheets/moon.sprites/pixil-frame-0 (49).tres", "res://game_generation/Worlddesignsheets/moon.sprites/pixil-frame-0 (50).tres"]
 
 [params]
 

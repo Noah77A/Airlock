@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://c1ot8dtjsxgrc"]
+
+[ext_resource type="Texture2D" uid="uid://d4hhn1ak5j7r1" path="res://game_generation/Worlddesignsheets/moon.png" id="1_xpqjp"]
+
+[resource]
+atlas = ExtResource("1_xpqjp")
+region = Rect2(100, 0, 100, 100)

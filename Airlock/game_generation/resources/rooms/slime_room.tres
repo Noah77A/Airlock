@@ -6,5 +6,5 @@
 script = ExtResource("1_h630n")
 name = "slime"
 scenePath = "slimeroom_2.tscn"
-roomExits = [[Vector2i(47, -11), Vector2i(0, 0), "E"], [Vector2i(0, 0), Vector2i(0, 0), "W"]]
+roomExits = [[Vector2i(47, -11), Vector2i(0, 0), "E", true]]
 metadata/_custom_type_script = "uid://cjuncqqyo0m2k"
