@@ -1,0 +1,21 @@
+extends Area2D
+
+var travelled_distance = 0
+var target_position
+var damage = (GameManager.difficulty+2) * 5
+func _physics_process(delta):
+	const SPEED = 150
+	const RANGE = 200
+	var direction = Vector2.RIGHT.rotated(rotation)
+	position += direction * SPEED * delta
+	travelled_distance += SPEED * delta 
+	if travelled_distance > RANGE:
+		queue_free()
+	
+
+func _on_body_entered(body):
+	if body.has_method("get_hit"):
+		body.get_hit(damage)
+		queue_free()
+	else: if !body.has_method("take_damage"):
+		queue_free()

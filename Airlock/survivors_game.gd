@@ -47,10 +47,11 @@ func _on_return_to_menu_pressed() -> void:
 	GameManager.bulletSize = 0.25
 	GameManager.price = 10
 	GameManager.fireRate = 0.4
-
+	GameManager.range=155
 	GameManager.upgradeSignal = false
 	GameManager.healthSignal = false
 	GameManager.haveKey = false
+	GameManager.ice = false
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://menu.tscn")
 

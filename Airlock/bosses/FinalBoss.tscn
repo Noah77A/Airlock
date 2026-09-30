@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ct2vbblun4oe1"]
+
+[ext_resource type="Script" uid="uid://cf2bjcl2135c5" path="res://bosses/final_boss.gd" id="1_ewfwg"]
+[ext_resource type="Script" uid="uid://ygjkyvb1w2y4" path="res://bosses/boss_animate.gd" id="2_7tpgx"]
+[ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="3_ewfwg"]
+[ext_resource type="Script" uid="uid://ejjedktwg50c" path="res://bosses/boss_sprite.gd" id="4_0qnvo"]
+[ext_resource type="Texture2D" uid="uid://cte1sbh4kver2" path="res://assets/Boss sprites/FinalBoss.png" id="4_ewfwg"]
+[ext_resource type="Script" uid="uid://dgkwu1bwkmwfk" path="res://bosses/cloud.gd" id="6_0qnvo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1o08"]
+radius = 147.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rdiey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ewfwg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FinalBoss" type="CharacterBody2D" unique_id=498159889]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ewfwg")
+
+[node name="DetectionBox" type="Area2D" parent="." unique_id=68406153]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+
+[node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=234974410]
+shape = SubResource("CircleShape2D_q1o08")
+
+[node name="Boss" type="CollisionShape2D" parent="." unique_id=604940667]
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="BossAnimate" type="Node2D" parent="." unique_id=454787475]
+unique_name_in_owner = true
+script = ExtResource("2_7tpgx")
+
+[node name="GroundShadow" type="Sprite2D" parent="BossAnimate" unique_id=1171267053]
+self_modulate = Color(0.59607846, 0.59607846, 0.59607846, 0.53333336)
+z_index = -1
+z_as_relative = false
+position = Vector2(4.7683716e-07, 1.1920929e-07)
+scale = Vector2(0.13273811, 0.13365386)
+texture = ExtResource("3_ewfwg")
+
+[node name="BossSprite" type="AnimatedSprite2D" parent="BossAnimate" unique_id=1356727339]
+unique_name_in_owner = true
+position = Vector2(0, -1.9999998)
+scale = Vector2(0.012109375, 0.010859376)
+sprite_frames = SubResource("SpriteFrames_rdiey")
+script = ExtResource("4_0qnvo")
+
+[node name="Cloud" type="Marker2D" parent="." unique_id=1248636568]
+position = Vector2(0, -32)
+script = ExtResource("6_0qnvo")
+
+[node name="Timer" type="Timer" parent="Cloud" unique_id=1541854092]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Cloud/Timer" to="Cloud" method="_on_timer_timeout"]

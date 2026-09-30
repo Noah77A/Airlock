@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3q2l0jwsvge7"]
+
+[ext_resource type="Script" uid="uid://flhiyc12yaym" path="res://bosses/lightning.gd" id="1_g3ivt"]
+[ext_resource type="Texture2D" uid="uid://c381kl4c5l72e" path="res://assets/Boss sprites/LightningBolt.png" id="2_g3ivt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nffs5"]
+
+[node name="Lightning" type="Area2D" unique_id=474212797]
+top_level = true
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_g3ivt")
+
+[node name="Shot" type="Sprite2D" parent="." unique_id=1917565333]
+rotation = -2.0107534
+scale = Vector2(0.021718768, 0.019062495)
+texture = ExtResource("2_g3ivt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573588313]
+position = Vector2(4, 1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nffs5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
