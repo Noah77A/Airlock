@@ -10,7 +10,7 @@ func increase_frame():
 	if (frame < 6):
 		frame += 1
 	else:
-		get_tree().change_scene_to_file("res://survivors_game.tscn")
+		get_tree().change_scene_to_file("res://tutorial_screen.tscn")
 
 
 "position"
@@ -52,4 +52,4 @@ Once he reached the system, he sent out a diplomatic signal. He came here to lea
 
 
 func _on_skip_pressed() -> void:
-	get_tree().change_scene_to_file("res://survivors_game.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://tutorial_screen.tscn") # Replace with function body.

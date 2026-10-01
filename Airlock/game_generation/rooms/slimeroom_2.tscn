@@ -519,20 +519,6 @@ texture = ExtResource("1_c74iw")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_n6uwe")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6r6fe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_ivf1u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_h3prq")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="Curve2D" id="Curve2D_s2t1s"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 471, -253, 0, 0, 0, 0, 1804, -259, 0, 0, 0, 0, 1825, 1075, 0, 0, 0, 0, 471, -253)
@@ -548,7 +534,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_h3prq")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
@@ -585,12 +571,6 @@ scale = Vector2(5.549654, 1.7237593)
 [node name="Node2D4" parent="." unique_id=994982379 instance=ExtResource("2_nyyg6")]
 position = Vector2(536, 408.00003)
 scale = Vector2(0.31999922, 0.23999977)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=392855665]
-position = Vector2(463.00003, 1345)
-scale = Vector2(0.022, 0.025)
-sprite_frames = SubResource("SpriteFrames_6r6fe")
-script = ExtResource("7_qxduk")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=761600085]
 position = Vector2(-1007, -410)

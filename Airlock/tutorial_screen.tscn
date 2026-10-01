@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dirc5aq0um0va"]
+
+[ext_resource type="Script" uid="uid://brr3rkdqogr5" path="res://tutorial_screen.gd" id="1_w2oki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpsjc"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgsld"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b68d8"]
+bg_color = Color(0.44445664, 0.44445667, 0.44445652, 1)
+
+[node name="tutorial" type="CanvasLayer" unique_id=2087086532]
+script = ExtResource("1_w2oki")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1911039818]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8980392)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=465295190]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -554.5
+offset_right = 554.5
+offset_bottom = 157.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 115
+text = "SHIPLOG - CRASHED"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=2049692706]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -824.0
+offset_top = -344.0
+offset_right = 832.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 45
+text = "SHIP STATUS ---CRITICAL CONDITION----
+
+LOCATION: EXPEDITITION IV SECTOR B1A77
+
+HOSTILE LIFEFORMS NEARBY - OXYGEN SUPPLY LIMITED
+
+ALIENS CARRY CREDITS THAT OPEN CRATES - DEFEAT ALIENS TO 
+INCREASE YOUR STRENGTH
+
+USE (LMB) TO FIRE YOUR BLASTER AND WASD TO TRAVERSE THE PLANETS
+GOOD LUCK, ISAAC. SAVE YOUR WORLD.
+"
+horizontal_alignment = 1
+
+[node name="StartJourney" type="Button" parent="ColorRect" unique_id=362386061]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 960.0
+offset_right = 1400.0
+offset_bottom = 1022.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpsjc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mgsld")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b68d8")
+text = "START YOUR JOURNEY"
+
+[connection signal="pressed" from="ColorRect/StartJourney" to="." method="_on_start_journey_pressed"]

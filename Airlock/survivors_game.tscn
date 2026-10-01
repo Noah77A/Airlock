@@ -28,8 +28,8 @@ script = ExtResource("1_l26od")
 layer = -10
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1244689540]
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 1.0458333
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2

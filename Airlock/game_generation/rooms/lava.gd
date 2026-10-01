@@ -18,5 +18,5 @@ func spawn_mob():
 	
 	
 
-
-	spawn_mob() # Replace with function body.
+func _on_timer_timeout() -> void:
+	spawn_mob()

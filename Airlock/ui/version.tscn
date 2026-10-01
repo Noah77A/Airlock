@@ -68,7 +68,18 @@ Version 0.4: 9/23/26
 -more upgrades(health, bullet size and speed)
 - added text to intro sequence along with a skip button
 - added background music that loops
-- Created a 3rd room (will be fully implemented for the next sprint, we had some issues with implementing it)"
+- Created a 3rd room (will be fully implemented for the next sprint, we had some issues with implementing it)
+
+Version 0.5 9/30/26
+- more tilesets created
+- two completed planets/rooms that are filled with randomly spawning enemies and obstacles
+- new enemy type (drone and turrets)
+- teleporter on each (this is still very buggy. Changing to the actual levels from the test rooms caused some problems). The primary goal for the next sprint is to fix this, it doesnt always work or has unintended effects)
+- updated intro sequence
+- new final boss sprite created 
+- key system for teleporter
+- tutorial screen added
+- Improved UI with EX icon"
 horizontal_alignment = 1
 
 [node name="Menu" type="Button" parent="Background" unique_id=73407062]
