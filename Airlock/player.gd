@@ -2,6 +2,7 @@ extends CharacterBody2D
 signal health_depleted
 var health = GameManager.maxHealth
 var o2 = 60
+
 func _ready():
 	RoundStart()
 func _physics_process(delta):

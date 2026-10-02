@@ -32,7 +32,7 @@ func _on_player_health_depleted():
 	
 	
 	
-	
+
 
 
 func _on_return_to_menu_pressed() -> void:
@@ -59,5 +59,21 @@ func _on_return_to_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://menu.tscn")
 
 
+
+func _input(event) -> void:
+	if event.is_action_pressed("pause"):
+		get_tree().paused = true
+		%Pause.visible = true
+	
 func _on_quit_button_pressed() -> void:
 	get_tree().quit(0)
+
+
+func _on_resume_pressed() -> void:
+	%Pause.visible = false
+	get_tree().paused = false
+	# Replace with function body.
+
+
+func _on_pause_quit_pressed() -> void:
+	get_tree().quit(0) # Replace with function body.
