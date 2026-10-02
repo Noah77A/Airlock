@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cihk7k7625ac1"]
+
+[ext_resource type="Script" uid="uid://oqpcr2gy5iya" path="res://area_2d4.gd" id="1_1i7b8"]
+
+[node name="Node2D" type="Node2D" unique_id=1634830598]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1484585968]
+script = ExtResource("1_1i7b8")
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=748414444]
+color = Color(0.11207495, 1, 1, 1)
+polygon = PackedVector2Array(-68.000336, -54.666664, -44.666992, 16.666672, -284.00034, 48.66667, -87.33368, -36)
+uv = PackedVector2Array(-68.000336, -54.666664, -44.666992, 16.666672, -284.00034, 48.66667, -87.33368, -36)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=125042749]
+polygon = PackedVector2Array(-68, -54, -46, 17, -284, 48, -87, -35)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://tgp6px1bex7k"]
+
+[ext_resource type="Script" uid="uid://bs625d5yfgq6n" path="res://combo_display.gd" id="1_2poo2"]
+
+[node name="Node2D" type="Node2D" unique_id=1949332684]
+script = ExtResource("1_2poo2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=892365830]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1269967687]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=721830739]
+layout_mode = 2
+theme_override_constants/separation = 12

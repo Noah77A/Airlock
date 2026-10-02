@@ -3,7 +3,7 @@ extends Area2D
 signal combo_generated(letters: Array[int])
 signal combo_progress(index: int)
 signal combo_escaped
-
+signal combo_wrong(index: int)
 @export var combo_length: int = 4
 @export var snap_margin: float = 6.0
 
@@ -39,11 +39,14 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	if key.keycode == _combo[_combo_index]:
 		_combo_index += 1
-	if _combo_index >= _combo.size():
-		_solved = true
-		combo_escaped.emit()
+		if _combo_index >= _combo.size():
+			_solved = true
+			combo_escaped.emit()
+		else:
+			combo_progress.emit(_combo_index)
 	else:
-		combo_progress.emit(_combo_index)
+		combo_wrong.emit(_combo_index)
+	get_viewport().set_input_as_handled()
 func _on_trap_entered(area: Area2D) -> void:
 	_trap_count += 1
 	_trap_center = area.global_position
