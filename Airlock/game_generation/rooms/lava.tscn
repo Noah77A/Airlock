@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mufyluvjhcud" path="res://game_generation/rooms/lava.gd" id="1_hpw0u"]
 [ext_resource type="Texture2D" uid="uid://8gy3nh422bhb" path="res://game_generation/Worlddesignsheets/lava.png" id="1_j1bf6"]
-[ext_resource type="PackedScene" uid="uid://bopmpvunwncgk" path="res://crate.tscn" id="2_onocx"]
+[ext_resource type="PackedScene" uid="uid://bopmpvunwncgk" path="res://game_generation/room_interactables/crate.tscn" id="2_onocx"]
 [ext_resource type="Texture2D" uid="uid://c26aa4mosafh4" path="res://assets/Portal(Active).png" id="3_agex3"]
 [ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="4_onocx"]
 [ext_resource type="Texture2D" uid="uid://dofkc4vay1n5a" path="res://assets/Portal(deactive).png" id="4_we4e0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="8_we4e0"]
 [ext_resource type="Script" uid="uid://dwasb57qsy3al" path="res://game_generation/rooms/lavariver.gd" id="9_8tk0p"]
 [ext_resource type="PackedScene" uid="uid://cxgmhqxoigc0r" path="res://bosses/xeno_boss.tscn" id="10_0jis0"]
+[ext_resource type="PackedScene" uid="uid://bwusf43es55fa" path="res://game_generation/room_interactables/room_exit.tscn" id="11_7yc8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nkng"]
 texture = ExtResource("1_j1bf6")
@@ -14806,5 +14807,9 @@ scale = Vector2(0.63999987, 0.68)
 color = Color(0.006466695, 0.0064666974, 0.0064666965, 1)
 polygon = PackedVector2Array(-176.667, 53.333344, -177.33368, -6.666664, -160.667, -41.333332, -124.000336, -65.33333, -85.33368, -68.666664, -65.33368, -54.666664, -50.666992, -31.333328, -42.000336, -2.6666641, -40.000336, 29.333344, -39.33368, 55.333344)
 uv = PackedVector2Array(-176.667, 53.333344, -177.33368, -6.666664, -160.667, -41.333332, -124.000336, -65.33333, -85.33368, -68.666664, -65.33368, -54.666664, -50.666992, -31.333328, -42.000336, -2.6666641, -40.000336, 29.333344, -39.33368, 55.333344)
+
+[node name="RoomExit" parent="." unique_id=192507844 instance=ExtResource("11_7yc8x")]
+position = Vector2(-32, -279)
+scale = Vector2(0.05, 0.05)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

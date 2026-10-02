@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bwusf43es55fa"]
+
+[ext_resource type="Script" uid="uid://3tmqai8shleq" path="res://game_generation/room_interactables/room_exit.gd" id="1_f31kj"]
+[ext_resource type="Texture2D" uid="uid://dofkc4vay1n5a" path="res://assets/Portal(deactive).png" id="2_ug51x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bflv"]
+size = Vector2(1601, 824)
+
+[node name="RoomExit" type="Area2D" unique_id=192507844]
+script = ExtResource("1_f31kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1323984263]
+texture = ExtResource("2_ug51x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523174874]
+position = Vector2(0.5, 402)
+shape = SubResource("RectangleShape2D_2bflv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

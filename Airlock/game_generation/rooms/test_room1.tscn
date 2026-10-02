@@ -2,8 +2,9 @@
 
 [ext_resource type="TileSet" uid="uid://dujaw04hlqblu" path="res://assets/test_tile_set.tres" id="1_5lgwg"]
 [ext_resource type="PackedScene" uid="uid://y38gte5o0xf8" path="res://mob.tscn" id="2_keefj"]
-[ext_resource type="PackedScene" uid="uid://bopmpvunwncgk" path="res://crate.tscn" id="3_8ttth"]
+[ext_resource type="PackedScene" uid="uid://bopmpvunwncgk" path="res://game_generation/room_interactables/crate.tscn" id="3_8ttth"]
 [ext_resource type="PackedScene" uid="uid://bqkbvvcfh8t5d" path="res://bosses/robot_boss.tscn" id="4_y0c3f"]
+
 
 [node name="Node2D2" type="Node2D" unique_id=63089627]
 
