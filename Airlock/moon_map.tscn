@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dopia74cxge6t" path="res://asteroid.tscn" id="2_l6tbk"]
 [ext_resource type="PackedScene" uid="uid://dtp7287lpl6an" path="res://Moon_crack.tscn" id="3_kkygs"]
 [ext_resource type="Texture2D" uid="uid://cb72yqnbn5lt0" path="res://game_generation/Worlddesignsheets/moon.sprites/spritesheet_moon.png" id="3_l6tbk"]
+[ext_resource type="PackedScene" uid="uid://tgp6px1bex7k" path="res://combo_display.tscn" id="5_hwcrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kkygs"]
 texture = ExtResource("1_5wo7i")
@@ -570,7 +571,11 @@ scale = Vector2(0.40000305, -2.2799995)
 position = Vector2(377, -319)
 scale = Vector2(0.51999587, 0.8654115)
 
+[node name="Node2D" parent="Node2D" unique_id=1949332684 instance=ExtResource("5_hwcrr")]
+
 [node name="Node2D4" parent="." unique_id=932006674 instance=ExtResource("2_l6tbk")]
 position = Vector2(-275, 306)
 rotation = -3.000342
 scale = Vector2(0.5508207, -0.29557604)
+
+[node name="Node2D" parent="Node2D4" unique_id=1146225128 instance=ExtResource("5_hwcrr")]
