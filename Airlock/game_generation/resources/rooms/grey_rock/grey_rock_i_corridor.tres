@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="roomData" format=3 uid="uid://75ib1shkwo6q"]
+
+[ext_resource type="Script" uid="uid://cjuncqqyo0m2k" path="res://game_generation/data/room_data.gd" id="1_d540i"]
+
+[resource]
+script = ExtResource("1_d540i")
+name = "I Corridor"
+scenePath = "grey_rock/grey_rock_i_corridor.tscn"
+metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

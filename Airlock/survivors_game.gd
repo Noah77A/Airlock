@@ -6,7 +6,7 @@ extends Node2D
 
 func _ready():
 	%Timer.start()
-	player_room_handler.load_floor("res://game_generation/resources/floors/slime_floor.tres")
+	player_room_handler.load_floor("res://game_generation/resources/floors/grey_rock.tres")
 func spawn_mob():
 	var new_mob = preload("res://mob.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
