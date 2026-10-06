@@ -22,7 +22,6 @@ position = Vector2(-52, -62)
 position = Vector2(-141.99998, 20.999998)
 scale = Vector2(0.015, 0.015)
 direction = "W"
-floorSwitch = "res://game_generation/resources/floors/lava_floor.tres"
 
 [node name="RoomExit2" parent="." unique_id=851865573 instance=ExtResource("3_vftkt")]
 position = Vector2(130.99998, 19.000002)
