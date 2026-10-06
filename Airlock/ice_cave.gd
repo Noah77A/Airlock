@@ -1,11 +1,15 @@
 extends Area2D
 
+@export var destination: Marker2D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	body_entered.connect(_on_body_entered)
 
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		call_deferred("_teleport", body)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _teleport(body: Node2D) -> void:
+	body.global_position = destination.global_position
+	if body is CharacterBody2D:
+		body.velocity = Vector2.ZERO
