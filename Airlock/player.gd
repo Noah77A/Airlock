@@ -35,13 +35,13 @@ func _physics_process(delta):
 		%WormholeKey.frame= 1
 	else:
 		%WormholeKey.frame= 0
-	const DAMAGE_RATE = 5.0	
+	const DAMAGE_RATE = 4.0	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if(GameManager.healthSignal):
 		health +=25
 		GameManager.healthSignal = false
 	if overlapping_mobs.size() > 0:
-		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
+		health -= (DAMAGE_RATE+GameManager.difficulty) * overlapping_mobs.size() * delta 
 		if health <= 0.0:
 			health_depleted.emit()
 	if(health < GameManager.maxHealth):
@@ -60,7 +60,7 @@ func _physics_process(delta):
 		GameManager.level += 1
 		%ExpBar.max_value = 15 +(GameManager.level * 2)
 		GameManager.oxygen += 5
-		o2 +=15
+		o2 +=15 
 		%OxygenBar.max_value +=5
 		
 

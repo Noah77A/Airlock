@@ -18,11 +18,11 @@ func _physics_process(delta):
 		$BossAnimate.play_idle()
 func take_damage():
 	health -= GameManager.damage
-	
+	%BossAnimate.play_hurt()
 	
 	if (health <= 0):
-		GameManager.credits += 5
-		GameManager.experiance += 5
+		GameManager.credits += 3+(GameManager.difficulty*2)
+		GameManager.experiance += 3
 		
 		queue_free()
 		GameManager.haveKey = true

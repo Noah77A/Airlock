@@ -10,10 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://bn74ii3rhumr1" path="res://assets/wormhole(beta3).png" id="8_b26j0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
-radius = 29.15
+radius = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
-radius = 34.0147
+radius = 36.221542
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3pqv"]
 bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
@@ -58,7 +58,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_b26j0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -90,10 +90,10 @@ debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="Health" type="ProgressBar" parent="." unique_id=1200308221]
 unique_name_in_owner = true
-offset_left = -107.0
-offset_top = -134.0
-offset_right = 131.0
-offset_bottom = -106.83125
+offset_left = -120.0
+offset_top = -164.0
+offset_right = 118.0
+offset_bottom = -136.83125
 theme_override_styles/background = SubResource("StyleBoxFlat_i3pqv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hqtel")
 value = 100.0
