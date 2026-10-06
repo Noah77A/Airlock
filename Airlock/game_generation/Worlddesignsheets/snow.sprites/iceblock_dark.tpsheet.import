@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://dvishfdt6nbcn"
+path="res://.godot/imported/iceblock_dark.tpsheet-d646b999cebf9fecea6c5d7417c00136.res"
+
+[deps]
+
+files=["res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark.sprites/iceblock_dark.tres"]
+
+source_file="res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark.tpsheet"
+dest_files=["res://.godot/imported/iceblock_dark.tpsheet-d646b999cebf9fecea6c5d7417c00136.res", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark.sprites/iceblock_dark.tres"]
+
+[params]
+

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dbcdiwom3t1c4"]
+
+[ext_resource type="Texture2D" uid="uid://br1hrjjkfjwm7" path="res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.png" id="1_413k1"]
+
+[resource]
+atlas = ExtResource("1_413k1")
+region = Rect2(48, 0, 16, 16)

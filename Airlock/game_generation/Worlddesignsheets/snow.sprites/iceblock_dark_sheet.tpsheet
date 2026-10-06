@@ -1,0 +1,78 @@
+{
+	"textures": [
+		{
+			"image": "iceblock_dark_sheet.png",
+			"size": {
+				"w": 64,
+				"h": 16
+			},
+			"sprites": [
+				{
+					"filename": "iceblock_dark_1.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "iceblock_dark_2.png",
+					"region": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "iceblock_dark_3.png",
+					"region": {
+						"x": 32,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "iceblock_dark_4.png",
+					"region": {
+						"x": 48,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:e99a6fffd3b1151d6d5fa6c769046406:12e2e65671ac5345ceaee4f10133a62b:0d75d8bb6b1160c5428e1e19457b094a$"
+	}
+}
