@@ -22,13 +22,21 @@ func load_room(data: roomData):
 func load_floor(floorPath : String):
 	curFloorData = load(floorPath).duplicate()
 	
-	var r = randi_range(0, curFloorData.roomFiles.size() - 1)
-	curFloorData.add_room(load(curFloorData.roomFiles[r]).duplicate(), Vector2i(0,0))
+	for i in range(1000):
+		var r = randi_range(0, curFloorData.roomFiles.size() - 1)
+		var room :roomData = load(curFloorData.roomFiles[r]).duplicate()
+		print(str(room.tags.front()) + " " + room.name)
+		if(room.tags.find("boss") == -1): 
+			curFloorData.add_room(room.duplicate(), Vector2i(0,0))
+			break
+	
 	generate_floor(curFloorData.get_room(Vector2i(0,0)))
 	
 	load_room(curFloorData.get_room(Vector2i(0,0)))
+	print(curFloorData.get_room(Vector2i(0,0)).name)
 
 func generate_floor(curRoomData : roomData, recursions : int = 0):
+	if(curRoomData == null): return
 	var exits = get_exits(curRoomData)
 	for exit in exits:
 		if(recursions >= curFloorData.floorSize):
@@ -52,7 +60,6 @@ func place_special(tag: String, location: Vector2i):
 	var r = randi_range(0, specialRooms.size() - 1)
 	var room:roomData = specialRooms[r]
 	if(!curFloorData.add_room(room.duplicate(), location)):return
-	print(tag + " created at "  + str(location))
 
 func get_exits(data:roomData) -> Array[Vector2i]:
 	var exits : Array[Vector2i] = []

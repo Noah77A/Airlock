@@ -4,32 +4,27 @@ class_name floorData extends Resource
 @export var roomFiles : Array[String] = []
 @export var floorSize : int = 1
 
-var occupiedNodes : Dictionary[Vector2i, int] = {}
-
-var nodeData : Dictionary[int, roomData] = {}
+var nodeData : Dictionary[Vector2i, roomData] = {}
 
 func add_room(data: roomData, location : Vector2i) -> bool:
 	for l in data.nodesOccupying:
-		if occupiedNodes.find_key(l+location):
+		if nodeData.get(l+location) != null:
 			return false
-	var dataptr = nodeData.size()
 	data.globalOrigin = location
-	nodeData.set(dataptr, data)
 	
 	for l in data.nodesOccupying:
-		occupiedNodes.set(l + location, dataptr)
+		nodeData.set(l + location, data)
 	
 	return true
 
 func contains(location : Vector2i) -> bool:
-	return occupiedNodes.get(location) != null
+	return nodeData.get(location) != null
 	
 func remove(location : Vector2i):
 	var data: roomData = get_room(location)
 	var origin: Vector2i = data.globalOrigin
-	nodeData.erase(occupiedNodes.get(location))
 	for l in data.nodesOccupying:
-		occupiedNodes.erase(l+origin)
+		nodeData.erase(l+origin)
 
 func get_room(location : Vector2i) -> roomData:
-	return nodeData.get(occupiedNodes.get(location))
+	return nodeData.get(location)

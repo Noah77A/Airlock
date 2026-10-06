@@ -33,6 +33,5 @@ func _on_body_entered(body: Node2D) -> void:
 		exitDir = Vector2i(-1,0)
 	var rData : roomData = roomHandler.loadedData
 	
-	print(GameManager.haveKey)
 	roomHandler.player.position = Vector2(0,0)
 	roomHandler.load_room(roomHandler.curFloorData.get_room(rData.globalOrigin + exitDir))
