@@ -6,4 +6,4 @@ var roomPath: String = "res://game_generation/rooms/"
 @export var scenePath: String = roomPath + "."
 @export var nodesOccupying : Array[Vector2i] = [Vector2i(0,0)] #example of which rooms this will be occupying with 0,0 generally being the origin
 @export var globalOrigin: Vector2i = Vector2i(0,0)#is set when placed into data
-@export	var tags = [] #additional tags for individual room mods and such
+@export	var tags : Array[String] = [] #additional tags for individual room mods and such

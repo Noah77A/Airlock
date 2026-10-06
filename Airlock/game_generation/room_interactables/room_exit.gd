@@ -10,6 +10,7 @@ extends Area2D
 
 var readyExit:bool = false
 func _ready() -> void:
+	self.add_to_group("exits")
 	await get_tree().create_timer(1.5).timeout
 	readyExit = true
 
@@ -20,7 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 		requiresKey = false
 	else: if(requiresKey && !GameManager.haveKey):
 		return
-	if(floorSwitch.length() > 0): roomHandler.loadFloor(floorSwitch)
+	if(floorSwitch.length() > 0): roomHandler.load_floor(floorSwitch)
 	var exitDir: Vector2i = Vector2i(0,0)
 	if direction == "N":
 		exitDir = Vector2i(0,1)
