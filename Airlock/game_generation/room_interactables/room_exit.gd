@@ -10,6 +10,7 @@ extends Area2D
 
 var readyExit:bool = false
 func _ready() -> void:
+	self.add_to_group("exits")
 	await get_tree().create_timer(1.5).timeout
 	readyExit = true
 
