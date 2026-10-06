@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="floorData" format=3 uid="uid://6huoacc6rglf"]
+
+[ext_resource type="Script" uid="uid://bp836rmhjq1t" path="res://game_generation/data/floor_data.gd" id="1_p3djx"]
+
+[resource]
+script = ExtResource("1_p3djx")
+name = "Lava Arena"
+roomFiles = Array[String](["res://game_generation/resources/rooms/lava_arena_room.tres"])
+metadata/_custom_type_script = "uid://bp836rmhjq1t"

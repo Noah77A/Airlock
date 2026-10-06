@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://cysk2577nkfku"
+path="res://.godot/imported/iceblock_dark_sheet.tpsheet-27e6cf9958b32503019ff6a310b27c14.res"
+
+[deps]
+
+files=["res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_1.tres", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_2.tres", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_3.tres", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_4.tres"]
+
+source_file="res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.tpsheet"
+dest_files=["res://.godot/imported/iceblock_dark_sheet.tpsheet-27e6cf9958b32503019ff6a310b27c14.res", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_1.tres", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_2.tres", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_3.tres", "res://game_generation/Worlddesignsheets/snow.sprites/iceblock_dark_sheet.sprites/iceblock_dark_4.tres"]
+
+[params]
+

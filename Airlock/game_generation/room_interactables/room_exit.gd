@@ -21,7 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 		requiresKey = false
 	else: if(requiresKey && !GameManager.haveKey):
 		return
-	if(floorSwitch.length() > 0): roomHandler.loadFloor(floorSwitch)
+	if(floorSwitch.length() > 0): roomHandler.load_floor(floorSwitch)
 	var exitDir: Vector2i = Vector2i(0,0)
 	if direction == "N":
 		exitDir = Vector2i(0,1)

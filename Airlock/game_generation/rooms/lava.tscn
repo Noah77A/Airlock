@@ -6,10 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c26aa4mosafh4" path="res://assets/Portal(Active).png" id="3_agex3"]
 [ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="4_onocx"]
 [ext_resource type="Texture2D" uid="uid://dofkc4vay1n5a" path="res://assets/Portal(deactive).png" id="4_we4e0"]
-[ext_resource type="Script" uid="uid://dgvh4v0evxahj" path="res://game_generation/rooms/animated_sprite_2d.gd" id="7_8tk0p"]
-[ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="8_we4e0"]
 [ext_resource type="Script" uid="uid://dwasb57qsy3al" path="res://game_generation/rooms/lavariver.gd" id="9_8tk0p"]
-[ext_resource type="PackedScene" uid="uid://cxgmhqxoigc0r" path="res://bosses/xeno_boss.tscn" id="10_0jis0"]
 [ext_resource type="PackedScene" uid="uid://bwusf43es55fa" path="res://game_generation/room_interactables/room_exit.tscn" id="11_7yc8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nkng"]
@@ -14650,20 +14647,6 @@ _data = {
 }
 point_count = 78
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1hk80"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_we4e0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_agex3")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Node2D" type="Node2D" unique_id=1388302867]
 script = ExtResource("1_hpw0u")
 
@@ -14724,16 +14707,6 @@ position = Vector2(878, 615)
 [node name="Crate8" parent="." unique_id=547530201 instance=ExtResource("2_onocx")]
 position = Vector2(-616, 761)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=720004882]
-position = Vector2(447, 1324)
-scale = Vector2(0.022, 0.025)
-sprite_frames = SubResource("SpriteFrames_1hk80")
-frame_progress = 0.5465161
-script = ExtResource("7_8tk0p")
-
-[node name="GeneralBoss" parent="." unique_id=498159889 instance=ExtResource("8_we4e0")]
-position = Vector2(-688, -360)
-
 [node name="Area2D" type="Area2D" parent="." unique_id=935518317]
 position = Vector2(-704, -255)
 script = ExtResource("9_8tk0p")
@@ -14772,17 +14745,9 @@ uv = PackedVector2Array(-23.33368, -45.333332, -78.66699, -50, -123.33368, -64.6
 position = Vector2(-89, 185)
 polygon = PackedVector2Array(-54, -49, -195, -57, -395, -57, -606, -75, -747, -105, -1047, -335, -1233, -320, -1299, -164, -1244, -5, -1099, 166, -769, 258, -399, 292, 124, 306, 46, -9)
 
-[node name="XenoBoss" parent="." unique_id=190076786 instance=ExtResource("10_0jis0")]
-position = Vector2(-500, 730)
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=715759803]
-position = Vector2(447, 1324)
-scale = Vector2(0.022, 0.025)
-sprite_frames = SubResource("SpriteFrames_1hk80")
-frame_progress = 0.5465161
-script = ExtResource("7_8tk0p")
-
 [node name="Area2D3" type="Area2D" parent="." unique_id=1016657669]
+top_level = true
+position = Vector2(554, 1303)
 
 [node name="Polygon2D" type="Polygon2D" parent="Area2D3" unique_id=113250913]
 color = Color(0.0627451, 0.0627451, 0.0627451, 1)
@@ -14809,7 +14774,8 @@ polygon = PackedVector2Array(-176.667, 53.333344, -177.33368, -6.666664, -160.66
 uv = PackedVector2Array(-176.667, 53.333344, -177.33368, -6.666664, -160.667, -41.333332, -124.000336, -65.33333, -85.33368, -68.666664, -65.33368, -54.666664, -50.666992, -31.333328, -42.000336, -2.6666641, -40.000336, 29.333344, -39.33368, 55.333344)
 
 [node name="RoomExit" parent="." unique_id=192507844 instance=ExtResource("11_7yc8x")]
-position = Vector2(-32, -279)
+position = Vector2(456, 1293)
 scale = Vector2(0.05, 0.05)
+floorSwitch = "res://game_generation/resources/floors/lava_arena.tres"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

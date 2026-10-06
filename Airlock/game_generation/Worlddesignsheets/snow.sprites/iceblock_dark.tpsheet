@@ -1,0 +1,32 @@
+{
+	"textures": [
+		{
+			"image": "iceblock_dark.png",
+			"size": {
+				"w": 16,
+				"h": 16
+			},
+			"sprites": [
+				{
+					"filename": "iceblock_dark.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1"
+	}
+}
