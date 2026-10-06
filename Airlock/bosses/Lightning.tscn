@@ -10,6 +10,7 @@ top_level = true
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_g3ivt")
+metadata/_edit_horizontal_guides_ = [-31.0]
 
 [node name="Shot" type="Sprite2D" parent="." unique_id=1917565333]
 rotation = -2.0107534

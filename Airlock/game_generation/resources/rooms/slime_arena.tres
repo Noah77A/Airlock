@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="roomData" format=3 uid="uid://cq0eva1ud7yxd"]
+
+[ext_resource type="Script" uid="uid://cjuncqqyo0m2k" path="res://game_generation/data/room_data.gd" id="1_dmn0r"]
+
+[resource]
+script = ExtResource("1_dmn0r")
+name = "Slime arena"
+scenePath = "slime_arena.tscn"
+tags = Array[String](["boss"])
+metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

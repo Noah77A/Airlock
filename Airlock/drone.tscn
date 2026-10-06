@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cweb53b1afc20" path="res://drone.gd" id="1_uvgqj"]
 [ext_resource type="Texture2D" uid="uid://ch8382qtsm1p5" path="res://assets/Drone.png" id="2_d5du7"]
+[ext_resource type="Texture2D" uid="uid://bwb4h0utpdxl8" path="res://assets/DroneSummon.png" id="3_puw62"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d5du7"]
 radius = 12.165525
@@ -17,6 +18,14 @@ position = Vector2(5.9604645e-08, 0)
 rotation = -1.5707964
 scale = Vector2(0.015781252, 0.017968751)
 texture = ExtResource("2_d5du7")
+
+[node name="SummonSprite" type="Sprite2D" parent="." unique_id=421474551]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-0.9999973, -0.0023125496)
+rotation = -1.5707964
+scale = Vector2(0.016, 0.018)
+texture = ExtResource("3_puw62")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655820067]
 shape = SubResource("CircleShape2D_d5du7")
