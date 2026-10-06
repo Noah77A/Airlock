@@ -8,8 +8,8 @@ func take_damage():
 	%TurretSprite.play_hurt()
 	
 	if (health <= 0):
-		GameManager.credits += 1
-		GameManager.experiance += 1
+		GameManager.credits += (GameManager.difficulty*2)-1
+		GameManager.experiance += (GameManager.difficulty*2)-1
 		
 		queue_free()
 		

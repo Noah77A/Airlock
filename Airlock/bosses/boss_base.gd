@@ -23,8 +23,8 @@ func take_damage():
 	%BossAnimate.play_hurt()
 	
 	if (health <= 0):
-		GameManager.credits += 5
-		GameManager.experiance += 5
+		GameManager.credits += 3+(GameManager.difficulty*2)
+		GameManager.experiance += 3+(GameManager.difficulty*2)
 		
 		queue_free()
 		GameManager.haveKey = true

@@ -44,7 +44,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_p11y5"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qmh0"]
 
 [node name="Mob" type="CharacterBody2D" unique_id=121620099]
 collision_layer = 2
@@ -54,6 +54,7 @@ script = ExtResource("1_nokgg")
 [node name="Slime" type="Node2D" parent="." unique_id=2008890567]
 unique_name_in_owner = true
 visibility_layer = 4
+scale = Vector2(1.28, 1.08)
 script = ExtResource("2_1qmh0")
 
 [node name="GroundShadow" type="Sprite2D" parent="Slime" unique_id=2019923751]
@@ -83,5 +84,5 @@ scale = Vector2(0.014, 0.013)
 texture = ExtResource("7_pcqmr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1652750644]
-position = Vector2(0, -9)
-shape = SubResource("CircleShape2D_p11y5")
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_1qmh0")

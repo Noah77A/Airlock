@@ -40,6 +40,8 @@ func _input(event) -> void:
 			autofire = false
 		else:
 			autofire = true
+	if event.is_action_pressed("difficulty debug"):
+		GameManager.difficulty +=1
 
 
 func _on_timer_timeout() -> void:
