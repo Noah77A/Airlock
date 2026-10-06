@@ -1,11 +1,12 @@
 [gd_scene format=4 uid="uid://uhtifh3qfws6"]
 
-[ext_resource type="Texture2D" uid="uid://cibb4q8poaphd" path="res://spritesheet_moon.sprites/spritesheet.png" id="1_xm6g7"]
+[ext_resource type="Texture2D" uid="uid://cibb4q8poaphd" path="res://assets/spritesheet_moon.sprites/SLIME_spritesheet.png" id="1_xm6g7"]
 [ext_resource type="PackedScene" uid="uid://bdcqwhdu8sp31" path="res://Slime_fast.tscn" id="2_iuxcm"]
 [ext_resource type="PackedScene" uid="uid://bsvon7wnuw6pa" path="res://Slow_Slime.tscn" id="3_hc6by"]
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="4_v7y76"]
 [ext_resource type="PackedScene" uid="uid://dpaj15hn7ma7x" path="res://Gel_tree.tscn" id="5_s0wjs"]
 [ext_resource type="Script" uid="uid://djjv6qxc2w8sh" path="res://game_generation/resources/floors/floor.gd" id="6_hc6by"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4o6y1"]
 texture = ExtResource("1_xm6g7")

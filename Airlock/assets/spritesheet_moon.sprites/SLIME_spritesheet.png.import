@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cibb4q8poaphd"
-path="res://.godot/imported/spritesheet.png-96d0cddfb88b861e64533ad9e2507453.ctex"
+path="res://.godot/imported/SLIME_spritesheet.png-ebf5df429b29b5313583d2b7612d4e5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spritesheet_moon.sprites/spritesheet.png"
-dest_files=["res://.godot/imported/spritesheet.png-96d0cddfb88b861e64533ad9e2507453.ctex"]
+source_file="res://assets/spritesheet_moon.sprites/SLIME_spritesheet.png"
+dest_files=["res://.godot/imported/SLIME_spritesheet.png-ebf5df429b29b5313583d2b7612d4e5f.ctex"]
 
 [params]
 

@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://qvfqy5oamnlo"]
 
-[ext_resource type="Texture2D" uid="uid://cibb4q8poaphd" path="res://spritesheet_moon.sprites/spritesheet.png" id="1_qdcdr"]
+[ext_resource type="Texture2D" uid="uid://cibb4q8poaphd" path="res://assets/spritesheet_moon.sprites/SLIME_spritesheet.png" id="1_qdcdr"]
 [ext_resource type="PackedScene" uid="uid://dpaj15hn7ma7x" path="res://Gel_tree.tscn" id="2_la5pr"]
 [ext_resource type="PackedScene" uid="uid://bdcqwhdu8sp31" path="res://Slime_fast.tscn" id="3_0yyvk"]
 [ext_resource type="PackedScene" uid="uid://bsvon7wnuw6pa" path="res://Slow_Slime.tscn" id="4_rk5t1"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n6uwe"]
 texture = ExtResource("1_qdcdr")
