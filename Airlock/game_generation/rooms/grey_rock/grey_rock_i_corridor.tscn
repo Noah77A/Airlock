@@ -19,15 +19,10 @@ position = Vector2(23, 83)
 position = Vector2(-52, -62)
 
 [node name="RoomExit" parent="." unique_id=192507844 instance=ExtResource("3_vftkt")]
-position = Vector2(-141.99998, 20.999998)
+position = Vector2(-105, 25.000002)
 scale = Vector2(0.015, 0.015)
 direction = "W"
-floorSwitch = "res://game_generation/resources/floors/lava_floor.tres"
-
-[node name="RoomExit2" parent="." unique_id=851865573 instance=ExtResource("3_vftkt")]
-position = Vector2(130.99998, 19.000002)
-scale = Vector2(0.015, 0.015)
-direction = "E"
+floorSwitch = "res://game_generation/resources/floors/slime_floor.tres"
 
 [node name="Mob" parent="." unique_id=121620099 instance=ExtResource("4_kfnrb")]
 position = Vector2(-5, 98)

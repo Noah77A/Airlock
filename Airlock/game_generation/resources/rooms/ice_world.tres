@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_mio2a")
-scenePath = null
+name = "ice world"
+scenePath = "ice_world.tscn"
 metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

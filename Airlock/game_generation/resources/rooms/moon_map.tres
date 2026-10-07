@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_keybp")
-scenePath = null
+name = "moon map"
+scenePath = "moon_map.tscn"
 metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

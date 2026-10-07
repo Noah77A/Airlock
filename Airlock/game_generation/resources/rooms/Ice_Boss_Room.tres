@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_8eq8h")
-scenePath = null
+name = "ice boss room"
+scenePath = "Ice_Boss_Room.tscn"
+tags = Array[String](["boss"])
 metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="roomData" format=3 uid="uid://b18ypb07075fm"]
+
+[ext_resource type="Script" uid="uid://cjuncqqyo0m2k" path="res://game_generation/data/room_data.gd" id="1_66cww"]
+
+[resource]
+script = ExtResource("1_66cww")
+name = "moon arena"
+scenePath = "moon_arena.tscn"
+tags = Array[String](["boss"])
+metadata/_custom_type_script = "uid://cjuncqqyo0m2k"

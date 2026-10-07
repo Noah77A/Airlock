@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_116uu")
+name = "moon floor"
+roomFiles = Array[String](["res://game_generation/resources/rooms/moon_arena.tres", "res://game_generation/resources/rooms/moon_map.tres"])
+floorSize = 2
 metadata/_custom_type_script = "uid://bp836rmhjq1t"

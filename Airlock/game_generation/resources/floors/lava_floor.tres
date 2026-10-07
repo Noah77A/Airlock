@@ -6,4 +6,5 @@
 script = ExtResource("1_32ow5")
 name = "Lava"
 roomFiles = Array[String](["res://game_generation/resources/rooms/lava_room.tres", "res://game_generation/resources/rooms/lava_arena_room.tres"])
+floorSize = 3
 metadata/_custom_type_script = "uid://bp836rmhjq1t"
