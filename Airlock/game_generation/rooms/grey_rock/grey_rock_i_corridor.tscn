@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://ccndlslfiid0q" path="res://assets/grey_rock_tileset.tres" id="1_kfnrb"]
 [ext_resource type="PackedScene" uid="uid://bopmpvunwncgk" path="res://game_generation/room_interactables/crate.tscn" id="2_ktvkk"]
 [ext_resource type="PackedScene" uid="uid://bwusf43es55fa" path="res://game_generation/room_interactables/room_exit.tscn" id="3_vftkt"]
-[ext_resource type="PackedScene" uid="uid://y38gte5o0xf8" path="res://mob.tscn" id="4_kfnrb"]
+[ext_resource type="PackedScene" uid="uid://bqkbvvcfh8t5d" path="res://bosses/robot_boss.tscn" id="5_ktvkk"]
 
 [node name="GreyRockICorridor" type="Node2D" unique_id=1843173302]
 
@@ -23,15 +23,7 @@ position = Vector2(-105, 25.000002)
 scale = Vector2(0.015, 0.015)
 direction = "W"
 floorSwitch = "res://game_generation/resources/floors/slime_floor.tres"
+requiresKey = true
 
-[node name="Mob" parent="." unique_id=121620099 instance=ExtResource("4_kfnrb")]
-position = Vector2(-5, 98)
-
-[node name="Mob2" parent="." unique_id=289085467 instance=ExtResource("4_kfnrb")]
-position = Vector2(40, 104)
-
-[node name="Mob3" parent="." unique_id=1074023490 instance=ExtResource("4_kfnrb")]
-position = Vector2(-76, -55)
-
-[node name="Mob4" parent="." unique_id=897467696 instance=ExtResource("4_kfnrb")]
-position = Vector2(-25, -54)
+[node name="Robot_Boss" parent="." unique_id=498159889 instance=ExtResource("5_ktvkk")]
+position = Vector2(133, -23)

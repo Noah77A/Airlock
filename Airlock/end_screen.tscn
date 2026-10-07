@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cy68ucgij2ef2"]
+
+[ext_resource type="Script" uid="uid://c4ggudrkip8ce" path="res://end_screen.gd" id="1_my301"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abjgy"]
+bg_color = Color(0.6, 0.6, 0.8980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xu7hh"]
+bg_color = Color(0.65356296, 2.6351586e-06, 6.256998e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmjk2"]
+bg_color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d75mr"]
+bg_color = Color(0.654902, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_be1gp"]
+bg_color = Color(0.27607, 0.2760634, 0.27606502, 1)
+
+[node name="Node2D" type="Node2D" unique_id=877232052]
+script = ExtResource("1_my301")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1105666976]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=245244618]
+offset_right = 1921.0
+offset_bottom = 1081.0
+theme_override_font_sizes/font_size = 50
+text = "Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="Button" parent="." unique_id=282876821]
+offset_left = 1064.0
+offset_top = 704.0
+offset_right = 1406.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_abjgy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xu7hh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pmjk2")
+text = "Credits
+"
+
+[node name="Quit Button" type="Button" parent="." unique_id=1034233006]
+offset_left = 520.0
+offset_top = 704.0
+offset_right = 854.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_abjgy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d75mr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_be1gp")
+text = "Quit"
+
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]

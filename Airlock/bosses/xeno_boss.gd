@@ -30,6 +30,7 @@ func take_damage():
 		var smoke = SMOKE_SCENE.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
+		GameManager.difficulty += 1
 	speed = 40
 	await get_tree().create_timer(0.4).timeout
 	speed = 85

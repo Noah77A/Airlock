@@ -8,11 +8,17 @@ extends Area2D
 @export var floorSwitch : String = ""
 @export var requiresKey : bool = false
 
+
+
+
+
 var readyExit:bool = false
 func _ready() -> void:
 	self.add_to_group("exits")
 	await get_tree().create_timer(1.5).timeout
 	readyExit = true
+
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body != roomHandler.player || !readyExit): return

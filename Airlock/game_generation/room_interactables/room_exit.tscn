@@ -9,7 +9,7 @@ size = Vector2(1601, 824)
 [node name="RoomExit" type="Area2D" unique_id=192507844]
 script = ExtResource("1_f31kj")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1323984263]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1855102431]
 texture = ExtResource("2_ug51x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523174874]

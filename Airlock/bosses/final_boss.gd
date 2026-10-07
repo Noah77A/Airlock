@@ -5,7 +5,6 @@ var health = 30 + (GameManager.difficulty*30)
 
 
 
-
 func _physics_process(delta):
 	var things_in_range = %DetectionBox.get_overlapping_bodies()
 	if things_in_range.any(func(body): return body.has_method("get_hit")):
@@ -26,8 +25,13 @@ func take_damage():
 		GameManager.experiance += 5
 		
 		queue_free()
+		
 		GameManager.haveKey = true
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_SCENE.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
+		Fade.fade_to_black()
+
+		
+	

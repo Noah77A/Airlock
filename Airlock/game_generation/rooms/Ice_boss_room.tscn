@@ -228,4 +228,4 @@ tile_map_data = PackedByteArray("AAD1//n/AAAqAAAAAAD1//r/AAAqAAAAAAD1//v/AAAqAAA
 tile_set = SubResource("TileSet_rs0q7")
 
 [node name="FinalBoss" parent="." unique_id=498159889 instance=ExtResource("3_ejbce")]
-position = Vector2(-125, -29)
+position = Vector2(-122, -27)

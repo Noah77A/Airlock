@@ -6,5 +6,5 @@
 script = ExtResource("1_3awig")
 name = "grey rock"
 roomFiles = Array[String](["res://game_generation/resources/rooms/grey_rock/grey_rock_i_corridor.tres", "res://game_generation/resources/rooms/grey_rock/grey_rock_plus_corridor.tres"])
-floorSize = 3
+floorSize = 0
 metadata/_custom_type_script = "uid://bp836rmhjq1t"

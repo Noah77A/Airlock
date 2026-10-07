@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_uphvw")
 name = "slime"
-roomFiles = Array[String](["res://game_generation/resources/rooms/slime_room.tres", "res://game_generation/resources/rooms/slime_arena.tres"])
+roomFiles = Array[String](["res://game_generation/resources/rooms/slime_room.tres", "res://game_generation/resources/rooms/slime_world/slime_boss_arena.tres"])
 floorSize = 0
 metadata/_custom_type_script = "uid://bp836rmhjq1t"

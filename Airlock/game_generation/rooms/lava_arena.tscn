@@ -18,31 +18,16 @@ floorSwitch = "res://game_generation/resources/floors/ice_floor.tres"
 requiresKey = true
 
 [node name="XenoBoss" parent="." unique_id=498159889 instance=ExtResource("3_666ql")]
-position = Vector2(-24, 11)
+position = Vector2(-92, 42)
 
 [node name="Mob" parent="." unique_id=121620099 instance=ExtResource("4_tygik")]
-position = Vector2(65, 39)
+position = Vector2(-18, 64)
 
 [node name="Mob2" parent="." unique_id=1381718707 instance=ExtResource("4_tygik")]
 position = Vector2(-120, -37)
 
-[node name="Mob3" parent="." unique_id=1916359263 instance=ExtResource("4_tygik")]
-position = Vector2(-9, 65)
-
-[node name="Mob4" parent="." unique_id=895674076 instance=ExtResource("4_tygik")]
-position = Vector2(41, -14)
-
-[node name="Mob5" parent="." unique_id=952803941 instance=ExtResource("4_tygik")]
-position = Vector2(42, -58)
-
-[node name="Mob6" parent="." unique_id=88932640 instance=ExtResource("4_tygik")]
-position = Vector2(-71, -46)
-
 [node name="Mob7" parent="." unique_id=1772314013 instance=ExtResource("4_tygik")]
-position = Vector2(75, 68)
+position = Vector2(33, 79)
 
 [node name="Mob8" parent="." unique_id=1657718434 instance=ExtResource("4_tygik")]
-position = Vector2(95, -13)
-
-[node name="Mob9" parent="." unique_id=548504493 instance=ExtResource("4_tygik")]
-position = Vector2(-92, 31)
+position = Vector2(-82, -68)

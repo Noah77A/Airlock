@@ -9,8 +9,8 @@ func _ready() -> void:
 func _process(delta) -> void:
 	CreditsText.position.y -= SCROLL_SPEED * delta
 	if CreditsText.position.y < 0:
-		queue_free()
+		get_tree().change_scene_to_file("res://menu.tscn")
 
 
 func _on_menu_pressed() -> void:
-	queue_free() # Replace with function body.
+	get_tree().change_scene_to_file("res://menu.tscn")
