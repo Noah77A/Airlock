@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="2_5y1gb"]
 [ext_resource type="PackedScene" uid="uid://bwusf43es55fa" path="res://game_generation/room_interactables/room_exit.tscn" id="3_mnkdt"]
 
+
 [node name="Node2D" type="Node2D" unique_id=1113264892]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=46930474]
