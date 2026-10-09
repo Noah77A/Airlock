@@ -3,7 +3,8 @@
 [ext_resource type="TileSet" uid="uid://r7lki5ci4jh3" path="res://assets/slimeworld_tileset.tres" id="1_soo6m"]
 [ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="2_5y1gb"]
 [ext_resource type="PackedScene" uid="uid://bwusf43es55fa" path="res://game_generation/room_interactables/room_exit.tscn" id="3_mnkdt"]
-
+[ext_resource type="PackedScene" uid="uid://64rt181qe3gv" path="res://Soldier.tscn" id="4_pfoqq"]
+[ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="5_qkku6"]
 
 [node name="Node2D" type="Node2D" unique_id=1113264892]
 
@@ -20,3 +21,18 @@ position = Vector2(237, -135.99998)
 scale = Vector2(0.025, 0.025)
 floorSwitch = "res://game_generation/resources/floors/lava_floor.tres"
 requiresKey = true
+
+[node name="Soldier" parent="." unique_id=121620099 instance=ExtResource("4_pfoqq")]
+position = Vector2(-73, -45)
+
+[node name="Soldier2" parent="." unique_id=33954823 instance=ExtResource("4_pfoqq")]
+position = Vector2(-10, -50)
+
+[node name="Soldier3" parent="." unique_id=1636501306 instance=ExtResource("4_pfoqq")]
+position = Vector2(-77, 32)
+
+[node name="Soldier4" parent="." unique_id=261063471 instance=ExtResource("4_pfoqq")]
+position = Vector2(25, 28)
+
+[node name="Turret" parent="." unique_id=1718083494 instance=ExtResource("5_qkku6")]
+position = Vector2(14, -77)

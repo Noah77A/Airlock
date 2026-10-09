@@ -7,11 +7,10 @@ var speed = 85
 
 
 func _physics_process(delta):
-	var things_in_range = %DetectionBox.get_overlapping_bodies()
-	if things_in_range.any(func(body): return body.has_method("get_hit")):
-		var direction = global_position.direction_to(player.global_position)
-		velocity = direction * speed
-		move_and_slide()
+	
+	var direction = global_position.direction_to(player.global_position)
+	velocity = direction * speed
+	move_and_slide()
 	if velocity.length() > 0.0:
 		$BossAnimate.play_walk()	
 	else: 	

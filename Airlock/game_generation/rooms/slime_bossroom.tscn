@@ -3,6 +3,8 @@
 [ext_resource type="TileSet" uid="uid://7y0b00oe54q0" path="res://slime_tileset.tres" id="1_cmb65"]
 [ext_resource type="PackedScene" uid="uid://bwusf43es55fa" path="res://game_generation/room_interactables/room_exit.tscn" id="2_o53bd"]
 [ext_resource type="PackedScene" uid="uid://budbgdcucpb0b" path="res://bosses/general_boss.tscn" id="3_fc3vw"]
+[ext_resource type="PackedScene" uid="uid://64rt181qe3gv" path="res://Soldier.tscn" id="4_fc3vw"]
+[ext_resource type="PackedScene" uid="uid://cn1uq6ogmlme6" path="res://turret.tscn" id="5_2e485"]
 
 [node name="SlimeBossroom" type="Node2D" unique_id=383912633]
 
@@ -19,3 +21,21 @@ requiresKey = true
 
 [node name="GeneralBoss" parent="." unique_id=498159889 instance=ExtResource("3_fc3vw")]
 position = Vector2(-94, 73)
+
+[node name="Soldier" parent="." unique_id=121620099 instance=ExtResource("4_fc3vw")]
+position = Vector2(-109, 8)
+
+[node name="Soldier2" parent="." unique_id=800817147 instance=ExtResource("4_fc3vw")]
+position = Vector2(-55, 24)
+
+[node name="Soldier3" parent="." unique_id=749504603 instance=ExtResource("4_fc3vw")]
+position = Vector2(-40, 69)
+
+[node name="Soldier4" parent="." unique_id=1503288245 instance=ExtResource("4_fc3vw")]
+position = Vector2(-32, 100)
+
+[node name="Turret" parent="." unique_id=1718083494 instance=ExtResource("5_2e485")]
+position = Vector2(41, 81)
+
+[node name="Turret2" parent="." unique_id=321531489 instance=ExtResource("5_2e485")]
+position = Vector2(-67, -141)
