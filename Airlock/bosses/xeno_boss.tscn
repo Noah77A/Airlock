@@ -23,7 +23,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_pbe25")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -31,9 +31,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdx44"]
 radius = 15.0
 height = 64.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_h6u1s"]
-radius = 147.0
 
 [node name="XenoBoss" type="CharacterBody2D" unique_id=498159889]
 collision_layer = 2
@@ -63,13 +60,3 @@ script = ExtResource("6_6hoxh")
 visible = false
 position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_pdx44")
-
-[node name="DetectionBox" type="Area2D" parent="." unique_id=437876924]
-unique_name_in_owner = true
-visible = false
-collision_layer = 8
-collision_mask = 8
-
-[node name="DetectionArea" type="CollisionShape2D" parent="DetectionBox" unique_id=782159358]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_h6u1s")

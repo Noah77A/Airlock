@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health = 30 + (GameManager.difficulty*20)
+var health = 30 + (GameManager.difficulty*40)
 var speed = 85
 @onready var player = get_node("/root/Game/Player")
 
@@ -22,7 +22,7 @@ func take_damage():
 	if (health <= 0):
 		GameManager.credits += 3+(GameManager.difficulty*2)
 		GameManager.experiance += 3
-		
+		player.o2 = GameManager.oxygen
 		queue_free()
 		GameManager.haveKey = true
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")

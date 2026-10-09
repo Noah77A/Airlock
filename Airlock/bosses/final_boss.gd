@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health = 30 + (GameManager.difficulty*30)
+var health = 30 + (GameManager.difficulty*50)
 
 @onready var player = get_node("/root/Game/Player")
 
@@ -22,7 +22,7 @@ func take_damage():
 	if (health <= 0):
 		GameManager.credits += 5
 		GameManager.experiance += 5
-		
+		player.o2 = GameManager.oxygen
 		queue_free()
 		
 		GameManager.haveKey = true

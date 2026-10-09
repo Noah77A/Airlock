@@ -1,6 +1,6 @@
 extends CharacterBody2D
 ## basic structure for a boss enemy, bosses with inherit this with their own unique features
-var health = 30 + (GameManager.difficulty*20)
+var health = 30 + (GameManager.difficulty*40)
 
 @onready var player = get_node("/root/Game/Player")
 
@@ -24,6 +24,7 @@ func take_damage():
 	if (health <= 0):
 		GameManager.credits += 3+(GameManager.difficulty*2)
 		GameManager.experiance += 3+(GameManager.difficulty*2)
+		player.o2 = GameManager.oxygen
 		
 		queue_free()
 		GameManager.haveKey = true

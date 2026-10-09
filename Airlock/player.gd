@@ -59,9 +59,9 @@ func _physics_process(delta):
 		GameManager.experiance -= 15 + (GameManager.level * 2)
 		GameManager.level += 1
 		%ExpBar.max_value = 15 +(GameManager.level * 2)
-		GameManager.oxygen += 5
-		o2 +=15 
-		%OxygenBar.max_value +=5
+		GameManager.oxygen += 3
+		o2 +=10
+		%OxygenBar.max_value +=3
 		
 
 func RoundStart():
