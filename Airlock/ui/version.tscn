@@ -79,7 +79,19 @@ Version 0.5 9/30/26
 - new final boss sprite created 
 - key system for teleporter
 - tutorial screen added
-- Improved UI with EX icon"
+- Improved UI with EX icon
+
+Version 0.6 final
+- Added a new moon and Ice floor
+- Changed the core game loop to traverse the worlds to find the teleporter/cave which brings you to a Boss arena where after you fight the boss you move to the next floor
+- Added a new tileset for the slime arena
+- Final boss implemented
+- Added a \"Thank you for playing screen\" and a fade to black that happens after you beat the final boss
+- Improved the teleporter system. Now functional and not as buggy as before
+- General bug fixes and world improvements 
+- Added a pause screen
+- Fixed a bug with the credits scene
+"
 horizontal_alignment = 1
 
 [node name="Menu" type="Button" parent="Background" unique_id=73407062]
